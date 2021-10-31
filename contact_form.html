@@ -15,17 +15,43 @@
     </header>
     <nav>
         <fieldset>
-            <strong><a href="https://www.aueb.gr/">Αρχική</a></strong> |
+            <a href="index.html">Αρχική</a> |
             <a href="https://www.aueb.gr/">Θεματικές περιοχές</a> |
             <a href="https://www.aueb.gr/">Ποιοι είμαστε</a> |
-            <a href="https://www.aueb.gr/">Φόρμα επικοινωνίας</a>
+            <strong><a href="contact_form.html">Φόρμα επικοινωνίας</a></strong>
         </fieldset>
     </nav>
     <h2>Επικοινωνήστε μαζί μας!</h2>
-    
+    <form>
+        <fieldset>
+            <legend>Στοιχεία ενδιαφερόμενου</legend>
+            
+            <label for="firstname_txt">Όνομα: </label>
+            <input type="text" id="firstname_txt" name="firstname" placeholder="Το όνομα μου...">
+
+            <label for="lastname_txt">Επώνυμο: </label>
+            <input type="text" id="lastname_txt" name="lastname" placeholder="Το επώνυμο μου...">
+
+            <label for="email_txt">Email: </label>
+            <input type="email" id="email_txt" name="email" placeholder="όνομα@email.com">
+        </fieldset>
+        <fieldset>
+            <legend>Περιεχόμενο</legend>
+
+            <label>Θέμα: </label>
+            <input type="text" id="sub_txt" name="subject">
+            <br>
+
+            <label>Αντικείμενο: </label>
+            <textarea type="text" id="subject_txt"></textarea>
+            <input type="submit" id="submit_btn" name="submit">
+        </fieldset>
+        
+    </form>
     
 
     <footer>
+        <hr>
         <p>x Powered by M and A | 2021</p>
     </footer>
 
