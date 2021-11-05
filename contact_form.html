@@ -24,6 +24,7 @@
     <h1>Επικοινωνήστε μαζί μας!</h1>
     <form>
 
+        <h2>Στοιχεία ενδιαφερόμενου</h2>
         <label for="firstname_txt">Όνομα: </label>
         <input type="text" id="firstname_txt" name="firstname" placeholder="Το όνομα μου...">
 
@@ -31,14 +32,47 @@
         <input type="text" id="lastname_txt" name="lastname" placeholder="Το επώνυμο μου...">
 
         <label for="email_txt">Email: </label>
-        <input type="email" id="email_txt" name="email" placeholder="όνομα@email.com">
+        <input type="email" id="email_txt" name="email" placeholder="Το email μου...">
 
-        <label>Θέμα: </label>
-        <input type="text" id="sub_txt" name="subject">
+        <label for="country">Χώρα: </label>
+        <input type="country" id="" name="">
+        <h2>Αντικείμενο σχολιασμού</h2>
+        <p>Επιλέξτε ένα από τα παρακάτω θέματα για το οποίο θέλετε να επικοινωνήσετε μαζί μας. Σε 
+            περίπτωση όπου δεν σας καλύπτουν οι παρακάτω επιλογές, πατήστε στην ενότητα 
+            <strong>Άλλα θέματα</strong> την επιλογή <strong>Άλλο θέμα</strong> και
+            γράψτε στο κουτί με την αντίστοιχη επιγραφή το θέμα του προβλήματος σας.
+        </p>
+        <select id="main_issue" name="Θέμα:">
+            <optgroup label="Θέματα με λογαριασμό">
+                <option value="renew">Ανανέωση λογαριασμού</option>
+                <option value="renew">Διαγραφή λογαριασμού</option>
+                <option value="renew">Ξεμπλοκάρισμα λογαριασμού</option>
+                <option value="renew">Επιβεβαίωση στοιχείων λογαριασμού</option>
+            </optgroup>
+            <optgroup label="Θέματα με πληρωμή">
+                <option value="renew">Ακύρωση μηνιαίας πίστωσης</option>
+                <option value="renew">Αποτυχία πληρωμής</option>
+                <option value="renew">Αλλαγή στοιχείων πληρωμής</option>
+            </optgroup>
+            <optgroup label="Θέματα με μαθήματα">
+                <option value="renew">Αποτυχία εγγραφής σε μάθημα</option>
+                <option value="renew">Διακοπή παρακολούθησης</option>
+                <option value="renew">Πρόβλημα παρακολούθησης μαθήματος</option>
+            </optgroup>
+            <optgroup label="Άλλα θέματα">
+                <option value="renew">Καθυστέρηση αποστολής πιστοποιητικού</option>
+                <option value="">Αλλαγή διεύθυνσης αποστολής</option>
+                <option value="renew">Άλλο θέμα</option>
+            </optgroup>
+        </select>
+
+        <label>Άλλο θέμα: </label>
+        <input type="text" id="">
 
         <label>Αντικείμενο: </label>
         <textarea type="text" id="subject_txt"></textarea>
         <input type="submit" id="submit_btn" name="submit">
+        <input type="reset" id="" name="reset">
 
     </form>
 
