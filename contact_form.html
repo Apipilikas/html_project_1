@@ -44,30 +44,30 @@
         </p>
         <select id="main_issue" name="Θέμα:">
             <optgroup label="Θέματα με λογαριασμό">
-                <option value="renew">Ανανέωση λογαριασμού</option>
-                <option value="renew">Διαγραφή λογαριασμού</option>
-                <option value="renew">Ξεμπλοκάρισμα λογαριασμού</option>
-                <option value="renew">Επιβεβαίωση στοιχείων λογαριασμού</option>
+                <option value="renew_account">Ανανέωση λογαριασμού</option>
+                <option value="delete_account">Διαγραφή λογαριασμού</option>
+                <option value="unblock_account">Ξεμπλοκάρισμα λογαριασμού</option>
+                <option value="confirm_account_details">Επιβεβαίωση στοιχείων λογαριασμού</option>
             </optgroup>
             <optgroup label="Θέματα με πληρωμή">
-                <option value="renew">Ακύρωση μηνιαίας πίστωσης</option>
-                <option value="renew">Αποτυχία πληρωμής</option>
-                <option value="renew">Αλλαγή στοιχείων πληρωμής</option>
+                <option value="cancel_montly_payment">Ακύρωση μηνιαίας πίστωσης</option>
+                <option value="payment_failure">Αποτυχία πληρωμής</option>
+                <option value="change_payment_details">Αλλαγή στοιχείων πληρωμής</option>
             </optgroup>
             <optgroup label="Θέματα με μαθήματα">
-                <option value="renew">Αποτυχία εγγραφής σε μάθημα</option>
-                <option value="renew">Διακοπή παρακολούθησης</option>
-                <option value="renew">Πρόβλημα παρακολούθησης μαθήματος</option>
+                <option value="enrollment_failure">Αποτυχία εγγραφής σε μάθημα</option>
+                <option value="cancel_enrollment">Διακοπή παρακολούθησης</option>
+                <option value="attending_problem">Πρόβλημα παρακολούθησης μαθήματος</option>
             </optgroup>
             <optgroup label="Άλλα θέματα">
-                <option value="renew">Καθυστέρηση αποστολής πιστοποιητικού</option>
-                <option value="">Αλλαγή διεύθυνσης αποστολής</option>
-                <option value="renew">Άλλο θέμα</option>
+                <option value="send_certification_problem">Καθυστέρηση αποστολής πιστοποιητικού</option>
+                <option value="change_shipping_address">Αλλαγή διεύθυνσης αποστολής</option>
+                <option value="else">Άλλο θέμα</option>
             </optgroup>
         </select>
 
         <label>Άλλο θέμα: </label>
-        <input type="text" id="">
+        <input type="text" id="another_issue_txt" name="another_issue">
 
         <label>Αντικείμενο: </label>
         <textarea type="text" id="subject_txt"></textarea>
@@ -77,7 +77,14 @@
     </form>
 
     <footer>
-        <p>x Powered by M and A | 2021</p>
+        <address>
+            📧<a href="mailto:MandA@example.com">MandA@example.com</a><br>
+            ☎️<a href="tel:+13115552368">(311) 555-2368</a><br>
+            📍 Λεωφόρος Πατησσίων 76, 104 34 Αθήνα
+        </address>
+        <p>
+            x Powered by M and A | 2021 <br>
+        </p>
     </footer>
 
 </body>
