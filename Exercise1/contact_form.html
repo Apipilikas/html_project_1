@@ -4,10 +4,11 @@
 
 <head>
     <title>Edume | Φόρμα επικοινωνίας</title>
-    <link rel="icon" href="resources\edume_icon.png">
+    <link rel="icon" href="resources/edume_icon.png">
     <meta name="description" content="An open source site for everyone">
-    <meta name="keywords" content="Open source, Education">
-    <meta name="author" content="Myrto Chatzivoukoudi, Evangelos Pipilikas">
+    <meta name="keywords" content="Open source, Education, Edume">
+    <meta name="author" content="Murto Chatzivoukoudi, Evangelos Pipilikas">
+    <meta charset="UTF-8">
 </head>
 <!--#ededed-->
 
@@ -40,7 +41,7 @@
         <input type="email" id="email_txt" name="email" placeholder="Το email μου...">
 
         <label for="country_txt">Χώρα: </label>
-        <input type="country" id="country_txt" name="country">
+        <input type="text" id="country_txt" name="country" placeholder="Η χώρα μου...">
         <h2>Αντικείμενο σχολιασμού</h2>
         <p>Επιλέξτε ένα από τα παρακάτω θέματα για το οποίο θέλετε να επικοινωνήσετε μαζί μας. Σε
             περίπτωση όπου δεν σας καλύπτουν οι παρακάτω επιλογές, πατήστε στην ενότητα
@@ -75,9 +76,9 @@
         <input type="text" id="another_issue_txt" name="another_issue">
 
         <label>Αντικείμενο: </label>
-        <textarea type="text" id="subject_txt"></textarea>
+        <textarea  id="subject_txt"></textarea>
         <input type="submit" id="submit_btn" name="submit">
-        <input type="reset" id="" name="reset">
+        <input type="reset" id="reset_btn" name="reset">
 
     </form>
 
@@ -90,6 +91,14 @@
                 <li>📍 Λεωφόρος Πατησσίων 76, 104 34 Αθήνα</li>
             </ul>
         </address>
+        <div class="social-media-footer">
+            <ul>
+                <li><a href="https://twitter.com/?lang=el"><img src="resources/twitter_icon.png" alt="twitter" width="50" height="50"></a></li>
+                <li><a href="https://el-gr.facebook.com/"><img src="resources/facebook_icon.png" alt="facebook" width="50" height="50"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="resources/youtube_icon.png" alt="youtube" width="50" height="50"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="resources/instagram_icon.png" alt="instagram" width="50" height="50"></a></li>
+            </ul>
+        </div>
         <p>
             Edume | Powered by M and A | 2021 <br>
         </p>
