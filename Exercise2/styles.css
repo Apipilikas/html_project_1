@@ -1,18 +1,22 @@
 /*https://looka.com/editor/77504306*/
 body {
-    background-color: #ededed;
+    /*background-color: #ededed;*/
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header nav{
-    background-color: #1899d9;
+header {
+    background-color: #215ef9;
 }
 
-header p{
+header p {
     font-size: 1.1em;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.announcement > h3 + p{
+.announcement > h3 + p {
     background-color: aliceblue;
+}
+
+footer {
+    background-color: #dadbde;
 }
