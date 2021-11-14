@@ -1,7 +1,8 @@
 /*https://looka.com/editor/77504306*/
 body {
     background-color: #f2f0ef;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Manrope', sans-serif;
     margin: 0em;
 }
 
@@ -11,7 +12,7 @@ h1, h2, p {
 }
 
 section > img {
-    padding: 1em;
+    padding: 0.5em;
 }
 
 .main-content > h3 {
@@ -21,7 +22,7 @@ section > img {
 header {
     background-color: #215ef9;
     font-size: 1.1em;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
 nav ul {
@@ -78,17 +79,14 @@ section > * {
 #most-famous-subject-areas a {
     color: red;
     text-decoration: none;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 500;
+    font-weight: bold;
+    transition-duration: 0.25s;
 }
 
 #most-famous-subject-areas a:hover {
     color: red;
     text-decoration: none;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 500;
     border-bottom: 0.2em solid red;
-    transition: 0.3s;
 }
 
 #most-famous-subject-areas a:active {
@@ -169,12 +167,129 @@ footer div li {
     float: left;
 }
 
-.subject .content table {
-    border-spacing: 0;
+.subject table th {
+    padding: 1.5em;
 }
 
-.subject .content table th, .subject .content table td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    
+.subject table td {
+    padding: 1em;
+}
+
+.subject .content table {
+    border-spacing: 0;
+    text-align: center;
+}
+
+.subject .content table th {
+    background-color: #344c74;
+    color: white;
+    font-weight: bold;
+}
+
+.subject .content table td {
+    background-color: #bcc4d1;
+}
+
+.subject .content table tbody > tr:first-child > td {
+    background-color: #858da8;
+    font-weight: 600;
+}
+
+.subject .links a {
+    color: black;
+}
+
+.subject .links a:hover {
+    color: white;
+    background-color: #858da8;
+    text-decoration: none;
+}
+
+.subject .total-cost thead > tr > th:nth-child(2) {
+    background-color: #b9161f;
+    color: white;
+}
+
+.subject .total-cost thead > tr > th:nth-child(3) {
+    background-color: #fbdb54;
+}
+
+.subject .total-cost tbody > tr > td:first-child {
+    font-weight: bold;
+}
+
+.subject .total-cost tbody > tr > td + td {
+    text-align: center;
+}
+
+.subject .total-cost s {
+    padding: 0.5em;
+    font-size: 1.5em;
+    color: red;
+}
+
+.subject .start-day {
+    background-color: #dadbde;
+    border: 3px solid #bac0ca;
+    border-radius: 10px;
+    float: left;
+}
+
+.subject .start-day h2 {
+    padding: 0.2em;
+}
+
+.subject .start-day button {
+    background-color: #b9161f;
+    padding: 0.8em;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    border: 2px solid #dadbde;
+    transition-duration: 0.5s;
+}
+
+.subject .start-day button:hover {
+    background-color: #6e070c;
+}
+
+.subject .start-day button:active {
+    border: 2px solid black;
+    transition: 0s;
+}
+
+form {
+    padding: 0.5em;
+}
+
+form label, form input[type="text"], form input[type="email"],
+form select, form textarea {
+    display: block;
+    width: 99%;
+    padding: 0.5em;
+    font-family: 'Manrope', sans-serif;
+}
+
+form label {
+    padding-left: 0em;
+}
+
+form input[type="submit"], form input[type="reset"] {
+    padding: 0.8em;
+    margin-top: 0.5em;
+    border: 2px solid;
+    background-color: #215ef9;
+    font-family: 'Manrope', sans-serif;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+form input[type="submit"]:hover, form input[type="reset"]:hover {
+    background-color: #04246c;
+}
+
+form input[type="submit"]:active, form input[type="reset"]:active {
+    background-color: #8494b8;
+    border: 2px solid black;
+    color: black;
+    transition-duration: 0s;
 }
