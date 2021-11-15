@@ -52,6 +52,7 @@ nav li:hover {
 nav li:active {
     background-color: #50666f;
     border-top: 0.5em solid #50666f;
+    border-bottom: 0.5em solid #50666f;
     transition: 0.15s;
 }
 
@@ -154,7 +155,7 @@ footer div li {
     display: inline;
 }
 
-.main-subject > h1 {
+main > h1 {
     color: #6277b6;
 }
 
@@ -228,10 +229,25 @@ footer div li {
     color: red;
 }
 
+/* .subject .choose-price input[type="radio"]{
+    display: none;
+}
+
+.subject .choose-price label {
+    border: 2px solid #215ef9;
+    background-color: #215ef9;
+    color: white;
+    font-weight: 700;
+    padding: 1em;
+    border-radius: 4px;
+} */
+
 .subject .start-day {
+    width: 25%;
     background-color: #dadbde;
     border: 3px solid #bac0ca;
     border-radius: 10px;
+    margin: 0.5em;
     float: left;
 }
 
@@ -240,10 +256,13 @@ footer div li {
 }
 
 .subject .start-day button {
+    width: 80%;
     background-color: #b9161f;
     padding: 0.8em;
+    margin: 1em;
     color: white;
     font-family: 'Manrope', sans-serif;
+    font-weight: 700;
     border: 2px solid #dadbde;
     transition-duration: 0.5s;
 }
