@@ -128,6 +128,11 @@ section::after{
     float: right;
 }
 
+.announcement {
+    width: 300px;
+    float: left;
+}
+
 .announcement > h3 {
     margin-bottom: 0.5em;
 }
@@ -229,21 +234,41 @@ main > h1 {
     color: red;
 }
 
-/* .subject .choose-price input[type="radio"]{
+.subject .choose-price h3 {
+    padding-bottom: 1em;
+}
+
+.subject .choose-price input[type="radio"]{
     display: none;
 }
 
 .subject .choose-price label {
-    border: 2px solid #215ef9;
-    background-color: #215ef9;
-    color: white;
+    border: 2px solid #858da8;
+    color: #858da8;
     font-weight: 700;
     padding: 1em;
     border-radius: 4px;
-} */
+    transition-duration: 0.5s;
+}
+
+.subject .choose-price label:hover {
+    border: 2px solid black;
+    color: black;
+    
+}
+
+.subject .choose-price input[type="radio"]:focus + label {
+    background-color: #7c7c99;
+}
+
+.subject .choose-price input[type="radio"]:checked + label {
+    border: 2px solid #215ef9;
+    background-color: #215ef9;
+    color: white;
+}
 
 .subject .start-day {
-    width: 25%;
+    width: 200px;
     background-color: #dadbde;
     border: 3px solid #bac0ca;
     border-radius: 10px;
@@ -264,6 +289,7 @@ main > h1 {
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
     border: 2px solid #dadbde;
+    border-radius: 4px;
     transition-duration: 0.5s;
 }
 
@@ -296,6 +322,7 @@ form input[type="submit"], form input[type="reset"] {
     padding: 0.8em;
     margin-top: 0.5em;
     border: 2px solid;
+    border-radius: 4px;
     background-color: #215ef9;
     font-family: 'Manrope', sans-serif;
     color: white;
