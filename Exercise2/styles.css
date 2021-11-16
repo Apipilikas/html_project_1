@@ -1,0 +1,344 @@
+body {
+    background-color: #f2f0ef;
+    font-family: 'Manrope', sans-serif;
+    margin: 0em;
+}
+
+h1, h2, p {
+    margin: 0em;
+    padding: 0.5em;
+}
+
+section > img {
+    margin: 0.5em;
+}
+
+.main-content > h3 {
+    margin: 0.5em;
+}
+
+header {
+    background-color: #215ef9;
+    font-size: 1.1em;
+}
+
+nav ul {
+    margin: 0em;
+    padding: 0.5em 0em;
+    border: 0.5em solid #94acfc;
+    background-color: #94acfc;
+}
+
+nav li > a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li {
+    color: white;
+    display: inline;
+    padding: 0.5em 1em;
+}
+
+nav li:hover {
+    border-bottom: 0.5em solid #50666f;
+    transition: 0.5s;
+}
+
+nav li:active {
+    background-color: #50666f;
+    border-top: 0.5em solid #50666f;
+    border-bottom: 0.5em solid #50666f;
+    transition: 0.15s;
+}
+
+section > * {
+    margin-left: 0.5em;
+}
+
+.main-content > h2 {
+    color: #6277b6;
+}
+
+#world-connection {
+    background-color: #d5ebf2;
+}
+
+#world-connection > img {
+    float: left;
+}
+
+#most-famous-subject-areas {
+    background-color: #67b4da;
+}
+
+#most-famous-subject-areas a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.25s;
+}
+
+#most-famous-subject-areas a:hover {
+    color: red;
+    text-decoration: none;
+    border-bottom: 0.2em solid red;
+}
+
+#most-famous-subject-areas a:active {
+    color: black;
+    background-color: red;
+    border-bottom: 0.2em solid red;
+}
+
+#most-famous-subject-areas a:visited {
+    color: black;
+}
+
+section:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+#your-level {
+    background-color: #ffdf52;
+}
+
+#your-level > h3:first-letter {
+    font-size: 1.5em;
+    color: red;
+}
+
+#your-level > img {
+    float: left;
+}
+
+#our-vision {
+    background-color: #ebdbc4;
+}
+
+#our-vision > img {
+    float: right;
+}
+
+.announcement {
+    width: 300px;
+    float: left;
+}
+
+.announcement > h3 {
+    margin-bottom: 0.5em;
+}
+
+.announcement > h3 + p {
+    margin: 0em;
+    border-left: 0.2em solid #215ef9;
+    font-weight: 500;
+}
+
+footer {
+    background-color: #dadbde;
+}
+
+footer > img, footer address ,footer .social-media-footer {
+    float: left;
+}
+
+footer  address a {
+    color: black;
+    text-decoration: none;
+}
+
+footer address li {
+    display: block;
+}
+
+footer div li {
+    display: inline;
+}
+
+footer > p {
+    clear: both;
+}
+
+main > h1 {
+    color: #6277b6;
+}
+
+.subject h1 {
+    border-left: 0.5em solid #215ef9;
+    font-size: 1.8em;
+}
+
+.subject img {
+    float: left;
+}
+
+.subject table th {
+    padding: 1.5em;
+}
+
+.subject table td {
+    padding: 1em;
+}
+
+.subject .content table {
+    border-spacing: 0;
+    text-align: center;
+}
+
+.subject .content table th {
+    background-color: #344c74;
+    color: white;
+    font-weight: bold;
+}
+
+.subject .content table td {
+    background-color: #bcc4d1;
+}
+
+.subject .content table tbody > tr:first-child > td {
+    background-color: #858da8;
+    font-weight: 600;
+}
+
+.subject .links a {
+    color: black;
+}
+
+.subject .links a:hover {
+    color: white;
+    background-color: #858da8;
+    text-decoration: none;
+}
+
+.subject .total-cost thead > tr > th:nth-child(2) {
+    background-color: #b9161f;
+    color: white;
+}
+
+.subject .total-cost thead > tr > th:nth-child(3) {
+    background-color: #fbdb54;
+}
+
+.subject .total-cost tbody > tr > td:first-child {
+    font-weight: bold;
+}
+
+.subject .total-cost tbody > tr > td + td {
+    text-align: center;
+}
+
+.subject .total-cost s {
+    padding: 0.5em;
+    font-size: 1.5em;
+    color: red;
+}
+
+.subject .choose-price h3 {
+    padding-bottom: 1em;
+}
+
+.subject .choose-price input[type="radio"]{
+    display: none;
+}
+
+.subject .choose-price label {
+    border: 2px solid #858da8;
+    color: #858da8;
+    font-weight: 700;
+    padding: 1em;
+    border-radius: 4px;
+    transition-duration: 0.5s;
+}
+
+.subject .choose-price label:hover {
+    border: 2px solid black;
+    color: black;
+    
+}
+
+.subject .choose-price input[type="radio"]:focus + label {
+    background-color: #7c7c99;
+}
+
+.subject .choose-price input[type="radio"]:checked + label {
+    border: 2px solid #215ef9;
+    background-color: #215ef9;
+    color: white;
+}
+
+.subject .start-day {
+    width: 200px;
+    background-color: #dadbde;
+    border: 3px solid #bac0ca;
+    border-radius: 5px;
+    margin: 0.5em;
+    float: left;
+}
+
+.subject .start-day h2 {
+    padding: 0.2em;
+}
+
+.subject .start-day button {
+    width: 80%;
+    background-color: #b9161f;
+    padding: 0.8em;
+    margin: 1em;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    border: 2px solid #dadbde;
+    border-radius: 6px;
+    transition-duration: 0.5s;
+}
+
+.subject .start-day button:hover {
+    background-color: #6e070c;
+}
+
+.subject .start-day button:active {
+    border: 2px solid black;
+    transition: 0s;
+}
+
+form {
+    padding: 0.5em;
+}
+
+form label, form input[type="text"], form input[type="email"],
+form select, form textarea {
+    display: block;
+    width: 99%;
+    padding: 0.5em;
+    font-family: 'Manrope', sans-serif;
+}
+
+form label {
+    padding-left: 0em;
+}
+
+form input[type="submit"], form input[type="reset"] {
+    padding: 0.8em;
+    margin-top: 0.5em;
+    border: 2px solid;
+    border-radius: 4px;
+    background-color: #215ef9;
+    font-family: 'Manrope', sans-serif;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+form input[type="submit"]:hover, form input[type="reset"]:hover {
+    background-color: #04246c;
+}
+
+form input[type="submit"]:active, form input[type="reset"]:active {
+    background-color: #8494b8;
+    border: 2px solid black;
+    color: black;
+    transition-duration: 0s;
+}
