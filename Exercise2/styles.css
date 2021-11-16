@@ -1,7 +1,5 @@
-/*https://looka.com/editor/77504306*/
 body {
     background-color: #f2f0ef;
-    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: 'Manrope', sans-serif;
     margin: 0em;
 }
@@ -12,7 +10,7 @@ h1, h2, p {
 }
 
 section > img {
-    padding: 0.5em;
+    margin: 0.5em;
 }
 
 .main-content > h3 {
@@ -22,7 +20,6 @@ section > img {
 header {
     background-color: #215ef9;
     font-size: 1.1em;
-    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
 nav ul {
@@ -40,11 +37,10 @@ nav li > a {
 nav li {
     color: white;
     display: inline;
-    padding: 0.5em;
+    padding: 0.5em 1em;
 }
 
 nav li:hover {
-    /* background-color: #50666f; */
     border-bottom: 0.5em solid #50666f;
     transition: 0.5s;
 }
@@ -61,7 +57,6 @@ section > * {
 }
 
 .main-content > h2 {
-    /* background-color: #6277b6; */
     color: #6277b6;
 }
 
@@ -100,7 +95,7 @@ section > * {
     color: black;
 }
 
-section::after{
+section:after {
     content: ".";
     visibility: hidden;
     display: block;
@@ -111,7 +106,7 @@ section::after{
     background-color: #ffdf52;
 }
 
-#your-level > h3::first-letter {
+#your-level > h3:first-letter {
     font-size: 1.5em;
     color: red;
 }
@@ -147,7 +142,11 @@ footer {
     background-color: #dadbde;
 }
 
-footer  address  a {
+footer > img, footer address ,footer .social-media-footer {
+    float: left;
+}
+
+footer  address a {
     color: black;
     text-decoration: none;
 }
@@ -158,6 +157,10 @@ footer address li {
 
 footer div li {
     display: inline;
+}
+
+footer > p {
+    clear: both;
 }
 
 main > h1 {
@@ -271,7 +274,7 @@ main > h1 {
     width: 200px;
     background-color: #dadbde;
     border: 3px solid #bac0ca;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 0.5em;
     float: left;
 }
@@ -289,7 +292,7 @@ main > h1 {
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
     border: 2px solid #dadbde;
-    border-radius: 4px;
+    border-radius: 6px;
     transition-duration: 0.5s;
 }
 
