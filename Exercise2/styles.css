@@ -168,6 +168,7 @@ main > h1 {
 }
 
 .subject h1 {
+    margin-left: 0.5em;
     border-left: 0.5em solid #215ef9;
     font-size: 1.8em;
 }
