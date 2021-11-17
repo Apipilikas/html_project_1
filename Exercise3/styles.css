@@ -168,8 +168,12 @@ main > h1 {
 }
 
 .subject h1 {
+    background-color: #f2f0ef;
+    margin-left: 0.3em;
     border-left: 0.5em solid #215ef9;
     font-size: 1.8em;
+    position: sticky;
+    top: 0;
 }
 
 .subject img {
