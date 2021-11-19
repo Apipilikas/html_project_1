@@ -1,6 +1,6 @@
 body {
     background-color: #f2f0ef;
-    font-family: 'Manrope', sans-serif;
+    font-family: sans-serif;
     margin: 0em;
 }
 
@@ -86,15 +86,17 @@ section > * {
 }
 
 #group-images > img:nth-child(1) {
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: 150px;
     position: absolute;
-    top: 770px;
-    right: 300px;
+    top: 730px;
+    right: 250px;
     z-index: 3;
 }
 
 #group-images > img:nth-child(2) {
+    width: 250px;
+    height: 200px;
     position: relative;
     right: 20px;
     z-index: 2;
@@ -104,7 +106,7 @@ section > * {
     width: 300px;
     height: 200px;
     position: absolute;
-    top: 1000px;
+    top: 900px;
     right: 200px;
 }
 
@@ -350,7 +352,7 @@ main > h1 {
     padding: 0.8em;
     margin: 1em;
     color: white;
-    font-family: 'Manrope', sans-serif;
+    font-family: sans-serif;
     font-weight: 700;
     border: 2px solid #dadbde;
     border-radius: 6px;
@@ -375,7 +377,7 @@ form select, form textarea {
     display: block;
     width: 99%;
     padding: 0.5em;
-    font-family: 'Manrope', sans-serif;
+    font-family: sans-serif;
 }
 
 form label {
@@ -388,7 +390,7 @@ form input[type="submit"], form input[type="reset"] {
     border: 2px solid;
     border-radius: 4px;
     background-color: #215ef9;
-    font-family: 'Manrope', sans-serif;
+    font-family: sans-serif;
     color: white;
     transition-duration: 0.5s;
 }
