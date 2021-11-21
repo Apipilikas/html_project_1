@@ -25,7 +25,7 @@ header {
 nav ul {
     margin: 0em;
     padding: 0.5em 0em;
-    border-left: 0.5em solid #94acfc;
+    border: 0.5em solid #94acfc;
     background-color: #94acfc;
 }
 
@@ -227,6 +227,10 @@ main > h1 {
     color: #6277b6;
 }
 
+.main-subject > .subject:nth-child(2n) {
+    background-color: #cbdaeb;
+}
+
 .subject h1 {
     background-color: #f2f0ef;
     margin-left: 0.3em;
@@ -234,6 +238,18 @@ main > h1 {
     font-size: 1.8em;
     position: sticky;
     top: 0;
+}
+
+.subject:nth-child(2n) h1 {
+    background-color: #cbdaeb;
+}
+
+.subject:nth-child(2n + 1) section > h2 {
+    background-color: #cfc4be;
+}
+
+.subject:nth-child(2n) section > h2 {
+    background-color: #63a2e0;
 }
 
 .subject img {
@@ -570,6 +586,7 @@ form input[type="submit"]:active, form input[type="reset"]:active {
 }
 
 .dropdown-content a {
+    border-left: 0.5em solid #94acfc;
     color: white;
     padding: 0.5em 1em;
     text-decoration: none;
@@ -577,8 +594,14 @@ form input[type="submit"]:active, form input[type="reset"]:active {
 }
 
 .dropdown-content a:hover {
-    /* font-weight: bold;
-    font-size: large; */
+    border-left: 0.5em solid #50666f;
+    transition: 0.5s;
+}
+
+.dropdown-content a:active {
+    color: white;
+    background-color: #50666f;
+    transition: 0.15s;
 }
 
 .dropdown:hover .dropdown-content {
