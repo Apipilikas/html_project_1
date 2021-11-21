@@ -25,7 +25,7 @@ header {
 nav ul {
     margin: 0em;
     padding: 0.5em 0em;
-    border: 0.5em solid #94acfc;
+    border-left: 0.5em solid #94acfc;
     background-color: #94acfc;
 }
 
@@ -37,10 +37,11 @@ nav li > a {
 nav li {
     color: white;
     display: inline;
-    padding: 0.5em 1em;
+    padding: 0.5em;
 }
 
-nav li:hover {
+nav li:not(nav ul > li:nth-child(2)):hover {
+    /* background-color: #50666f; */
     border-bottom: 0.5em solid #50666f;
     transition: 0.5s;
 }
@@ -405,3 +406,188 @@ form input[type="submit"]:active, form input[type="reset"]:active {
     color: black;
     transition-duration: 0s;
 }
+
+#education, #health, #law {
+    background: rgba(44, 132, 219, 0.2)
+} 
+
+.field h2 {
+    border-left: 0.3em solid #3365d1;
+    font-size: 1.8em;
+    margin-bottom: 0.3em;
+}
+
+.field > ul > li a {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+.field > ul > li a:hover {
+    color: white;
+    background-color: #858da8;
+    text-decoration: none;
+}
+
+.field > ul > li a:active {
+    background-color: #858da8;
+    border-bottom: 0.5em solid #858da8;
+    transition: 0.15s;
+}
+
+.field > ul {
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.field > ul > li {
+    font-size: large;
+    font-weight: bold;
+    display: inline;
+    margin: 40px;
+}
+
+#education ul > li { /*etsi wste na xorane se mia grammi*/
+    font-size: large;
+    font-weight: bold;
+    display: inline;
+    margin: 30px;
+}
+
+.field{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#education ul li a, #health ul li a, #law ul li a, #education ul li, #health ul li, #law ul li {
+    color: rgb(19, 16, 233);
+}
+
+#energy ul li a, #history ul li a, #IT ul li a, #energy ul li, #history ul li, #IT ul li {
+    color: rgb(226, 134, 81);
+}
+
+#education p, #health p, #law p {
+    margin: 2em 10em 2em 1em;
+    background: rgba(44, 132, 219, 0.3);
+    border-style: solid;
+    border-width: 4px 4px;
+    border-color: white;
+    border-radius: 25px;
+}
+
+#energy p, #history p, #IT p {
+    margin: 2em 10em 2em 1em;
+    background: rgba(126, 93, 76, 0.3);
+    border-style: solid;
+    border-width: 4px 4px;
+    border-color: white;
+    border-radius: 25px;
+}
+
+.about_us {
+    background: rgba(44, 132, 219, 0.3);
+}
+
+.about_us h2 {
+    color: white;
+    font-size: 1.6em;
+    background: rgba(44, 132, 219, 0.6);
+    margin: 0em;
+}
+
+#start_about img{
+    float: right;
+    margin-right: 10em;
+}
+
+#start_about p{
+    margin-top: 3.5em;
+    font-weight: bold;
+    font-size: large;
+}
+
+#end_about {
+    margin-bottom: 5em;
+}
+
+#end_about p{
+    position:relative;
+    top: 4em;
+    max-width: 80em;
+}    
+
+#end_about img{
+    margin: 2em;
+}
+
+#end_about article img{
+    border-radius: 80%;
+    float: left;
+}
+
+#end_about h3{
+    font-weight: bold;
+    font-size: large;
+    position: relative;
+    left: 1.5em;
+}
+
+#first {
+    margin-top: 5em;
+}
+
+#first p {
+    margin-bottom: 6em;
+}
+
+#second {
+    margin-top: 3em;
+}
+
+#second p{
+    margin-bottom: 8em;
+}
+
+#second h3 {
+    clear: left;
+}
+
+/* dropdown menu*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    margin-top: 0.5em;
+    display: none;
+    position: absolute;
+    background-color: #94acfc;
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    /* font-weight: bold;
+    font-size: large; */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    color: white;
+    text-align: center;
+    padding-bottom: 18px;
+    text-decoration: none;
+  }

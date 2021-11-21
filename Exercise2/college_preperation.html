@@ -10,6 +10,7 @@
     <meta name="author" content="Murto Chatzivoukoudi, Evangelos Pipilikas">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -19,8 +20,18 @@
         <nav>
             <ul>
                 <li><a href="index.html">Αρχική</a></li>
-                <li><a href="SubjectAreas.html">Θεματικές περιοχές</a></li>
-                <li><a href="AboutUs.html">Ποιοι είμαστε</a></li>
+                <li class="dropdown">
+                    <a href="subject_areas.html" class="dropbtn">Θεματικές περιοχές</a>
+                    <div class="dropdown-content">
+                        <a href="subject_areas.html#education">Εκπαίδευση</a>
+                        <a href="subject_areas.html#energy">Ενέργεια</a>
+                        <a href="subject_areas.html#health">Υγεία</a>
+                        <a href="subject_areas.html#history">Ιστορία</a>
+                        <a href="subject_areas.html#law">Νομική</a>
+                        <a href="subject_areas.html#IT">Προγραμματισμός Υπολογιστών</a>
+                    </div>
+                </li>
+                <li><a href="about_us.html">Ποιοι είμαστε</a></li>
                 <li><a href="contact_form.html">Φόρμα επικοινωνίας</a></li>
             </ul>
         </nav>

@@ -3,19 +3,14 @@
 <html lang="el">
 
 <head>
-    <!-- Basic meta -->
-    <meta charset="UTF-8">
-    <meta name="description" content="Massive Open Online Courses">
-    <meta name="keywords" content="MOOC, μαθησιακό υλικό, εκπαίδευση εξ'αποστάσεως">
-    <meta name="author" content="Μυρτώ Χατζηβουκούδη">
     <title>Edume | Σχετικά με εμάς</title>
-
-    <!-- Mobile Specific -->
+    <link rel="icon" href="resources/edume_icon.png">
+    <meta name="description" content="An open source site for everyone">
+    <meta name="keywords" content="Open source, Education, Edume">
+    <meta name="author" content="Myrto Chatzivoukoudi, Evangelos Pipilikas">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Shortcut Icon -->
-    <link rel="shortcut icon" type="image/png" href="resources/edume_icon.png">
-
 </head>
 
 <body>
@@ -25,18 +20,29 @@
         <nav>
             <ul>
                 <li><a href="index.html">Αρχική</a></li>
-                <li><a href="SubjectAreas.html">Θεματικές περιοχές</a></li>
-                <li><a href="AboutUs.html">Ποιοι είμαστε</a></li>
+                <li class="dropdown">
+                    <a href="subject_areas.html" class="dropbtn">Θεματικές περιοχές</a>
+                    <div class="dropdown-content">
+                        <a href="subject_areas.html#education">Εκπαίδευση</a>
+                        <a href="subject_areas.html#energy">Ενέργεια</a>
+                        <a href="subject_areas.html#health">Υγεία</a>
+                        <a href="subject_areas.html#history">Ιστορία</a>
+                        <a href="subject_areas.html#law">Νομική</a>
+                        <a href="subject_areas.html#IT">Προγραμματισμός Υπολογιστών</a>
+                    </div>
+                </li>
+                <li><a href="about_us.html">Ποιοι είμαστε</a></li>
                 <li><a href="contact_form.html">Φόρμα επικοινωνίας</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="main-subject" >
         <!--Allagi-->
         <h1>Σχετικά Με Εμάς </h1>
-        <section>
+        <section class="about_us" id="start_about">
             <h2>Ο σκοπός μας</h2>
+            <img src="resources/handshake_tr.png" alt="Χειραψία" width="240" height="225">
             <p>
                 Έχουμε κάνει τρείς δεσμεύσεις προς τον κόσμο τις οποίες πραγματοποιούμε απο την πρώτη μέρα:
             </p>
@@ -45,21 +51,26 @@
                 <li>Να ενισχύσουμε την εκπαίδευση τόσο στο πανεπιστήμιο, όσο και online. </li>
                 <li>Να προωθήσουμε την διδασκαλία και την εκμάθηση μέσω έρευνας.</li>
             </ol>
-
-            <img src="resources/cytonn-photography-n95VMLxqM2I-unsplash.jpg" alt="Χειραψία" width="330" height="225">
             
         </section>
 
-        <section>
+        <section class="about_us" id="end_about">
             <h2>Η ομάδα μας</h2>
-            <article>
+            <article id="first">
                 <h3>Χατζηβουκούδη Μυρτώ</h3>
-                <p>Βιογραφικό...</p>
-                <img src="resources/Woman-DRAWING-–-STEP-8new.jpg" alt="Μυρτώ" width="330" height="225">
+                <img src="resources/Woman-DRAWING-–-STEP-8new.jpg" alt="Μυρτώ" width="190" height="170">
+                <p>Receptionist with over 5 years' experience working in both the public and private sectors. Diplomatic,
+                    personable, and adept at managing sensitive situations. Highly organized, self-motivated, and proficient
+                     with computers. Looking to boost students’ satisfactions scores for ABC University. Bachelor's degree
+                     in communications.</p>
             </article>
-            <h3>Πιπιλίκας Άγγελος</h3>
-            <p>Βιογραφικό...</p>
-            <img src="resources/Man-DRAWING-–-STEP-8new.jpg" alt="Άγγελος" width="330" height="225">
+            <article id="second">
+                <h3>Πιπιλίκας Άγγελος</h3>
+                <img src="resources/Man-DRAWING-–-STEP-8new.jpg" alt="Άγγελος" width=190" height="170">
+                <p>Experienced PMP with a background in law and 7+ years experience growing revenue for a Massachusetts-based
+                     electronics firm. Seeking to leverage leadership expertise as project manager for Paylocity. Guest speaker 
+                     at the Northeast Lean Conference in 2014.</p>
+        </article>
         </section>
 
     </main>
