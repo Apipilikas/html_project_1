@@ -93,11 +93,62 @@ nav li:not(nav ul > li:nth-child(2)):hover {
     transition: 0.5s;
 }
 
+nav li:nth-child(2):hover {
+    border-bottom: 0.5em solid #94acfc;
+    transition: 0.5s;
+}
+
 nav li:active {
     background-color: #50666f;
     border-top: 0.5em solid #50666f;
     border-bottom: 0.5em solid #50666f;
     transition: 0.15s;
+}
+
+/* dropdown menu*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    margin-top: 0.5em;
+    display: none;
+    position: absolute;
+    background-color: #94acfc;
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+}
+
+.dropdown-content a {
+    border-left: 0.5em solid #94acfc;
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    border-left: 0.5em solid #50666f;
+    transition: 0.5s;
+}
+
+.dropdown-content a:active {
+    color: white;
+    background-color: #50666f;
+    transition: 0.15s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    color: white;
+    text-align: center;
+    padding-bottom: 18px;
+    text-decoration: none;
 }
 
 section > * {
@@ -637,48 +688,3 @@ form input[type="submit"]:active, form input[type="reset"]:active {
     clear: left;
 }
 
-/* dropdown menu*/
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    margin-top: 0.5em;
-    display: none;
-    position: absolute;
-    background-color: #94acfc;
-    min-width: 160px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-    z-index: 1;
-}
-
-.dropdown-content a {
-    border-left: 0.5em solid #94acfc;
-    color: white;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    border-left: 0.5em solid #50666f;
-    transition: 0.5s;
-}
-
-.dropdown-content a:active {
-    color: white;
-    background-color: #50666f;
-    transition: 0.15s;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropbtn {
-    color: white;
-    text-align: center;
-    padding-bottom: 18px;
-    text-decoration: none;
-  }

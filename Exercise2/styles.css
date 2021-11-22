@@ -576,7 +576,7 @@ form input[type="submit"]:active, form input[type="reset"]:active {
 }
 
 .dropdown-content {
-    margin-top: 0.5em;
+    margin-top: 1em;
     display: none;
     position: absolute;
     background-color: #94acfc;
