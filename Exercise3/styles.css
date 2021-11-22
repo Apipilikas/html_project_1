@@ -46,7 +46,7 @@ body {
     margin: 0em;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
     margin: 0em;
     padding: 0.5em;
 }
@@ -167,15 +167,9 @@ nav li:active {
     }
 }
 
-@media only screen and (max-width: 768px) {
-    nav ul {
-        /* display: none; */
-    }
-}
-
-section > * {
+/* section > * {
     margin-left: 0.5em;
-}
+} */
 
 .main-content > h2 {
     color: #6277b6;
@@ -320,8 +314,12 @@ footer {
     justify-items: center;
 }
 
-footer > img, footer address ,footer .social-media-footer {
-    float: left;
+.social-media-footer ul {
+    padding: 0em;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
 }
 
 .social-media-footer img {
@@ -352,10 +350,6 @@ footer  address a {
 
 footer address li {
     display: block;
-}
-
-footer div li {
-    display: inline;
 }
 
 /*allagi*/
@@ -527,7 +521,8 @@ main > h1 {
     border: 3px solid #bac0ca;
     border-radius: 5px;
     margin: 0.5em;
-    float: left;
+    /* float: left; */
+    text-align: center;
 }
 
 .subject .start-day h2 {
@@ -554,6 +549,38 @@ main > h1 {
 .subject .start-day button:active {
     border: 2px solid black;
     transition: 0s;
+}
+
+/*  */
+.subject .enrollment > p {
+    text-align: center;
+}
+
+.subject .enrollment > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subject .enrollment .subject-choices section {
+    text-align: center;
+}
+
+.subject .enrollment .subject-choices {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.subject .enrollment .choose-price {
+    flex-wrap: nowrap;
+}
+
+.subject .enrollment .available-dates {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 form {
