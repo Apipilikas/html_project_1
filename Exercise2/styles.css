@@ -240,6 +240,10 @@ main > h1 {
     top: 0;
 }
 
+.subject .description p {
+    font-size: 1.3em;
+}
+
 .subject:nth-child(2n) h1 {
     background-color: #cbdaeb;
 }

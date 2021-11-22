@@ -151,6 +151,28 @@ nav li:active {
     text-decoration: none;
 }
 
+/* media query */
+@media only screen and (max-width: 600px) {
+    nav ul {
+        display: block;
+    }
+    .dropdown-content {
+        position: relative;
+    }
+    #announcements {
+        flex-direction: column;
+    }
+    .announcement {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        /* display: none; */
+    }
+}
+
 section > * {
     margin-left: 0.5em;
 }
@@ -359,6 +381,29 @@ main > h1 {
     top: 0;
 }
 
+/* allagi ex3 */
+.subject .description {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.subject .description img {
+    grid-column: 1/2;
+}
+
+.subject .description p {
+    font-size: 1.3em;
+    grid-column: 3/8;
+}
+
+.subject section h2 {
+    text-align: center;
+}
+
+.subject section table {
+    margin: auto;
+}
+
 .subject:nth-child(2n) h1 {
     background-color: #cbdaeb;
 }
@@ -405,6 +450,13 @@ main > h1 {
 
 .subject .links a {
     color: black;
+}
+
+/* allagi ex3 */
+.subject .links ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .subject .links a:hover {
