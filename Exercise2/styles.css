@@ -244,6 +244,14 @@ main > h1 {
     font-size: 1.3em;
 }
 
+.subject section h2 {
+    text-align: center;
+}
+
+.subject section table {
+    margin: auto;
+}
+
 .subject:nth-child(2n) h1 {
     background-color: #cbdaeb;
 }
@@ -274,22 +282,40 @@ main > h1 {
 }
 
 .subject .content table th {
-    background-color: #344c74;
+    background-color: #8c9ca4;
     color: white;
     font-weight: bold;
 }
 
+.subject:nth-child(2n + 1) .content table th {
+    background-color: #f1b99b;
+}
+
+.subject:nth-child(2n) .content table th {
+    background-color: #89bdf1;
+}
+
 .subject .content table td {
-    background-color: #bcc4d1;
+    background-color: #d9dadb;
 }
 
 .subject .content table tbody > tr:first-child > td {
-    background-color: #858da8;
+    background-color: #b4b4bc;
     font-weight: 600;
 }
 
 .subject .links a {
     color: black;
+}
+
+.subject:nth-child(2n + 1) .links ol li {
+    padding: 0.5em;
+    background: linear-gradient(to right, #f1b99b, #f2f0ef);
+}
+
+.subject:nth-child(2n) .links ol li {
+    padding: 0.5em;
+    background: linear-gradient(to right, #89bdf1, #cbdaeb);
 }
 
 .subject .links a:hover {
