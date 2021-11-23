@@ -41,7 +41,6 @@ nav li {
 }
 
 nav li:not(nav ul > li:nth-child(2)):hover {
-    /* background-color: #50666f; */
     border-bottom: 0.5em solid #50666f;
     transition: 0.5s;
 }
@@ -250,6 +249,14 @@ main > h1 {
 
 .subject section table {
     margin: auto;
+}
+
+.subject .content p {
+    text-align: center;
+}
+
+.subject .content table {
+    width: 50%;
 }
 
 .subject:nth-child(2n) h1 {
