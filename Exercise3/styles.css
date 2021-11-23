@@ -44,9 +44,13 @@ body {
     background-color: #f2f0ef;
     font-family: 'Manrope', sans-serif;
     margin: 0em;
+    display: grid;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
 }
 
-h1, h2, h3, p {
+h1, h2, p {
     margin: 0em;
     padding: 0.5em;
 }
@@ -62,6 +66,11 @@ section > img {
 header {
     background-color: #215ef9;
     font-size: 1.1em;
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
 }
 
 /*allagi*/
@@ -109,6 +118,7 @@ nav li:active {
 .dropdown {
     position: relative;
     display: inline-block;
+    width: 100%;
 }
 
 .dropdown-content {
@@ -116,7 +126,8 @@ nav li:active {
     display: none;
     position: absolute;
     background-color: #94acfc;
-    min-width: 160px;
+    width: 100%;
+    text-align: left;
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
 }
@@ -167,9 +178,9 @@ nav li:active {
     }
 }
 
-/* section > * {
+section > * {
     margin-left: 0.5em;
-} */
+}
 
 .main-content > h2 {
     color: #6277b6;
@@ -312,6 +323,12 @@ footer {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     justify-items: center;
+    grid-area: footer;
+}
+
+footer address ul {
+    padding: 0em;
+    list-style-type: none;
 }
 
 .social-media-footer ul {
@@ -379,15 +396,18 @@ main > h1 {
 .subject .description {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr 2fr 1fr;
 }
 
 .subject .description img {
     grid-column: 1/2;
+    grid-row: 1/4;
 }
 
 .subject .description p {
     font-size: 1.3em;
     grid-column: 3/8;
+    grid-row: 2/3;
 }
 
 .subject section h2 {
@@ -398,15 +418,25 @@ main > h1 {
     margin: auto;
 }
 
+.subject .content p {
+    text-align: center;
+}
+
+.subject .content table {
+    width: 50%;
+}
+
 .subject:nth-child(2n) h1 {
     background-color: #cbdaeb;
 }
 
 .subject:nth-child(2n + 1) section > h2 {
+    margin: 0em;
     background-color: #cfc4be;
 }
 
 .subject:nth-child(2n) section > h2 {
+    margin: 0em;
     background-color: #63a2e0;
 }
 
@@ -428,17 +458,25 @@ main > h1 {
 }
 
 .subject .content table th {
-    background-color: #344c74;
+    background-color: #8c9ca4;
     color: white;
     font-weight: bold;
 }
 
+.subject:nth-child(2n + 1) .content table th {
+    background-color: #f1b99b;
+}
+
+.subject:nth-child(2n) .content table th {
+    background-color: #89bdf1;
+}
+
 .subject .content table td {
-    background-color: #bcc4d1;
+    background-color: #d9dadb;
 }
 
 .subject .content table tbody > tr:first-child > td {
-    background-color: #858da8;
+    background-color: #b4b4bc;
     font-weight: 600;
 }
 
@@ -448,9 +486,29 @@ main > h1 {
 
 /* allagi ex3 */
 .subject .links ol {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.subject:nth-child(2n + 1) .links ol li {
+    padding: 0.5em;
+    background: linear-gradient(to right, #f1b99b, #f2f0ef);
+}
+
+.subject:nth-child(2n) .links ol li {
+    padding: 0.5em;
+    background: linear-gradient(to right, #89bdf1, #cbdaeb);
+}
+
+.subject .links ol li:nth-child(1){
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.subject .links ol li:nth-child(2){
+    grid-row: 2/3;
+    grid-column: 4/5;
 }
 
 .subject .links a:hover {
