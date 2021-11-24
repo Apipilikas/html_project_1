@@ -44,56 +44,80 @@
         <h1>Επικοινωνήστε μαζί μας!</h1>
         <form>
 
-            <h2>Στοιχεία ενδιαφερόμενου</h2>
-            <label for="firstname_txt">Όνομα: </label>
-            <input type="text" id="firstname_txt" name="firstname" placeholder="Το όνομα μου..." required>
+            <div class="customer-inf-area">
+                <h2>Στοιχεία ενδιαφερόμενου</h2>
+                <div class="customer-inf-content">
+                    <div class="firstname-box">
+                        <label for="firstname_txt">Όνομα: </label>
+                        <input type="text" id="firstname_txt" name="firstname" placeholder="Το όνομα μου..." required>
+                    </div>
+                
+                    <div class="lastname-box">
+                        <label for="lastname_txt">Επώνυμο: </label>
+                        <input type="text" id="lastname_txt" name="lastname" placeholder="Το επώνυμο μου..." required>
+                    </div>
+                
+                    <div class="email-box">
+                        <label for="email_txt">Email: </label>
+                        <input type="email" id="email_txt" name="email" placeholder="Το email μου..." required>
+                    </div>
+                    
+                    <div class="country-box">
+                        <label for="country_txt">Χώρα: </label>
+                        <input type="text" id="country_txt" name="country" placeholder="Η χώρα μου..." required>
+                    </div>
+                </div>
+            </div>
+            <div class="customer-subject-area">
+                <h2>Αντικείμενο σχολιασμού</h2>
+            
+                <div class="main-issue-box">
+                    <p>Επιλέξτε ένα από τα παρακάτω θέματα για το οποίο θέλετε να επικοινωνήσετε μαζί μας. Σε
+                        περίπτωση όπου δεν σας καλύπτουν οι παρακάτω επιλογές, πατήστε στην ενότητα
+                        <strong>Άλλα θέματα</strong> την επιλογή <strong>Άλλο θέμα</strong> και
+                        γράψτε στο κουτί με την αντίστοιχη επιγραφή το θέμα του προβλήματος σας.
+                    </p>
+                
+                    <select id="main_issue" name="Θέμα:">
+                        <optgroup label="Θέματα με λογαριασμό">
+                            <option value="renew_account">Ανανέωση λογαριασμού</option>
+                            <option value="delete_account">Διαγραφή λογαριασμού</option>
+                            <option value="unblock_account">Ξεμπλοκάρισμα λογαριασμού</option>
+                            <option value="confirm_account_details">Επιβεβαίωση στοιχείων λογαριασμού</option>
+                        </optgroup>
+                        <optgroup label="Θέματα με πληρωμή">
+                            <option value="cancel_montly_payment">Ακύρωση μηνιαίας πίστωσης</option>
+                            <option value="payment_failure">Αποτυχία πληρωμής</option>
+                            <option value="change_payment_details">Αλλαγή στοιχείων πληρωμής</option>
+                        </optgroup>
+                        <optgroup label="Θέματα με μαθήματα">
+                            <option value="enrollment_failure">Αποτυχία εγγραφής σε μάθημα</option>
+                            <option value="cancel_enrollment">Διακοπή παρακολούθησης</option>
+                            <option value="attending_problem">Πρόβλημα παρακολούθησης μαθήματος</option>
+                        </optgroup>
+                        <optgroup label="Άλλα θέματα">
+                            <option value="send_certification_problem">Καθυστέρηση αποστολής πιστοποιητικού</option>
+                            <option value="change_shipping_address">Αλλαγή διεύθυνσης αποστολής</option>
+                            <option value="else">Άλλο θέμα</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+                <div class="another-issue-box">
+                    <label for="another_issue_txt">Άλλο θέμα: </label>
+                    <input type="text" id="another_issue_txt" name="another_issue">
+                </div>
+                
+                <div class="subject-box">
+                    <label for="subject_txt">Αντικείμενο: </label>
+                    <textarea id="subject_txt"></textarea>
+                </div>
+            </div>
 
-            <label for="lastname_txt">Επώνυμο: </label>
-            <input type="text" id="lastname_txt" name="lastname" placeholder="Το επώνυμο μου..." required>
-
-            <label for="email_txt">Email: </label>
-            <input type="email" id="email_txt" name="email" placeholder="Το email μου..." required>
-
-            <label for="country_txt">Χώρα: </label>
-            <input type="text" id="country_txt" name="country" placeholder="Η χώρα μου..." required>
-            <h2>Αντικείμενο σχολιασμού</h2>
-            <p>Επιλέξτε ένα από τα παρακάτω θέματα για το οποίο θέλετε να επικοινωνήσετε μαζί μας. Σε
-                περίπτωση όπου δεν σας καλύπτουν οι παρακάτω επιλογές, πατήστε στην ενότητα
-                <strong>Άλλα θέματα</strong> την επιλογή <strong>Άλλο θέμα</strong> και
-                γράψτε στο κουτί με την αντίστοιχη επιγραφή το θέμα του προβλήματος σας.
-            </p>
-            <select id="main_issue" name="Θέμα:">
-                <optgroup label="Θέματα με λογαριασμό">
-                    <option value="renew_account">Ανανέωση λογαριασμού</option>
-                    <option value="delete_account">Διαγραφή λογαριασμού</option>
-                    <option value="unblock_account">Ξεμπλοκάρισμα λογαριασμού</option>
-                    <option value="confirm_account_details">Επιβεβαίωση στοιχείων λογαριασμού</option>
-                </optgroup>
-                <optgroup label="Θέματα με πληρωμή">
-                    <option value="cancel_montly_payment">Ακύρωση μηνιαίας πίστωσης</option>
-                    <option value="payment_failure">Αποτυχία πληρωμής</option>
-                    <option value="change_payment_details">Αλλαγή στοιχείων πληρωμής</option>
-                </optgroup>
-                <optgroup label="Θέματα με μαθήματα">
-                    <option value="enrollment_failure">Αποτυχία εγγραφής σε μάθημα</option>
-                    <option value="cancel_enrollment">Διακοπή παρακολούθησης</option>
-                    <option value="attending_problem">Πρόβλημα παρακολούθησης μαθήματος</option>
-                </optgroup>
-                <optgroup label="Άλλα θέματα">
-                    <option value="send_certification_problem">Καθυστέρηση αποστολής πιστοποιητικού</option>
-                    <option value="change_shipping_address">Αλλαγή διεύθυνσης αποστολής</option>
-                    <option value="else">Άλλο θέμα</option>
-                </optgroup>
-            </select>
-
-            <label>Άλλο θέμα: </label>
-            <input type="text" id="another_issue_txt" name="another_issue">
-
-            <label>Αντικείμενο: </label>
-            <textarea id="subject_txt"></textarea>
-            <input type="submit" id="submit_btn" name="submit">
-            <input type="reset" id="reset_btn" name="reset">
-
+            <div class="buttons-area">
+                <input type="submit" id="submit_btn" name="submit">
+                <input type="reset" id="reset_btn" name="reset">
+            </div>
         </form>
     </main>
     <footer>

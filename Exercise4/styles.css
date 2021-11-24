@@ -215,10 +215,14 @@ section > * {
 
 #world-connection {
     background-color: #d5ebf2;
+    /* text-align: center; */
 }
 
-#world-connection > img {
-    float: left;
+.main-content > img {
+    margin: auto;
+    max-width: 100%;
+    height: 100%;
+    
 }
 
 #most-famous-subject-areas {
@@ -231,8 +235,7 @@ section > * {
 
 /*allagi*/
 #mfsa-content {
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr 1fr; */
+    margin: auto;
 }
 /*allagi*/
 #mfsa-text {
@@ -317,17 +320,19 @@ section:after {
     color: red;
 }
 
-#your-level > img {
-    float: left;
-}
+/* #your-level > img {
+    max-width: 340px;
+    height: auto;
+    
+} */
 
 #our-vision {
     background-color: #ebdbc4;
 }
-
+/* 
 #our-vision > img {
-    float: right;
-}
+    
+} */
 
 #announcements {
     display: flex;
@@ -357,11 +362,12 @@ footer {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 0.5em;
 }
 
 footer > img {
-    max-width: 100%;
+    width: 100%;
 }
 
 footer address ul {
@@ -591,9 +597,14 @@ form {
 form label, form input[type="text"], form input[type="email"],
 form select, form textarea {
     display: block;
-    width: 99%;
+    width: 100%;
     padding: 0.5em;
     font-family: 'Manrope', sans-serif;
+    box-sizing: border-box;
+}
+
+form textarea {
+    height: 200px;
 }
 
 form label {
@@ -603,6 +614,7 @@ form label {
 form input[type="submit"], form input[type="reset"] {
     padding: 0.8em;
     margin-top: 0.5em;
+    width: 100%;
     border: 2px solid;
     border-radius: 4px;
     background-color: #215ef9;
@@ -620,6 +632,66 @@ form input[type="submit"]:active, form input[type="reset"]:active {
     border: 2px solid black;
     color: black;
     transition-duration: 0s;
+}
+
+/* allagi ex3 */
+form {
+    margin: auto;
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+form div h2 {
+    text-align: center;
+}
+
+form .customer-inf-area {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: #7996fc;
+}
+
+form .customer-subject-area {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: #b5cbf7;
+}
+
+form .buttons-area {
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    background-color: #bdd6ee;
+}
+/* 
+form .customer-inf-content {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "firstname gap lastname"
+                         "email email email"
+                         "country country country";
+}
+
+.customer-inf-content .firstname-box {
+    grid-area: firstname;
+}
+
+.customer-inf-content .lastname-box {
+    grid-area: lastname;
+}
+
+.customer-inf-content .email-box {
+    grid-area: email;
+} */
+
+.customer-inf-content .country-box {
+    grid-area: country;
 }
 
 #education, #health, #law {
