@@ -72,6 +72,7 @@ header {
 main {
     grid-area: main;
 }
+/* header */
 
 /*allagi*/
 nav ul {
@@ -177,6 +178,7 @@ nav li:active {
         width: 100%;
     }
 }
+/* index.html | main */
 
 section > * {
     margin-left: 0.5em;
@@ -316,6 +318,7 @@ section:after {
     border-left: 0.2em solid #215ef9;
     font-weight: 500;
 }
+/* footer */
 
 /*allagi*/
 footer {
@@ -374,6 +377,8 @@ footer > p {
     clear: both;
     grid-column: 2/3;
 }
+
+/* subjects (3 files) */
 
 main > h1 {
     color: #6277b6;
@@ -641,6 +646,8 @@ main > h1 {
     flex-wrap: wrap;
 }
 
+/* contact_form.html */
+
 form {
     padding: 0.5em;
 }
@@ -745,6 +752,8 @@ form .customer-inf-content {
     grid-area: country;
 }
 
+/* subject_areas.html */
+
 #education, #health, #law {
     background: rgba(44, 132, 219, 0.2)
 } 
@@ -822,6 +831,8 @@ form .customer-inf-content {
     border-color: white;
     border-radius: 25px;
 }
+
+/* about_us.html */
 
 .about_us {
     background: rgba(44, 132, 219, 0.3);
