@@ -758,10 +758,21 @@ form .customer-inf-content {
     background: rgba(44, 132, 219, 0.2)
 } 
 
+/*CHANGE*/
+.field {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
 .field h2 {
     border-left: 0.3em solid #3365d1;
     font-size: 1.8em;
     margin-bottom: 0.3em;
+    grid-area: 1/1/2/2;
 }
 
 .field > ul > li a {
@@ -784,7 +795,8 @@ form .customer-inf-content {
 .field > ul {
     list-style-type: none;
     margin: 0 auto;
-    text-align: left;
+    grid-area: 3/1/4/6;
+    margin-bottom: 1em;
 }
 
 .field > ul > li {
@@ -792,6 +804,7 @@ form .customer-inf-content {
     font-weight: bold;
     display: inline;
     margin: 40px;
+    justify-self: space-around;
 }
 
 #education ul > li { /*etsi wste na xorane se mia grammi*/
@@ -799,11 +812,6 @@ form .customer-inf-content {
     font-weight: bold;
     display: inline;
     margin: 30px;
-}
-
-.field{
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
 }
 
 #education ul li a, #health ul li a, #law ul li a, #education ul li, #health ul li, #law ul li {
@@ -815,24 +823,47 @@ form .customer-inf-content {
 }
 
 #education p, #health p, #law p {
-    margin: 2em 10em 2em 1em;
+    margin: 2em;
     background: rgba(44, 132, 219, 0.3);
     border-style: solid;
     border-width: 4px 4px;
     border-color: white;
     border-radius: 25px;
+    grid-area: 2/1/3/6;
 }
 
 #energy p, #history p, #IT p {
-    margin: 2em 10em 2em 1em;
+    margin: 2em;
     background: rgba(126, 93, 76, 0.3);
     border-style: solid;
     border-width: 4px 4px;
     border-color: white;
     border-radius: 25px;
+    grid-area: 2/1/3/6;
 }
 
-/* about_us.html */
+/*CHANGE*/
+.about_article {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_article h3 {
+    grid-area: 1/1/2/2;
+    margin: 1em;
+}
+
+.about_article img {
+    grid-area: 2/1/4/2;
+    margin: 2em;
+}
+
+.about_article p {
+    grid-area: 2/2/4/4;
+    margin: auto;
+}
 
 .about_us {
     background: rgba(44, 132, 219, 0.3);
@@ -861,44 +892,19 @@ form .customer-inf-content {
 }
 
 #end_about p{
-    position:relative;
-    top: 4em;
     max-width: 80em;
 }    
 
-#end_about img{
-    margin: 2em;
-}
-
 #end_about article img{
     border-radius: 80%;
-    float: left;
 }
 
 #end_about h3{
     font-weight: bold;
     font-size: large;
-    position: relative;
-    left: 1.5em;
 }
 
 #first {
-    margin-top: 5em;
-}
-
-#first p {
-    margin-bottom: 6em;
-}
-
-#second {
-    margin-top: 3em;
-}
-
-#second p{
-    margin-bottom: 8em;
-}
-
-#second h3 {
-    clear: left;
+    margin-top: 1em;
 }
 
