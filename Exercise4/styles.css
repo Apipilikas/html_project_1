@@ -120,7 +120,7 @@ header {
 }
 
 header > img {
-    max-width: 100%;
+    width: 100%;
 }
 
 nav ul {
@@ -419,6 +419,8 @@ footer > p {
     clear: both;
 }
 
+/* subjects (3 files) */
+
 main > h1 {
     color: #6277b6;
 }
@@ -436,8 +438,22 @@ main > h1 {
     top: 0;
 }
 
+/* allagi ex3 */
+.subject .description {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.subject .description img {
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+
 .subject .description p {
     font-size: 1.3em;
+    grid-column: 3/8;
+    grid-row: 2/3;
 }
 
 .subject section h2 {
@@ -448,15 +464,25 @@ main > h1 {
     margin: auto;
 }
 
+.subject .content p {
+    text-align: center;
+}
+
+.subject .content table {
+    width: 50%;
+}
+
 .subject:nth-child(2n) h1 {
     background-color: #cbdaeb;
 }
 
 .subject:nth-child(2n + 1) section > h2 {
+    margin: 0em;
     background-color: #cfc4be;
 }
 
 .subject:nth-child(2n) section > h2 {
+    margin: 0em;
     background-color: #63a2e0;
 }
 
@@ -478,22 +504,57 @@ main > h1 {
 }
 
 .subject .content table th {
-    background-color: #344c74;
+    background-color: #8c9ca4;
     color: white;
     font-weight: bold;
 }
 
+.subject:nth-child(2n + 1) .content table th {
+    background-color: #f1b99b;
+}
+
+.subject:nth-child(2n) .content table th {
+    background-color: #89bdf1;
+}
+
 .subject .content table td {
-    background-color: #bcc4d1;
+    background-color: #d9dadb;
 }
 
 .subject .content table tbody > tr:first-child > td {
-    background-color: #858da8;
+    background-color: #b4b4bc;
     font-weight: 600;
 }
 
 .subject .links a {
     color: black;
+}
+
+/* allagi ex3 */
+.subject .links ol {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.subject:nth-child(2n + 1) .links ol li {
+    padding: 0.5em;
+    background: linear-gradient(to right, #f1b99b, #f2f0ef);
+}
+
+.subject:nth-child(2n) .links ol li {
+    padding: 0.5em;
+    background: linear-gradient(to right, #89bdf1, #cbdaeb);
+}
+
+.subject .links ol li:nth-child(1){
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.subject .links ol li:nth-child(2){
+    grid-row: 2/3;
+    grid-column: 4/5;
 }
 
 .subject .links a:hover {
@@ -564,7 +625,8 @@ main > h1 {
     border: 3px solid #bac0ca;
     border-radius: 5px;
     margin: 0.5em;
-    float: left;
+    /* float: left; */
+    text-align: center;
 }
 
 .subject .start-day h2 {
@@ -592,6 +654,40 @@ main > h1 {
     border: 2px solid black;
     transition: 0s;
 }
+
+/*  */
+.subject .enrollment > p {
+    text-align: center;
+}
+
+.subject .enrollment > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subject .enrollment .subject-choices section {
+    text-align: center;
+}
+
+.subject .enrollment .subject-choices {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.subject .enrollment .choose-price {
+    flex-wrap: nowrap;
+}
+
+.subject .enrollment .available-dates {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* contact_form.html */
 
 form {
     padding: 0.5em;
@@ -693,9 +789,11 @@ form .customer-inf-content {
     grid-area: email;
 } */
 
-.customer-inf-content .country-box {
+/* .customer-inf-content .country-box {
     grid-area: country;
-}
+} */
+
+/* subject_areas.html */
 
 #education, #health, #law {
     background: rgba(44, 132, 219, 0.2)
