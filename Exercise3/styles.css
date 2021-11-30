@@ -825,11 +825,15 @@ form .customer-inf-content {
     padding-bottom: 0.5em;
 }
 
+.field span {
+    font-weight: 100;
+}
+
 .field h2 {
     border-left: 0.3em solid #3365d1;
     font-size: 1.8em;
     margin-bottom: 0.3em;
-    grid-area: 1/1/2/2;
+    grid-area: 1/1/2/6;
 }
 
 .field > ul > li a {
@@ -850,6 +854,10 @@ form .customer-inf-content {
 }
 
 .field > ul {
+    display: flex;
+	flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     list-style-type: none;
     margin: 0 auto;
     grid-area: 3/1/4/6;
@@ -857,18 +865,11 @@ form .customer-inf-content {
 }
 
 .field > ul > li {
+    text-align: center;
     font-size: large;
     font-weight: bold;
-    display: inline;
     margin: 40px;
     justify-self: space-around;
-}
-
-#education ul > li { /*etsi wste na xorane se mia grammi*/
-    font-size: large;
-    font-weight: bold;
-    display: inline;
-    margin: 30px;
 }
 
 #education ul li a, #health ul li a, #law ul li a, #education ul li, #health ul li, #law ul li {
@@ -934,8 +935,8 @@ form .customer-inf-content {
 }
 
 #start_about img{
+    margin: 2em;
     float: right;
-    margin-right: 10em;
 }
 
 #start_about p{
@@ -964,4 +965,3 @@ form .customer-inf-content {
 #first {
     margin-top: 1em;
 }
-
