@@ -44,6 +44,12 @@ body {
     background-color: #f2f0ef;
     font-family: 'Manrope', sans-serif;
     margin: 0em;
+    display: grid;
+    /* grid-template-columns: 1.9fr 0.1fr; */
+    grid-template-areas: "header "
+                         "main "
+                         "aside"
+                         "footer ";
 }
 
 h1, h2, p {
@@ -59,9 +65,12 @@ section > img {
     margin: 0.5em;
 }
 
+/* header - nav */
+
 header {
     background-color: #215ef9;
     font-size: 1.1em;
+    grid-area: header;
 }
 
 header > img {
@@ -152,6 +161,10 @@ nav li:active {
 
 section > * {
     margin-left: 0.5em;
+}
+
+main {
+    grid-area: main;
 }
 
 .main-content > h2 {
@@ -292,10 +305,65 @@ section:after {
     font-weight: 500;
 }
 
+/* aside */
+
+aside {
+    background-color: #e50122;
+    grid-area: aside;
+    text-align: center;
+}
+
+aside img {
+    width: 100%;
+    height: 100%;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+aside #special-xmas-offer {
+    background-color: #fae8a2;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+aside #special-xmas-offer span {
+    display: block;
+    font-size: 1.5em;
+}
+
+aside button {
+    width: 50%;
+    background-image: url(resources/xmas_button.png);
+    padding: 0.8em;
+    margin: 1em;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    border: 2px solid black;
+    border-radius: 6px;
+    transition-duration: 0.5s;
+}
+
+aside button:hover {
+    color: #e50122;
+}
+
+aside button:active {
+    background-image: url(resources/xmas_button_active.png);
+    background-position: center;
+    background-size: cover;
+    color: transparent;
+}
+
+/* footer */
+
 footer {
     background-color: #dadbde;
     display: flex;
     flex-direction: column;
+    grid-area: footer;
     /* text-align: center; */
 }
 
@@ -391,6 +459,7 @@ main > h1 {
 .subject .description img {
     margin: 0em;
     width: 100%;
+    height: 100%;
     /* grid-column: 1/9;
     grid-row: 1/2; */
 }
@@ -897,15 +966,11 @@ form .customer-inf-content {
     header nav ul {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
     header nav ul li {
-        width: 100%;
-        flex-basis: 40%;
-    }
-
-    header nav ul li:nth-child(2), header nav ul li:nth-child(4) {
-        margin-left: auto;
+        width: 40%;
     }
 
     #mfsa-content {
@@ -969,6 +1034,23 @@ form .customer-inf-content {
         grid-column: 1/5;
     }
 
+    #announcements {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .announcement {
+        width: 50%;
+    }
+
+    aside img {
+        display: block;
+        width: 50%;
+        height: 50%;
+        margin: auto;
+    }
+
     footer {
         flex-direction: row;
         flex-wrap: wrap;
@@ -977,6 +1059,27 @@ form .customer-inf-content {
     footer > img {
         width: 428px;
         height: 106px;
+    }
+
+    .subject .description {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    .subject .description img {
+        align-self: center;
+        margin-left: 0.5em;
+        width: 100%;
+        height: 80%;
+        grid-column: 1/4;
+        grid-row: 1/4;
+    }
+
+    .subject .description p {
+        font-size: 1.3em;
+        grid-column: 5/9;
+        grid-row: 2/3;
     }
 }
 
