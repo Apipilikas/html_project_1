@@ -10,9 +10,7 @@
     <meta name="author" content="Murto Chatzivoukoudi, Evangelos Pipilikas">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -22,8 +20,20 @@
         <nav>
             <ul>
                 <li><a href="index.html">Αρχική</a></li>
-                <li><a href="SubjectAreas.html">Θεματικές περιοχές</a></li>
-                <li><a href="AboutUs.html">Ποιοι είμαστε</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="subject_areas.html" class="dropbtn">Θεματικές περιοχές</a>
+                        <div class="dropdown-content">
+                            <a href="subject_areas.html#education">Εκπαίδευση</a>
+                            <a href="subject_areas.html#energy">Ενέργεια</a>
+                            <a href="subject_areas.html#health">Υγεία</a>
+                            <a href="subject_areas.html#history">Ιστορία</a>
+                            <a href="subject_areas.html#law">Νομική</a>
+                            <a href="subject_areas.html#IT">Προγραμματισμός Υπολογιστών</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about_us.html">Ποιοι είμαστε</a></li>
                 <li><a href="contact_form.html">Φόρμα επικοινωνίας</a></li>
             </ul>
         </nav>
@@ -38,8 +48,8 @@
         </p>
 
         <article class="subject" id="algebra">
+            <h1>Εισαγωγή στην άλγεβρα</h1>
             <section class="description">
-                <h1>Εισαγωγή στην άλγεβρα</h1>
 
                 <img src="resources/algebra.jpg" alt="Διάφορες αριθμητικές πράξεις" width="350" height="200">
 
@@ -262,8 +272,8 @@
         </article>
 
         <article class="subject" id="geometry">
+            <h1>Εισαγωγή στην γεωμετρία</h1>
             <section class="description">
-                <h1>Εισαγωγή στην γεωμετρία</h1>
 
                 <img src="resources/geometry.jpg" alt="Διάφορα γεωμτρικά σχήματα" width="350" height="200">
 
@@ -455,8 +465,8 @@
         </article>
 
         <article class="subject" id="data-analysis-essentials">
+            <h1>Βασικά στοιχεία ανάλυσης δεδομένων</h1>
             <section class="description">
-                <h1>Βασικά στοιχεία ανάλυσης δεδομένων</h1>
 
                 <img src="resources/data_analysis.png" alt="Πίτες και ραβδογράμματα" width="350" height="200">
 
@@ -644,8 +654,8 @@
         </article>
 
         <article class="subject" id="fundamentals-of-statistics">
+            <h1>Βασικές αρχές στατιστικής</h1>
             <section class="description">
-                <h1>Βασικές αρχές στατιστικής</h1>
 
                 <img src="resources/statistics.jpg" alt="Ραβδογράμματα" width="350" height="200">
 
@@ -872,8 +882,8 @@
         </article>
 
         <article class="subject" id="climate-solutions">
+            <h1>Κλιματικές αλλαγές και λύσεις</h1>
             <section class="description">
-                <h1>Κλιματικές αλλαγές και λύσεις</h1>
 
                 <img src="resources/climate_solution.jpg" alt="Κλιματική αλλαγή" width="350" height="200">
 

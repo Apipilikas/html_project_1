@@ -10,9 +10,7 @@
     <meta name="author" content="Murto Chatzivoukoudi, Evangelos Pipilikas">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -22,8 +20,20 @@
         <nav>
             <ul>
                 <li><a href="index.html">Αρχική</a></li>
-                <li><a href="SubjectAreas.html">Θεματικές περιοχές</a></li>
-                <li><a href="AboutUs.html">Ποιοι είμαστε</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="subject_areas.html" class="dropbtn">Θεματικές περιοχές</a>
+                        <div class="dropdown-content">
+                            <a href="subject_areas.html#education">Εκπαίδευση</a>
+                            <a href="subject_areas.html#energy">Ενέργεια</a>
+                            <a href="subject_areas.html#health">Υγεία</a>
+                            <a href="subject_areas.html#history">Ιστορία</a>
+                            <a href="subject_areas.html#law">Νομική</a>
+                            <a href="subject_areas.html#IT">Προγραμματισμός Υπολογιστών</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about_us.html">Ποιοι είμαστε</a></li>
                 <li><a href="contact_form.html">Φόρμα επικοινωνίας</a></li>
             </ul>
         </nav>
@@ -39,8 +49,8 @@
         </p>
 
         <article class="subject" id="introduction-to-animal-behaviour">
+            <h1>Εισαγωγή στον τρόπο συμπεριφοράς των ζώων</h1>
             <section class="description">
-                <h1>Εισαγωγή στον τρόπο συμπεριφοράς των ζώων</h1>
 
                 <img src="resources/animal_behaviour.jpg" alt="Διάφορα άγρια ζώα" width="350" height="200">
 
@@ -265,8 +275,8 @@
         </article>
 
         <article class="subject" id="human-neuroanatomy">
+            <h1>Ανθρώπινη νευροανατομία</h1>
             <section class="description">
-                <h1>Ανθρώπινη νευροανατομία</h1>
 
                 <img src="resources/human_neuroanatomy.jpg" alt="Ο εγκέφαλος του ανθρώπου" width="350" height="200">
 
@@ -499,8 +509,8 @@
         </article>
 
         <article class="subject" id="cells-and-tissues">
+            <h1>Κύτταρα και Ιστοί: Δύο βασικά στοιχεία της ανθρώπινης βιολογίας</h1>
             <section class="description">
-                <h1>Κύτταρα και Ιστοί: Δύο βασικά στοιχεία της ανθρώπινης βιολογίας</h1>
 
                 <img src="resources/cells_and_tissues.jpg" alt="Διατομή ενός κυττάρου" width="350" height="200">
 
@@ -735,8 +745,8 @@
         </article>
 
         <article class="subject" id="Introduction-to-surgery">
+            <h1>Εισαγωγή στην χειρουργική</h1>
             <section class="description">
-                <h1>Εισαγωγή στην χειρουργική</h1>
 
                 <img src="resources/surgery.jpg" alt="Ετοιμασία για χειρουργική επέμβαση" width="350" height="200">
 
@@ -975,8 +985,8 @@
         </article>
 
         <article class="subject" id="introduction-to-biology">
+            <h1>Εισαγωγή στην βιολογία</h1>
             <section class="description">
-                <h1>Εισαγωγή στην βιολογία</h1>
 
                 <img src="resources/biology.jpg" alt="Βασικές εικόνες που μας θυμίζουν την βιολογία" width="350"
                     height="200">
