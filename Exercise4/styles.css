@@ -438,6 +438,7 @@ footer div li {
 }
 
 footer > p {
+    display: block;
     clear: both;
 }
 
@@ -1178,6 +1179,38 @@ form .customer-inf-content {
     .field > ul > li {
         font-size: 1.2em;
     }
+
+    header > img {
+        width: 483px;
+        height: 92px;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    header nav ul li {
+        width: 40%;
+    }
+
+    aside img {
+        display: block;
+        width: 50%;
+        height: 50%;
+        margin: auto;
+    }
+
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    footer > img {
+        width: 428px;
+        height: 106px;
+    }
 }
 
 /* DESKTOP */
@@ -1204,6 +1237,13 @@ form .customer-inf-content {
 
     .about_us h2 {
         font-size: 1.7em;
+    }
+
+    .field {
+        grid-template-areas: 
+        "h2_gr h2_gr"
+        "p_gr p_gr"
+        "ul_gr ul_gr";
     }
 
     .field h2 {
@@ -1256,5 +1296,38 @@ form .customer-inf-content {
         justify-self: left;
         grid-area: 3/1/4/4;
         padding-bottom: 2.5em;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    header nav ul li {
+        width: 20%;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.1fr;
+    }
+
+    footer > img {
+        width: 388px;
+        height: 86px;
+        grid-area: 1/1/2/2;
+    }
+
+    footer > p{
+        grid-area: 2/1/3/4;
+    }
+
+    footer address ul {
+        grid-area: 1/2/2/3;
+    }
+
+    footer .social-media-footer{
+        grid-area: 1/3/2/4;
     }
 }
