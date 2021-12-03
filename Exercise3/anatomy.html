@@ -7,12 +7,10 @@
     <link rel="icon" href="resources/edume_icon.png">
     <meta name="description" content="An open source site for everyone">
     <meta name="keywords" content="Open source, Education, Edume">
-    <meta name="author" content="Murto Chatzivoukoudi, Evangelos Pipilikas">
+    <meta name="author" content="Myrto Chatzivoukoudi, Evangelos Pipilikas">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -22,8 +20,20 @@
         <nav>
             <ul>
                 <li><a href="index.html">Αρχική</a></li>
-                <li><a href="SubjectAreas.html">Θεματικές περιοχές</a></li>
-                <li><a href="AboutUs.html">Ποιοι είμαστε</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="subject_areas.html" class="dropbtn">Θεματικές περιοχές</a>
+                        <div class="dropdown-content">
+                            <a href="subject_areas.html#education">Εκπαίδευση</a>
+                            <a href="subject_areas.html#energy">Ενέργεια</a>
+                            <a href="subject_areas.html#health">Υγεία</a>
+                            <a href="subject_areas.html#history">Ιστορία</a>
+                            <a href="subject_areas.html#law">Νομική</a>
+                            <a href="subject_areas.html#IT">Προγραμματισμός Υπολογιστών</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about_us.html">Ποιοι είμαστε</a></li>
                 <li><a href="contact_form.html">Φόρμα επικοινωνίας</a></li>
             </ul>
         </nav>
@@ -39,8 +49,8 @@
         </p>
 
         <article class="subject" id="introduction-to-animal-behaviour">
+            <h1>Εισαγωγή στον τρόπο συμπεριφοράς των ζώων</h1>
             <section class="description">
-                <h1>Εισαγωγή στον τρόπο συμπεριφοράς των ζώων</h1>
 
                 <img src="resources/animal_behaviour.jpg" alt="Διάφορα άγρια ζώα" width="350" height="200">
 
@@ -235,38 +245,43 @@
                     <li>επίλεξε μία από τις διαθέσιμες ημερομηνίες πατώντας το κουμπί <strong>Εγγραφή</strong></li>
                 </ul>
 
-                <section class="choose-price">
-                    <h3>Επιλογή εκδόσης</h3>
-                    <input type="radio" id="choosing-price-model1" name="choose-price1" value="unlimited">
-                    <label for="choosing-price-model1">Εμπλουτισμένη</label>
-                    <input type="radio" id="choosing-price-model2" name="choose-price1" value="free" checked>
-                    <label for="choosing-price-model2">Απλή</label>
-                </section>
-
-                <section class="choose-date">
-                    <h3>Απομένουν δύο διαθέσιμες ημερομηνιές:</h3>
-                    <div class="start-day">
-                        <h2>Ξεκινά στις</h2>
-                        <p>
-                            20 Νοεμβρίου 2021
-                        </p>
-                        <button type="button">Εγγραφή</button>
-                    </div>
-
-                    <div class="start-day">
-                        <h2>Ξεκινά στις</h2>
-                        <p>
-                            10 Ιανουαρίου 2022
-                        </p>
-                        <button type="button">Εγγραφή</button>
-                    </div>
-                </section>
+                <div class="subject-choices">
+                    <section class="choose-price">
+                        <h3>Επιλογή εκδόσης</h3>
+                        <input type="radio" id="choosing-price-model1" name="choose-price1" value="unlimited">
+                        <label for="choosing-price-model1">Εμπλουτισμένη</label>
+                        <input type="radio" id="choosing-price-model2" name="choose-price1" value="free" checked>
+                        <label for="choosing-price-model2">Απλή</label>
+                    </section>
+    
+                    <section class="choose-date">
+                        <h3>Απομένουν δύο διαθέσιμες ημερομηνιές:</h3>
+                        
+                        <div class="available-dates">
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    20 Νοεμβρίου 2021
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+        
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    10 Ιανουαρίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </section>
         </article>
 
         <article class="subject" id="human-neuroanatomy">
+            <h1>Ανθρώπινη νευροανατομία</h1>
             <section class="description">
-                <h1>Ανθρώπινη νευροανατομία</h1>
 
                 <img src="resources/human_neuroanatomy.jpg" alt="Ο εγκέφαλος του ανθρώπου" width="350" height="200">
 
@@ -461,46 +476,51 @@
                     <li>επίλεξε μία από τις διαθέσιμες ημερομηνίες πατώντας το κουμπί <strong>Εγγραφή</strong></li>
                 </ul>
 
-                <section class="choose-price">
-                    <h3>Επιλογή εκδόσης</h3>
-                    <input type="radio" id="choosing-price-model3" name="choose-price2" value="unlimited">
-                    <label for="choosing-price-model3">Εμπλουτισμένη</label>
-                    <input type="radio" id="choosing-price-model4" name="choose-price2" value="free" checked>
-                    <label for="choosing-price-model4">Απλή</label>
-                </section>
+                <div class="subject-choices">
+                    <section class="choose-price">
+                        <h3>Επιλογή εκδόσης</h3>
+                        <input type="radio" id="choosing-price-model3" name="choose-price2" value="unlimited">
+                        <label for="choosing-price-model3">Εμπλουτισμένη</label>
+                        <input type="radio" id="choosing-price-model4" name="choose-price2" value="free" checked>
+                        <label for="choosing-price-model4">Απλή</label>
+                    </section>
+    
+                    <section class="choose-date">
+                        <h3>Απομένουν τρεις διαθέσιμες ημερομηνιές:</h3>
 
-                <section class="choose-date">
-                    <h3>Απομένουν τρεις διαθέσιμες ημερομηνιές:</h3>
-                    <div class="start-day">
-                        <h2>Ξεκινά στις</h2>
-                        <p>
-                            20 Νοεμβρίου 2021
-                        </p>
-                        <button type="button">Εγγραφή</button>
-                    </div>
-
-                    <div class="start-day">
-                        <h2>Ξεκινά στις</h2>
-                        <p>
-                            10 Ιανουαρίου 2022
-                        </p>
-                        <button type="button">Εγγραφή</button>
-                    </div>
-
-                    <div class="start-day">
-                        <h2>Ξεκινά στις</h2>
-                        <p>
-                            20 Φεβρουαρίου 2022
-                        </p>
-                        <button type="button">Εγγραφή</button>
-                    </div>
-                </section>
+                        <div class="available-dates">
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    20 Νοεμβρίου 2021
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+        
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    10 Ιανουαρίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+        
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    20 Φεβρουαρίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </section>
         </article>
 
         <article class="subject" id="cells-and-tissues">
+            <h1>Κύτταρα και Ιστοί: Δύο βασικά στοιχεία της ανθρώπινης βιολογίας</h1>
             <section class="description">
-                <h1>Κύτταρα και Ιστοί: Δύο βασικά στοιχεία της ανθρώπινης βιολογίας</h1>
 
                 <img src="resources/cells_and_tissues.jpg" alt="Διατομή ενός κυττάρου" width="350" height="200">
 
@@ -713,30 +733,35 @@
                     <li>επίλεξε μία από τις διαθέσιμες ημερομηνίες πατώντας το κουμπί <strong>Εγγραφή</strong></li>
                 </ul>
 
-                <section class="choose-price">
-                    <h3>Επιλογή εκδόσης</h3>
-                    <input type="radio" id="choosing-price-model5" name="choose-price3" value="unlimited">
-                    <label for="choosing-price-model5">Εμπλουτισμένη</label>
-                    <input type="radio" id="choosing-price-model6" name="choose-price3" value="free" checked>
-                    <label for="choosing-price-model6">Απλή</label>
-                </section>
+                <div class="subject-choices">
+                    <section class="choose-price">
+                        <h3>Επιλογή εκδόσης</h3>
+                        <input type="radio" id="choosing-price-model5" name="choose-price3" value="unlimited">
+                        <label for="choosing-price-model5">Εμπλουτισμένη</label>
+                        <input type="radio" id="choosing-price-model6" name="choose-price3" value="free" checked>
+                        <label for="choosing-price-model6">Απλή</label>
+                    </section>
+    
+                    <section class="choose-date">
+                        <h3>Απομένει μία διαθέσιμη ημερομηνία:</h3>
 
-                <section class="choose-date">
-                    <h3>Απομένει μία διαθέσιμη ημερομηνία:</h3>
-                    <div class="start-day">
-                        <h2>Ξεκινά στις</h2>
-                        <p>
-                            20 Νοεμβρίου 2021
-                        </p>
-                        <button type="button">Εγγραφή</button>
-                    </div>
-                </section>
+                        <div class="available-dates">
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    20 Νοεμβρίου 2021
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </section>
         </article>
 
         <article class="subject" id="Introduction-to-surgery">
+            <h1>Εισαγωγή στην χειρουργική</h1>
             <section class="description">
-                <h1>Εισαγωγή στην χειρουργική</h1>
 
                 <img src="resources/surgery.jpg" alt="Ετοιμασία για χειρουργική επέμβαση" width="350" height="200">
 
@@ -929,54 +954,59 @@
                     <li>επίλεξε μία από τις διαθέσιμες ημερομηνίες πατώντας το κουμπί <strong>Εγγραφή</strong></li>
                 </ul>
 
-                <section class="choose-price">
-                    <h3>Επιλογή εκδόσης</h3>
-                    <input type="radio" id="choosing-price-model7" name="choose-price4" value="unlimited">
-                    <label for="choosing-price-model7">Εμπλουτισμένη</label>
-                    <input type="radio" id="choosing-price-model8" name="choose-price4" value="free" checked>
-                    <label for="choosing-price-model8">Απλή</label>
-                </section>
+                <div class="subject-choices">
+                    <section class="choose-price">
+                        <h3>Επιλογή εκδόσης</h3>
+                        <input type="radio" id="choosing-price-model7" name="choose-price4" value="unlimited">
+                        <label for="choosing-price-model7">Εμπλουτισμένη</label>
+                        <input type="radio" id="choosing-price-model8" name="choose-price4" value="free" checked>
+                        <label for="choosing-price-model8">Απλή</label>
+                    </section>
+    
+                    <section class="choose-date">
+                        <h3>Απομένουν τέσσερις διαθέσιμες ημερομηνιές:</h3>
 
-                <section class="choose-date">
-                    <h3>Απομένουν τέσσερις διαθέσιμες ημερομηνιές:</h3>
-                    <div class="start-day">
-                        <h2>Ξεκινά στις</h2>
-                        <p>
-                            20 Νοεμβρίου 2021
-                        </p>
-                        <button type="button">Εγγραφή</button>
-                    </div>
-
-                    <div class="start-day">
-                        <h2>Ξεκινά στις</h2>
-                        <p>
-                            10 Ιανουαρίου 2022
-                        </p>
-                        <button type="button">Εγγραφή</button>
-                    </div>
-
-                    <div class="start-day">
-                        <h2>Ξεκινά στις</h2>
-                        <p>
-                            13 Φεβρουαρίου 2022
-                        </p>
-                        <button type="button">Εγγραφή</button>
-                    </div>
-
-                    <div class="start-day">
-                        <h2>Ξεκινά στις</h2>
-                        <p>
-                            15 Μαρτίου 2022
-                        </p>
-                        <button type="button">Εγγραφή</button>
-                    </div>
-                </section>
+                        <div class="available-dates">
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    20 Νοεμβρίου 2021
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+        
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    10 Ιανουαρίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+        
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    13 Φεβρουαρίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+        
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    15 Μαρτίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </section>
         </article>
 
         <article class="subject" id="introduction-to-biology">
+            <h1>Εισαγωγή στην βιολογία</h1>
             <section class="description">
-                <h1>Εισαγωγή στην βιολογία</h1>
 
                 <img src="resources/biology.jpg" alt="Βασικές εικόνες που μας θυμίζουν την βιολογία" width="350"
                     height="200">
@@ -1194,35 +1224,65 @@
                     <li>επίλεξε μία από τις διαθέσιμες ημερομηνίες πατώντας το κουμπί <strong>Εγγραφή</strong></li>
                 </ul>
 
-                <section class="choose-price">
-                    <h3>Επιλογή εκδόσης</h3>
-                    <input type="radio" id="choosing-price-model9" name="choose-price5" value="unlimited">
-                    <label for="choosing-price-model9">Εμπλουτισμένη</label>
-                    <input type="radio" id="choosing-price-model10" name="choose-price5" value="free" checked>
-                    <label for="choosing-price-model10">Απλή</label>
-                </section>
+                <div class="subject-choices">
+                    <section class="choose-price">
+                        <h3>Επιλογή εκδόσης</h3>
+                        <input type="radio" id="choosing-price-model9" name="choose-price5" value="unlimited">
+                        <label for="choosing-price-model9">Εμπλουτισμένη</label>
+                        <input type="radio" id="choosing-price-model10" name="choose-price5" value="free" checked>
+                        <label for="choosing-price-model10">Απλή</label>
+                    </section>
+    
+                    <section class="choose-date">
+                        <h3>Απομένουν δύο διαθέσιμες ημερομηνιές:</h3>
 
-                <section class="choose-date">
-                    <h3>Απομένουν δύο διαθέσιμες ημερομηνιές:</h3>
-                    <div class="start-day">
-                        <h2>Ξεκινά στις</h2>
-                        <p>
-                            20 Νοεμβρίου 2021
-                        </p>
-                        <button type="button">Εγγραφή</button>
-                    </div>
-
-                    <div class="start-day">
-                        <h2>Ξεκινά στις</h2>
-                        <p>
-                            13 Φεβρουαρίου 2022
-                        </p>
-                        <button type="button">Εγγραφή</button>
-                    </div>
-                </section>
+                        <div class="available-dates">
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    20 Νοεμβρίου 2021
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+        
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    13 Φεβρουαρίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </section>
         </article>
     </main>
+
+    <aside>
+        <div class="sticky">
+            <h2>ΧΡΙΣΤΟΥΓΓΕΝΙΑΤΙΚΗ ΠΡΟΣΦΟΡΑ</h2>
+            <p>
+                Το Edume φέρνει τον Άι Βασίλη νωρίτερα φέτος με ένα πακέτο που δεν πρέπει να χάσεις!
+            </p>
+        
+            <div id="special-xmas-offer">
+                <p>
+                    4 μαθήματα της επιλογής σου <span>ΜΟΝΟ 100€</span>
+                </p>
+            </div>
+        
+            <p>
+                Χτύπα το κουμπί <strong>Το θέλω</strong> γιατί τέτοια προσφορά δεν ξανά 'γινε.
+            </p>
+        
+            <button type="button">Το θέλω</button>
+        
+            <img src="resources/xmas.png" alt="Ο 'Αι Βασίλης έρχεται..." width="300" height="220">
+
+            <small>Η προσφορά ισχύει μέχρι 25/12/2021 και ώρα 22:00.</small>
+        </div>
+    </aside>
 
     <footer>
         <img src="resources/edume_footer_logo.png" alt="Edume logo">
