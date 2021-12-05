@@ -61,7 +61,7 @@ section > img {
     margin: 0.5em;
 }
 
-.main-content > h3 {
+.main-content h3 {
     margin: 0.5em;
 }
 
@@ -434,6 +434,7 @@ footer  address a {
 
 footer address li {
     display: block;
+    text-align: center;
 }
 
 footer div li {
