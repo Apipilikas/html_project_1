@@ -1,50 +1,100 @@
+/* Αρχικοποίηση κάποιων μεταβλητών με τα βασικά χρώματα του site. */
+:root {
+    --blue: #215ef9;
+    --light-blue: #94acfc;
+}
+
+/* Ορισμός κύριου χρώματος παρασκηνίου και γραμματοσειράς για λόγους εμφάνισης. Επιπρόσθετα ορίζεται και margin: 0em 
+   έτσι ώστε να μην εμφανίζεται το περιθώριο στα αριστερά και δεξία της σελίδας (πετυχαίνουμε ουσιαστικά
+   να "κολλάνε" όλα τα elements που βρίσκονται μέσα στο body στις άκρες του παραθύρου και να μην φαίνεται 
+   το περιθώριο). */
 body {
     background-color: #f2f0ef;
     font-family: sans-serif;
     margin: 0em;
 }
 
+/* Με τον μηδενισμό του margin πετυχαίνουμε την ομοιογένεια μεταξύ των διάφορων sections. Η αναίρεση του παρόντος κανόνα
+   θα δημιουργούσε αισθητό πρόβλημα κυρίως στα πρώτα δύο elements, αφού θα εμφανιζόταν ένα κενό μεταξύ των sections που 
+   αλλάζουν χρώμα. Επιπρόσθετα με το padding καταφέρνουμε να υπάρχει μία συνόχη στην στοίχιση των βασικών elements που
+   χρησιμοποιούνται μέσα στα sections. */
 h1, h2, p {
     margin: 0em;
     padding: 0.5em;
 }
 
-section > img {
+/* Στοίχιση εικόνων ώστε να μην "κολλάνε" πάνω στο παράθυρο του φυλλομετρητή. Για εξοικονόμηση κώδικα, εφόσον θέλουμε τον ίδιο
+   κανόνα για δύο διαφορετικά elements, τα παραθέτουμε μαζί και τα χωρίζουμε με κόμμα(,). Επιπρόσθετα με τον τελεστή > ζητάμε την
+   εφαρμογή του κανόνα στα elements img και h3 που βρίσκονται μέσα στο element section και στην κλάση .main-content αντίστοιχα 
+   και είναι παιδιά τους.
+   ---
+   Για την αποφυγή επαναλήψεων στις παρακάτω περιγραφές, σε έναν κανόνα τύπου el1 > el2 ζητάμε την εφαρμογή του σε όλα τα el2 που βρίσκονται
+   κάτω από το el1 και είναι παιδιά του. ΠΡΟΣΟΧΗ: Δεν εφαρμόζεται στους απογόνους, μόνο στα παιδιά του.
+   ---
+   Για την αποφυγή επαναλήψεων στις παρακάτω περιγραφές, η σύνταξη .class-name παραπέμπει στην εφαρμογή ενός κανόνα σε μία κλάση με το όνομα class-name.
+   Ο κανόνας θα εφαρμοστεί σε όλα τα αντικείμενα που έχουμε ορίζει στο HTML αρχείο ως εξής: <el1 class="class-name"></el1>. */
+section > img, .main-content > h3 {
     margin: 0.5em;
 }
 
-.main-content > h3 {
-    margin: 0.5em;
-}
+/* START-OF: header */
 
+/* Χρήση μεταβλητής που έχει οριστεί στο :root και μέγεθος γραμματοσειράς. */
 header {
-    background-color: #215ef9;
+    background-color: var(--blue);
     font-size: 1.1em;
 }
 
+/* START-OF: header>nav */
+
+/* Χρήση μεταβλητών που έχουν οριστεί στο :root, ορισμός margin: 0em για αναίρεση προεπιλογής και για να μην υπάρχει κενό στο πάνω και κάτω 
+   μέρος της λίστας (ομοιομορφία), χρήση padding της μορφής padding: top_bottom left_right, χρήση του border έτσι ώστε να γίνει πιο έντονο 
+   και να έχει χρώμα --light-blue. Την τελευταία ιδιότητα την χρησιμοποιούμε για να πετύχουμε σε επόμενο κανόνα την εμφάνιση μίας μπάρας 
+   όταν κάνουμε hover πάνω από αντικείμενα τύπου li. Επιπρόσθετα με τον τελεστή κενό ( ) ζητάμε την εφαρμογή του κανόνα στο element ul 
+   που βρίσκεται κάτω από το element nav.
+   ---
+   Για την αποφυγή επαναλήψεων στις παρακάτω περιγραφές, σε έναν κανόνα τύπου el1 el2 ζητάμε την εφαρμογή του σε όλα τα el2 που βρίσκονται κάτω από το el1.
+   Εφαρμόζεται ουσιαστικά σε όλους τους απογόνους, ανεξαρτήτως βάθους στο δέντρο. */
 nav ul {
     margin: 0em;
     padding: 0.5em 0em;
-    border: 0.5em solid #94acfc;
-    background-color: #94acfc;
+    border: 0.5em solid var(--light-blue);
+    background-color: var(--light-blue);
 }
 
+/* Ορισμός χρώματος γραμματοσειράς και αναίρεση προεπιλογής εμφάνισης υπογράμμισης κάτω από τα elements a. */
 nav li > a {
     color: white;
     text-decoration: none;
 }
 
+/* Χρήση ιδιότητας display: inline για στοίχιση αντικειμένων στην ίδια σειρά το ένα δίπλα στο άλλο. Στην συγκεκριμένη
+   περίπτωση επειδή η λίστα εμφανίζει τα αντικείμενα της το ένα κάτω από το άλλο, με την χρήση της ιδιότητας που προαναφέραμε
+   αναιρούμε την συγκεκριμένη στοίχιση. */
 nav li {
     color: white;
     display: inline;
     padding: 0.5em;
 }
 
+/* Στόχος των παρακάτω δύο εντολών είναι η δημιουργία ενός menu όπου να γίνεται αισθητό όταν ο χρήστης μετακινεί τον κένσορα
+   πάνω σε αντικείμενα που ενδιαφέρεται (1ος κανόνας), καθώς και όταν επιλέγει ένα από αυτά (2ος κανόνας).
+   ---
+   Χρήση ψευδο-κλάσεων :hover, :not(), :nth-child() :
+   el:hover : χρησιμοποιείται έτσι ώστε όταν μετακινώ τον κένσορα πάνω από το αντικείμενο el να ενεργοποιείται ο κανόνας.
+   el:not() : ενεργοποίηση κανόνα στο αντικείμενο el σε όλες τις περιπτώσεις ΕΚΤΟΣ από αυτήν που αναφέρεται στις παρενθέσεις.
+              Στην συγκεκριμένη περίπτωση επειδή χρησιμοποιούμε ένα dropdown menu, για λόγους εμφάνισης θέλουμε όταν κάνουμε
+              hover πάνω σε έναν συγκεκριμένο αντικείμενο να μην εμφανίζεται διαφορετικό χρώμα.
+   el:nth-child() : επιλογή συγκεκριμένου παιδιού. Στην παρούσα κατάσταση θέλουμε να επιλέξουμε το δεύτερο παιδί element li που
+                    βρίσκεται κάτω από το το element ul.
+   ΣΥΝΟΛΙΚΑ ο κανόνας πετυχαίνει την εφαρμογή κάποιων ιδιοτήτων σε αντικείμενα li ΕΚΤΟΣ του li που εμφανίζεται κατά σειρά δεύτερο
+   μέσα στην λίστα element ul, όταν μετακινούμε τον κένσορα πάνω σε αυτά. */
 nav li:not(nav ul > li:nth-child(2)):hover {
     border-bottom: 0.5em solid #50666f;
     transition: 0.5s;
 }
 
+/* Χρήση ψευδό-κλάσης :active, όπου ενεργοποιεί τον παρακάτω κανόνα όταν πατάμε (κάνουμε click) πάνω σε ένα αντικείμενο li. */
 nav li:active {
     background-color: #50666f;
     border-top: 0.5em solid #50666f;
@@ -52,39 +102,112 @@ nav li:active {
     transition: 0.15s;
 }
 
+/* dropdown menu*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    margin-top: 1em;
+    display: none;
+    position: absolute;
+    background-color: #94acfc;
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+}
+
+.dropdown-content a {
+    border-left: 0.5em solid #94acfc;
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    border-left: 0.5em solid #50666f;
+    transition: 0.5s;
+}
+
+.dropdown-content a:active {
+    color: white;
+    background-color: #50666f;
+    transition: 0.15s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    color: white;
+    text-align: center;
+    padding-bottom: 18px;
+    text-decoration: none;
+}
+
+/* END-OF: header>nav */
+/* END-OF: header */
+
+/* Ο αστερίσκος (*) ορίζει την εφαρμογή του κανόνα σε όλα τα αντικείμενα που είναι παιδιά του element section. Η ιδιότητα margin-left 
+   ορίζει ένα margin μόνο στο αριστερό μέρος στα elements που εφαρμόζεται. Το τελευταίο το κάνουμε προκειμένου να μην "κολλάνε" τα 
+   elements στην αριστερή πλευρά του παραθύρου. */
 section > * {
     margin-left: 0.5em;
 }
 
+/* START-OF: index.html */
+
+/* Ορισμός χρώματος γραμματοσειράς σε όλα τα h2 που είναι παιδία της κλάσης .main-content. */
 .main-content > h2 {
     color: #6277b6;
 }
 
+/* Ορισμός χρώματος παρασκηνίου στο αντικείμενο με ID world-connection.
+   ---
+   Για την αποφυγή επαναλήψεων στις παρακάτω περιγραφές, η σύνταξη #id-name παραπέμπει στην εφαρμογή ενός κανόνα σε αντικείμενα με ID id name.
+   Ο κανόνας θα εφαρμοστεί σε όλα τα αντικείμενα που έχουμε ορίσει στο HTML αρχείο ως εξής: <el1 id="id-name"></el1>. */
 #world-connection {
     background-color: #d5ebf2;
 }
 
+/* Ορισμός της ιδιότητας float σε εικόνα που είναι παιδί του αντικειμένου με ID world-connection. Με την ιδιότητα float η εικόνα στοιχίζεται στα
+αριστερά και το κείμενο "ρέει" στα δεξιά της. */
 #world-connection > img {
     float: left;
 }
 
+/* Ορισμός χρώματος παρασκηνίου στο αντικείμενο με ID most-famous-subject-areas. */
 #most-famous-subject-areas {
     background-color: #67b4da;
 }
 
+/* Ορισμός μήκους του element p που βρίσκεται κάτω από το αντικείμενο με ID most-famous-subject-areas. Με το
+   ποσοστό της % καθορίζουμε πόσο της % θέλουμε να καλύπτει την οθόνη. */
 #most-famous-subject-areas > p {
-    width: 65%;
+    width: 60%;
 }
 
+/* Ορισμός της ιδιότητας float στο αντικείμενο με ID group-images. */
 #group-images {
     float: right;
 }
 
+/* Ορισμός της ιδιότητας margin στις εικόνες που είναι παιδιά του αντικειμένου με ID group-images. */
 #group-images > img {
-    display: block;
+    /* display: block; */
     margin: 0.5em;
 }
 
+/* Παρακάτω παραθέτονται τρεις κανόνες για την δημιουργία ενός κολλάζ αποτελούμενο από τρεις εικόνες.
+   ---
+   Ορισμός ιδιοτήτων σε εικόνες που είναι παιδιά του αντικειμένου με ID group-images. Εφαρμογή κανόνα στην πρώτη εικόνα (πρώτο παιδί) με ιδιότητες
+   width και height για τις διαστάσεις της εικόνας σε μονάδα px. 
+   Ορισμός ιδιότητας position: absolute η οποία αποδεσμεύει τον χώρο που είχε η εικόνα στο συγκεκριμένο χωρίο και την αφήνει στην κορυφή της σελίδας. Με 
+   την χρήση των ιδιοτήτων top και right σε μονάδες px ορίζουμε την σελίδα στο σημείο που την θέλουμε.
+   Ορισμός ιδιότητας z-index με αριθμό τέτοιον ώστε να είναι ο μεγαλύτερος και να εμφανίζεται πάνω από όλες τις άλλες εικόνες. */
 #group-images > img:nth-child(1) {
     width: 200px;
     height: 150px;
@@ -94,6 +217,8 @@ section > * {
     z-index: 3;
 }
 
+/* Ορισμός ιδιοτήτων παρόμοιων με παραπάνω με μόνη διαφορά τον ορισμό ιδιότητας position: absolute η οποία μας δίνει την δυνατότητα να μετακινήσουμε την εικόνα
+   από την θέση που είναι προς όλες τις κατευθύνσεις (στην συγκεκριμένη περίπτωση δεξιά). */
 #group-images > img:nth-child(2) {
     width: 250px;
     height: 200px;
@@ -102,14 +227,17 @@ section > * {
     z-index: 2;
 }
 
+/* Ορισμός ιδιοτήτων παρόμοιων με των παραπάνω. */
 #group-images > img:nth-child(3) {
-    width: 300px;
-    height: 200px;
+    width: 280px;
+    height: 180px;
     position: absolute;
     top: 900px;
     right: 200px;
 }
 
+/* Ορισμός χρώματος γραμματοσειράς, τόνωσης γραμματοσειράς (ιδιότητα font-weight για light, bold etc) και χρήση transition-duration για την εμφάνιση μικρού εφέ, το
+   οποίο για τα δευτερόλεπτα που έχουμε ορίσει καθυστερή να μεταβεί σε άλλη κατάσταση που όρίζεται σε επόμενη φάση με χρήση ψευδό-κλάσεων. */
 #most-famous-subject-areas a {
     color: red;
     text-decoration: none;
@@ -117,22 +245,34 @@ section > * {
     transition-duration: 0.25s;
 }
 
+/* Παρακάτω παρατίθονται τρεις κανόνες για την περίπτωση που ο χρήστης πατήσει κάποιον σύνδεσμο στο section Δημοφιλέστερες ενότητες.
+   ---
+   Ορισμός ιδιοτήτων παρόμοιων με άλλων που έχουν περιγραφεί παραπάνω. */
 #most-famous-subject-areas a:hover {
     color: red;
     text-decoration: none;
     border-bottom: 0.2em solid red;
 }
 
+/* Ορισμός ιδιοτήτων παρόμοιων με άλλων που έχουν περιγραφεί παραπάνω. */
 #most-famous-subject-areas a:active {
     color: black;
     background-color: red;
     border-bottom: 0.2em solid red;
 }
 
+/* Χρήση ψευδό-κλάσης :visited όπου θυμάται αν έχουμε επισκεφτεί μία σελίδα και στην συγκεκριμένη περίπτωση εφαρμόζει τον κανόνα. */
 #most-famous-subject-areas a:visited {
     color: black;
 }
 
+/* Χρήση ψευδό-κλάσης :after όπου εφαρμόζει κανόνες μετά από κάθε element που το ορίζει. Λόγω του ότι οι εικόνες σε πολλά sections "φεύγαν" από την θέση τους
+   και εμφανίζονταν και στο αμέσως επόμενο section (πιθανότατα εξαιτίας του προκαθορισμένου μεγέθους τους σε px), ορίσαμε τον παρόν κανόνα για να το αποφύγουμε.
+   Αυτό που κάνει είναι να χρησιμοποιεί τις ιδιότητες:
+   content: για να ορίσει ένα περιεχόμενο.
+   visibility: για να κρύψει το περιεχόμενο.
+   display: block: για να εμφανίζεται το περιεχόμενο ακριβώς κάτω από όλα τα αντικείμενα.
+   clear: both: για να εμφανίζεται το περιεχόμενο σε νέα γραμμή χωρίς τυχόν αντικείμενα με ιδιότητες float στα αριστερά και δεξιά του. */
 section:after {
     content: ".";
     visibility: hidden;
@@ -140,15 +280,21 @@ section:after {
     clear: both;
 }
 
+/* Ορισμός ιδιοτήτων παρόμοιων με άλλων που έχουν περιγραφεί παραπάνω. */
 #your-level {
     background-color: #ffdf52;
 }
 
+/* Ορισμός ιδιοτήτων παρόμοιων με άλλων που έχουν περιγραφεί παραπάνω. Χρήση ψευδό-κλάσης :first-letter που βρίσκει το πρώτο γράμμα στο αντικείμενο που την χρησιμοποιεί
+   και εφαρμόζει σε αυτό τους κανόνες. */
 #your-level > h3:first-letter {
     font-size: 1.5em;
     color: red;
 }
 
+/* Ορισμός ιδιοτήτων παρόμοιων με άλλων που έχουν περιγραφεί παραπάνω.
+   ---
+   Από εδώ και στο εξής θα παραθέτονται σχόλια σε κανόνες με καινούριες ιδιότητες ή σε κανόνες που η χρήση τους δεν είναι αυτονόητη.  */
 #your-level > img {
     float: left;
 }
@@ -176,6 +322,9 @@ section:after {
     font-weight: 500;
 }
 
+/* END-OF: index.html */
+/* START-OF: footer */
+
 footer {
     background-color: #dadbde;
 }
@@ -184,11 +333,13 @@ footer > img, footer address ,footer .social-media-footer {
     float: left;
 }
 
+/* Χρήση ιδιότητας border-radius για να δώσει μία καμπυλότητα στο περίγραμμα. */
 .social-media-footer img {
     border: 2px solid black;
     border-radius: 9.5px;
 }
 
+/* Οι τέσσερις παρακάτω κανόνες προορίζονται στην περίπτωση που ο χρήστης μετακινεί τον κένσορα πάνω από μία εικόνα των social medias. */
 .social-media-footer li:nth-child(1) img:hover {
     background-color: #1d9bf0;
 }
@@ -201,6 +352,8 @@ footer > img, footer address ,footer .social-media-footer {
     background-color: #ff0000;
 }
 
+/* Χρήση συνάρτησης radial-gradient() για εφαρμογή διάφορων χρωμάτων που ξεκινάνε με το πρώτο από πάνω δεξιά και καταλήγουν προς τα κάτω
+   με πλάγια κατεύθυνση. Ο συγκεκριμένος κανόνας χρησιμοποιείται για την προσομοίωση του λογότυπου Instagram. */
 .social-media-footer li:nth-child(4) img:hover {
     background: radial-gradient(at top right,#456eca,#a534ad,#b1338b,#e15947,#f4b753);
 }
@@ -221,6 +374,9 @@ footer div li {
 footer > p {
     clear: both;
 }
+
+/* END-OF: footer */
+/* START-OF: college_preparation.html, computer_programming.html, anatomy.html */
 
 main > h1 {
     color: #6277b6;
@@ -247,18 +403,27 @@ main > h1 {
     text-align: center;
 }
 
+/* Χρήση κανόνα για την τοποθέτηση του πίνακα στην μέση. Η ιδιότητα margin: auto φροντίζει να ισαπέχουν οι άκρες από το παράθυρο του φυλλομετρητή. */
 .subject section table {
     margin: auto;
 }
 
+/* Χρήση ιδιότητας text-align: ceneter για την τοποθέτηση του κειμένου στην μέση. */
 .subject .content p {
     text-align: center;
 }
 
+/* Χρήση κανόνα για επίτευξη ομοιομορφίας μεταξύ όλων των πινάκων περιεχομένων. */
 .subject .content table {
     width: 50%;
 }
 
+/* Στο εξής όπου χρησιμοποιούμε την ψευδό-κλάση :nth-child() με ορίσματα 2n και 2n+1, θέλουμε να δημιουργήσουμε ένα μοτίβο, έτσι ώστε τα μαθήματα
+   να μεφανίζονται με δύο διαφορετικά χρώματα εναλλάξ.
+   ---
+   Η ψευδό-κλάση :nth-child() χρησιμοποιείται με όρισμα 2n και 2n+1 παρακάτω για να καθορίσει ένα συγκεκριμένο μοτίβο ενεργοποίησης του κανόνα.
+   Συγκεκριμένα θέλουμε την ενεργοποίηση του κανόνα εναλλάξ. Έτσι ξεκινώντας από το πρώτο παιδί με n=0 καταφέρνουμε να διαχωρίσουμε τα παιδιά σε μονά και
+   ζυγά. */
 .subject:nth-child(2n) h1 {
     background-color: #cbdaeb;
 }
@@ -344,6 +509,10 @@ main > h1 {
     font-weight: bold;
 }
 
+/* Χρήση κανόνα που ενεργοποιείται σε όλα τα παιδιά td του tr εκτός του πρώτου.
+   ---
+   Για την αποφυγή επαναλήψεων στις παρακάτω περιγραφές, σε έναν κανόνα τύπου el1 + el2 ζητάμε την εφαρμογή του σε όλα τα el2 που είναι αδέλφια
+   με το el1. */
 .subject .total-cost tbody > tr > td + td {
     text-align: center;
 }
@@ -358,6 +527,7 @@ main > h1 {
     padding-bottom: 1em;
 }
 
+/* Χρήση της ιδιότητας display: none για να αφανήσουμε τα κυκλικά κουμπιά επιλογής. */
 .subject .choose-price input[type="radio"]{
     display: none;
 }
@@ -422,6 +592,9 @@ main > h1 {
     transition: 0s;
 }
 
+/* END-OF: college_preparation.html, computer_programming.html, anatomy.html */
+/* START-OF: contact_form.html */
+
 form {
     padding: 0.5em;
 }
@@ -459,6 +632,9 @@ form input[type="submit"]:active, form input[type="reset"]:active {
     color: black;
     transition-duration: 0s;
 }
+
+/* END-OF: contact_form.html */
+/* START-OF: subject_areas.html */
 
 #education, #health, #law {
     background: rgba(44, 132, 219, 0.2)
@@ -538,6 +714,9 @@ form input[type="submit"]:active, form input[type="reset"]:active {
     border-radius: 25px;
 }
 
+/* END-OF: subject_areas.html */
+/* START-OF: about_us.html */
+
 .about_us {
     background: rgba(44, 132, 219, 0.3);
 }
@@ -606,48 +785,4 @@ form input[type="submit"]:active, form input[type="reset"]:active {
     clear: left;
 }
 
-/* dropdown menu*/
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    margin-top: 1em;
-    display: none;
-    position: absolute;
-    background-color: #94acfc;
-    min-width: 160px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-    z-index: 1;
-}
-
-.dropdown-content a {
-    border-left: 0.5em solid #94acfc;
-    color: white;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    border-left: 0.5em solid #50666f;
-    transition: 0.5s;
-}
-
-.dropdown-content a:active {
-    color: white;
-    background-color: #50666f;
-    transition: 0.15s;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropbtn {
-    color: white;
-    text-align: center;
-    padding-bottom: 18px;
-    text-decoration: none;
-  }
+/* END-OF: about_us.html */
