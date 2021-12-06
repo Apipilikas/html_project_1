@@ -724,8 +724,9 @@ form {
     padding: 0.5em;
 }
 
-form label, form input[type="text"], form input[type="email"],
-form select, form textarea {
+#contact-form label, #contact-form input[type="text"], 
+#contact-form input[type="email"],
+#contact-form select, #contact-form textarea {
     display: block;
     width: 100%;
     padding: 0.5em;
@@ -1052,6 +1053,77 @@ form .customer-inf-content {
     grid-area: p_second;
     align-self: center; 
     justify-self: center;
+}
+
+/* registration-form.html */
+
+fieldset {
+    border:4px solid rgb(19, 97, 240);
+    background-color: #d1dbfc;
+    border-radius: 35px;
+    padding: 2.5em;
+    margin: 1em;
+    display: grid;
+}
+
+legend {
+    font-size: 20px;
+    border-radius: 35px;
+    background-color: rgb(19, 97, 240);
+    font-weight: bold;
+    color: white;
+    padding: 0.5em;
+}
+
+.question {
+    margin: 0.5em 0 0.5em 0;
+}
+
+.question > summary {
+    padding: 1em;
+    border: 1px solid black;
+}
+
+.answer {
+    margin: auto;
+}
+
+.input-radio, .input-checkbox {
+    width: 50%;
+    color: #858da8;
+    margin: 0.5em auto 0.5em auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid #858da8;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* .input-radio input[type="radio"]:focus + label {
+    background-color: #7c7c99;
+}
+
+.input-radio input[type="radio"]:checked + label {
+    border: 2px solid #215ef9;
+    background-color: #215ef9;
+    color: white;
+} */
+form input[type="number"] {
+    /* display: block; */
+    
+    padding: 0.5em;
+    font-family: 'Manrope', sans-serif;
+    /* box-sizing: border-box; */
+}
+
+.input-number {
+    margin: 0.5em auto 0.5em auto;
+}
+
+.input-number > p {
+    display: inline;
+    padding: 0;
 }
 
 /* TABLETS */
