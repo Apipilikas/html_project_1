@@ -11,9 +11,6 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="styles.css">
         <script src="script.js" type="text/javascript"></script>
-        <script>
-            window.onload = test;
-        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
@@ -46,7 +43,7 @@
         <main>
             <h1>Φόρμα εγγραφής</h1>
 
-            <form id="registration-form" method="POST" action="/edume">
+            <form id="registration-form" method="POST" novalidate>
                 <fieldset id="questionnaire">
                     <legend>Ερωτηματολόγιο</legend>
                     <p>
@@ -57,14 +54,15 @@
                     </p>
                     <details class="question" id="question-1" open>
                         <summary>1. Ποια είναι η τωρινή σου επαγγελματική κατάσταση;</summary>
+                        <span class="alert-box"></span>
                         <div class="answer">
                             <div class="input-radio">
                                 <input type="radio" id="student-radio" name="employment-status" value="student">
                                 <label for="student-radio">Φοιτητής</label>
                             </div>
                             <div class="input-radio">
-                                <input type="radio" id="employee-radio" name="employment-status" value="employed">
-                                <label for="employee-radio">Εργαζόμενος</label>
+                                <input type="radio" id="employed-radio" name="employment-status" value="employed">
+                                <label for="employed-radio">Εργαζόμενος</label>
                             </div>
                             <div class="input-radio">
                                 <input type="radio" id="unemployed-radio" name="employment-status" value="unemployed">
@@ -83,6 +81,7 @@
     
                     <details class="question" id="question-2" open>
                         <summary>2. Ανάλογα με την απάντηση σου στην ερώτηση (1.) απάντησε τα παρακάτω:</summary>
+                        <span class="alert-box"></span>
                         <div class="answer">
                             <div class="input-number" id="study-year-content">
                                 <label for="study-year-input">Παρακολουθώ το </label>
@@ -109,6 +108,7 @@
 
                     <details class="question" id="question-3" open>
                         <summary>3. Τι πτυχίο/πτυχία έχεις στην κατοχή σου;</summary>
+                        <span class="alert-box"></span>
                         <div class="answer">
                             <div class="input-radio">
                                 <input type="radio" id="high-school-radio" name="degrees" value="high-school">
@@ -143,6 +143,7 @@
     
                     <details class="question" id="question-4" open>
                         <summary>4. Σε τι επίπεδο θα κατέταζες τον εαυτό σου;</summary>
+                        <span class="alert-box"></span>
                         <div class="answer">
                             <div class="input-range">
                                 <input type="range" min="0" max="100" step="25" id="question-4-range" list="experience-level-list">
@@ -159,6 +160,7 @@
     
                     <details class="question" id="question-5" open>
                         <summary>5. Ποιος/Ποιοι από τους παρακάτω τομείς σε ενδιαφέρει/ενδιαφέρουν περισσότερο;</summary>
+                        <span class="alert-box"></span>
                         <div class="answer">
                             <div class="input-checkbox">
                                 <input type="checkbox" id="education-checkbox" name="education">
@@ -189,6 +191,7 @@
     
                     <details class="question" id="question-6" open>
                         <summary>6. Γιατί σε ενδιαφέρει ο/οι τομέας/τομείς που διάλεξες στην ερώτηση (5.);</summary>
+                        <span class="alert-box"></span>
                         <div class="answer">
                             <div class="input-checkbox">
                                 <input type="checkbox" id="business-reason-checkbox" name="business-reason">
@@ -223,6 +226,7 @@
     
                     <details class="question yes-no-question" id="question-7" open>
                         <summary>7. Στον ελεύθερο σου χρόνο ασχολείσαι με το επάγγελμα/ενδιαφέρον σου;</summary>
+                        <span class="alert-box"></span>
                         <div class="answer">
                             <div class="input-radio">
                                 <input type="radio" id="yes-radio-q7" name="question-7-radio" value="yes">
@@ -237,6 +241,7 @@
     
                     <details class="question" id="question-8" open>
                         <summary>8. Πόσες ώρες από τον ελεύθερο σου χρόνο αφιερώνεις στο επάγγελμα/ενδιαφέρον σου;</summary>
+                        <span class="alert-box"></span>
                         <div class="answer">
                             <div class="input-range">
                                 <input type="range" min="0" max="100" step="25" id="question-8-range" list="daily-hours-list">
@@ -253,6 +258,7 @@
     
                     <details class="question" id="question-9" open>
                         <summary>9. Ποιος είναι ο λόγος εγγραφής στην σελίδα;</summary>
+                        <span class="alert-box"></span>
                         <div class="answer">
                             <div class="input-checkbox">
                                 <input type="checkbox" id="knowledge-reason-checkbox" name="knowledge-reason">
@@ -295,6 +301,7 @@
     
                     <details class="question" id="question-10" open>
                         <summary>10. Με τρεις λέξεις θα περιέγραφα τον εαυτό μου...</summary>
+                        <span class="alert-box"></span>
                         <div class="answer">
                             <div class="input-checkbox">
                                 <input type="checkbox" id="creative-checkbox" name="creative">
@@ -349,6 +356,7 @@
                     
                     <details class="question yes-no-question" id="question-11" open>
                         <summary>11. Έχεις ξαναπαρακολουθήσει μάθημα από αντίστοιχη σελίδα;</summary>
+                        <span class="alert-box"></span>
                         <div class="answer">
                             <div class="input-radio">
                                 <input type="radio" id="yes-radio-q11" name="question-11-radio" value="yes">
@@ -363,6 +371,7 @@
 
                     <details class="question" id="question-12" open>
                         <summary>12. Αυτό που αναζητώ στο Edume είναι...</summary>
+                        <span class="alert-box"></span>
                         <div class="answer">
                             <div>
                                 <h3>από άποψη υλικού:</h3>
@@ -413,6 +422,10 @@
                         </div>
                     </details>
                 </fieldset>
+                <div class="buttons-area" id="reg_form_buttons">
+                    <input type="submit" id="submit_btn" name="submit_btn">
+                    <input type="reset" id="reset_btn" name="reset">
+                </div>
             </form>
         </main>
     </body>

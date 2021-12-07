@@ -1074,6 +1074,9 @@ legend {
     color: white;
     padding: 0.5em;
 }
+details{
+    display: flex;
+}
 
 .question {
     margin: 0.5em 0 0.5em 0;
@@ -1085,7 +1088,17 @@ legend {
     border-radius: 4px;
     font-weight: 700;
     background-color: rgba(247, 30, 30, 0.651);
+    /* background-color: rgba(247, 247, 67, 0.767); */
     /* background-color: rgba(40, 212, 40, 0.63); */
+}
+
+.question > .alert-box {
+    display: none;
+    margin: 0.5em 0 0 0;
+    padding: 0.5em;
+    border-radius: 4px;
+    font-weight: 600;
+    background-color: rgba(252, 159, 82, 0.767);
 }
 
 .answer {
@@ -1175,9 +1188,23 @@ form input[type="number"] {
     width: 25%;
 }
 
+#question-2 > .answer {
+    display: flex;
+    flex-direction: column;
+}
+
+#question-2 > .answer > .input-number {
+    background-color: rgba(247, 30, 30, 0.356);
+}
+
 .question h3 {
     text-align: center;
 }
+
+/* .input-checkbox + .input-text > input[type="text"],
+ .input-radio + .input-text > input[type="text"] {
+    background-color: rgba(247, 30, 30, 0.356);
+} */
 
 /* TABLETS */
 @media only screen and (min-width: 768px) {
