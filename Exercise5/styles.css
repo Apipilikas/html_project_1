@@ -1059,7 +1059,7 @@ form .customer-inf-content {
 
 fieldset {
     border:4px solid rgb(19, 97, 240);
-    background-color: #d1dbfc;
+    background-color: #d8e0fc;
     border-radius: 35px;
     padding: 2.5em;
     margin: 1em;
@@ -1081,23 +1081,36 @@ legend {
 
 .question > summary {
     padding: 1em;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border-radius: 4px;
+    font-weight: 700;
+    background-color: rgba(247, 30, 30, 0.651);
+    /* background-color: rgba(40, 212, 40, 0.63); */
 }
 
 .answer {
-    margin: auto;
+    margin: 0.5em auto auto auto;
+    padding: 0.5em;
+    /* border: 1px solid black; */
+    border-radius: 4px;
+    background-color: #c2cffa;
 }
 
 .input-radio, .input-checkbox {
     width: 50%;
-    color: #858da8;
+    color: black;
     margin: 0.5em auto 0.5em auto;
     display: flex;
     align-items: center;
     padding-left: 1em;
-    border: 2px solid #858da8;
+    border: 2px solid black;
     border-radius: 4px;
     font-weight: 500;
+}
+
+.input-text {
+    width: 50%;
+    margin: auto;
 }
 
 .input-text > input[type="text"] {
@@ -1111,6 +1124,7 @@ legend {
 .input-radio > label, .input-checkbox > label {
     width: 100%;
     padding: 1em;
+    transition-duration: 0.5s;
     
 }
 
@@ -1128,9 +1142,10 @@ form input[type="number"] {
 .input-number {
     width: 50%;
     margin: 0.5em auto 0.5em auto;
-    border: 2px solid #858da8;
+    border: 2px solid black;
     border-radius: 4px;
     padding: 1em;
+    font-weight: 500;
 }
 
 .input-number > p {
@@ -1158,6 +1173,10 @@ form input[type="number"] {
 
 .yes-no-question .input-radio {
     width: 25%;
+}
+
+.question h3 {
+    text-align: center;
 }
 
 /* TABLETS */
