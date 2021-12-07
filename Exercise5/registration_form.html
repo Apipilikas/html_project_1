@@ -43,62 +43,70 @@
 
     <main>
         <h1>Εγγραφείτε στο Edume!</h1>
-        <form method="POST" id="form">
+        <form method="POST" id="form" novalidate> <!--novalidate: gia emfanisi twn javascript validation rules-->
             <fieldset class="personal_info">
                 <legend>Προσωπικά Στοιχεία</legend>
 
-                <div id="reg_form_firstname">
+                <div class="form-field" id="reg_form_firstname">
                     <label for="firstname_txt">Όνομα: </label>
                     <input type="text" id="firstname_txt" name="firstname" autocomplete="on" required>
+                    <small></small>
                 </div>
 
-                <div id="reg_form_lastname">
+                <div class="form-field" id="reg_form_lastname">
                     <label for="lastname_txt">Επώνυμο: </label>
                     <input type="text" id="lastname_txt" name="lastname" autocomplete="on" required>
+                    <small></small>
                 </div>
 
-                <div id="reg_form_email">
+                <div class="form-field" id="reg_form_email">
                     <label for="email_txt">Email: </label>
                     <input type="email" id="email_txt" name="email" placeholder="πχ. p1234@aueb.gr" autocomplete="on"
                         required>
+                    <small></small>
                 </div>
 
-                <div id="reg_form_address">
+                <div class="form-field" id="reg_form_address">
                     <label for="address_txt">Διεύθυνση: </label>
                     <input type="text" id="address_txt" name="address" placeholder="πχ. Πατησίων 76" autocomplete="on"
                         required>
+                    <small></small>    
                 </div>
 
-                <div id="reg_form_birth">
+                <div class="form-field" id="reg_form_birth">
                     <label for="birth_txt">Ημερομηνία Γέννησης: </label>
                     <input type="date" id="birth_txt" name="birth_date" autocomplete="on" required>
-                    <div class="error" id="age_error"></div>
+                    <small></small>
                 </div>
 
-                <div id="reg_form_country">
+                <div class="form-field" id="reg_form_country">
                     <label for="country_txt">Χώρα: </label>
                     <input type="text" id="country_txt" name="country" placeholder="πχ. Ελλάδα" autocomplete="on"
                         required>
+                    <small></small>
                 </div>
 
-                <div id="reg_form_telephone">
+                <div class="form-field" id="reg_form_telephone">
                     <label for="telephone_txt">Τηλέφωνο Επικοινωνίας: </label>
                     <input type="tel" id="telephone_txt" name="telephone" placeholder="πχ. 6912345678" autocomplete="on"
                         required>
+                    <small></small>
                 </div>
             </fieldset>
 
             <fieldset class="payment_info">
                 <legend>Στοιχεία Πληρωμής</legend>
 
-                <div id="reg_form_card">
+                <div class="form-field" id="reg_form_card">
                     <label for="card_txt">Αριθμός Κάρτας: </label>
                     <input type="text" id="card_txt" name="card" pattern=[0-9]{16} autocomplete="off" required>
+                    <small></small>
                 </div>
 
-                <div id="reg_form_cvv">
+                <div class="form-field" id="reg_form_cvv">
                     <label for="cvv_txt">CVV: </label>
-                    <input type="text" id="cvv_txt" name="cvv" placeholder="πχ. 123" autocomplete="off" required>
+                    <input type="text" id="cvv_txt" name="cvv" pattern=[0-9]{3,4} placeholder="πχ. 123" autocomplete="off" required>
+                    <small></small>
                 </div>
 
                 <!--<details>
@@ -109,40 +117,44 @@
                     </p>
                 </details>-->
 
-                <div id="reg_form_card_date">
+                <div class="form-field" id="reg_form_card_date">
                     <label for="card_date_txt">Ημερομηνία Λήξης: </label>
                     <input type="month" id="card_date_txt" name="cvv" autocomplete="off" required>
+                    <small></small>
                 </div>
 
-                <div id="reg_form_card_email">
+                <div class="form-field" id="reg_form_card_email">
                     <label for="card_email_txt">Email κατόχου: </label>
                     <input type="email" id="card_email_txt" name="card_email" placeholder="πχ. p1234@aueb.gr"
                         autocomplete="on" required>
+                    <small></small>
                 </div>
             </fieldset>
 
             <fieldset class="user_info">
                 <legend>Στοιχεία Χρήστη</legend>
 
-                <div id="reg_form_username">
+                <div class="form-field" id="reg_form_username">
                     <label for="username_txt">Username: </label>
                     <input type="text" id="username_txt" name="username" autocomplete="off" required>
+                    <small></small>
                 </div>
 
-                <div id="reg_form_password1">
+                <div class="form-field" id="reg_form_password1">
                     <label for="password_txt">Password: </label>
                     <input type="password" id="password_txt" name="password1" autocomplete="off" required>
+                    <small></small>
                 </div>
 
-                <div id="reg_form_password2">
+                <div class="form-field" id="reg_form_password2">
                     <label for="password2_txt">Επιβεβαίωση password: </label>
                     <input type="password" id="password2_txt" name="password2" autocomplete="off" required>
-                    <div class="error" id="password_error"></div>
+                    <small></small>
                 </div>
             </fieldset>
 
             <div class="buttons-area" id="reg_form_buttons">
-                <input type="submit" id="submit_btn" name="submit">
+                <input type="submit" id="submit_btn" name="submit_btn">
                 <input type="reset" id="reset_btn" name="reset">
             </div>
         </form>

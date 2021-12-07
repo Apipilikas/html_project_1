@@ -40,6 +40,12 @@
     src: url(fonts/Manrope-ExtraBold.ttf);
 }
 
+:root {
+    --error-color: #dc3545;
+    --success-color: rgba(40, 212, 40, 0.63);
+    --warning-color: #ffc107;
+}
+
 body {
     background-color: #f2f0ef;
     font-family: 'Manrope', sans-serif;
@@ -1197,6 +1203,23 @@ legend {
 #reg_form_password2 input{
     min-width: 98%;
     height: 2.3em;
+}
+
+/* registration_form.html */
+.form-field input:focus {
+    outline: none;
+}
+
+.form-field.error input {
+    border-color: var(--error-color);
+}
+
+.form-field.success input {
+    border-color: var(--success-color);
+}
+
+.form-field small {
+    color: var(--error-color);
 }
 
 /* TABLETS */
