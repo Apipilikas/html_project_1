@@ -23,7 +23,6 @@ const defaultQuestionsAlertMessages = ['Επιλέξτε μία από τις π
     'Επιλέξτε ΝΑΙ ή ΌΧΙ.',
     'Επιλέξτε ένα ή περισσότερα κουτάκια.'];
 
-const form = document.getElementById('registration-form');
 window.onload = test;
 
 function test() {

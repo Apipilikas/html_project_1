@@ -1,7 +1,8 @@
 /* Αρχικοποίηση κάποιων μεταβλητών με τα βασικά χρώματα του site. */
 :root {
+    --menuColor: #94acfc;
     --blue: #215ef9;
-    --light-blue: #94acfc;
+    --menu_underline: #50666f;
 }
 
 /* Ορισμός κύριου χρώματος παρασκηνίου και γραμματοσειράς για λόγους εμφάνισης. Επιπρόσθετα ορίζεται και margin: 0em 
@@ -49,7 +50,7 @@ header {
 
 /* Χρήση μεταβλητών που έχουν οριστεί στο :root, ορισμός margin: 0em για αναίρεση προεπιλογής και για να μην υπάρχει κενό στο πάνω και κάτω 
    μέρος της λίστας (ομοιομορφία), χρήση padding της μορφής padding: top_bottom left_right, χρήση του border έτσι ώστε να γίνει πιο έντονο 
-   και να έχει χρώμα --light-blue. Την τελευταία ιδιότητα την χρησιμοποιούμε για να πετύχουμε σε επόμενο κανόνα την εμφάνιση μίας μπάρας 
+   και να έχει χρώμα --menuColor. Την τελευταία ιδιότητα την χρησιμοποιούμε για να πετύχουμε σε επόμενο κανόνα την εμφάνιση μίας μπάρας 
    όταν κάνουμε hover πάνω από αντικείμενα τύπου li. Επιπρόσθετα με τον τελεστή κενό ( ) ζητάμε την εφαρμογή του κανόνα στο element ul 
    που βρίσκεται κάτω από το element nav.
    ---
@@ -58,8 +59,8 @@ header {
 nav ul {
     margin: 0em;
     padding: 0.5em 0em;
-    border: 0.5em solid var(--light-blue);
-    background-color: var(--light-blue);
+    border: 0.5em solid var(--menuColor);
+    background-color: var(--menuColor);
 }
 
 /* Ορισμός χρώματος γραμματοσειράς και αναίρεση προεπιλογής εμφάνισης υπογράμμισης κάτω από τα elements a. */
@@ -90,15 +91,15 @@ nav li {
    ΣΥΝΟΛΙΚΑ ο κανόνας πετυχαίνει την εφαρμογή κάποιων ιδιοτήτων σε αντικείμενα li ΕΚΤΟΣ του li που εμφανίζεται κατά σειρά δεύτερο
    μέσα στην λίστα element ul, όταν μετακινούμε τον κένσορα πάνω σε αυτά. */
 nav li:not(nav ul > li:nth-child(2)):hover {
-    border-bottom: 0.5em solid #50666f;
+    border-bottom: 0.5em solid var(--menu_underline);
     transition: 0.5s;
 }
 
 /* Χρήση ψευδό-κλάσης :active, όπου ενεργοποιεί τον παρακάτω κανόνα όταν πατάμε (κάνουμε click) πάνω σε ένα αντικείμενο li. */
 nav li:active {
-    background-color: #50666f;
-    border-top: 0.5em solid #50666f;
-    border-bottom: 0.5em solid #50666f;
+    background-color: var(--menu_underline);
+    border-top: 0.5em solid var(--menu_underline);
+    border-bottom: 0.5em solid var(--menu_underline);
     transition: 0.15s;
 }
 
@@ -127,13 +128,13 @@ nav li:active {
 }
 
 .dropdown-content a:hover {
-    border-left: 0.5em solid #50666f;
+    border-left: 0.5em solid var(--menu_underline);
     transition: 0.5s;
 }
 
 .dropdown-content a:active {
     color: white;
-    background-color: #50666f;
+    background-color: var(--menu_underline);
     transition: 0.15s;
 }
 
