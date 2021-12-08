@@ -46,6 +46,7 @@
             <form id="registration-form" method="POST" novalidate>
                 <fieldset id="questionnaire">
                     <legend>Ερωτηματολόγιο</legend>
+                    <span id="questionnaire-result">a</span>
                     <p>
                         Απάντησε στις παρακάτω ερωτήσεις για να μας βοηθήσεις να σου παρέχουμε όλο και πιο 
                         στοχευμένο υλικό πάνω στα ενδιαφέροντα σου! Για την σωστή υποβολή του ερωτηματολογίου,
@@ -110,29 +111,29 @@
                         <summary>3. Τι πτυχίο/πτυχία έχεις στην κατοχή σου;</summary>
                         <span class="alert-box"></span>
                         <div class="answer">
-                            <div class="input-radio">
-                                <input type="radio" id="high-school-radio" name="degrees" value="high-school">
-                                <label for="high-school-radio">Απολυτήριο Λυκείου</label>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="high-school-checkbox" name="high-school">
+                                <label for="high-school-checkbox">Απολυτήριο Λυκείου</label>
                             </div>
-                            <div class="input-radio">
-                                <input type="radio" id="bachelor-degree-radio" name="degrees" value="bachelor-degree">
-                                <label for="bachelor-degree-radio">Προπτυχιακό</label>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="bachelor-degree-checkbox" name="bachelor-degree">
+                                <label for="bachelor-degree-checkbox">Προπτυχιακό</label>
                             </div>
-                            <div class="input-radio">
-                                <input type="radio" id="master-degree-radio" name="degrees" value="master-degree">
-                                <label for="master-degree-radio">Μεταπτυχιακό</label>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="master-degree-checkbox" name="master-degree">
+                                <label for="master-degree-checkbox">Μεταπτυχιακό</label>
                             </div>
-                            <div class="input-radio">
-                                <input type="radio" id="phd-degree-radio" name="degrees" value="phd-degree">
-                                <label for="phd-degree-radio">Διδακτορικό</label>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="phd-degree-checkbox" name="phd-degree">
+                                <label for="phd-degree-checkbox">Διδακτορικό</label>
                             </div>
-                            <div class="input-radio">
-                                <input type="radio" id="pnta-radio-2" name="degrees" value="pnta">
-                                <label for="pnta-radio-2">Δεν θέλω να απαντήσω</label>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="pnta-checkbox-2" name="pnta-2">
+                                <label for="pnta-checkbox-2">Δεν θέλω να απαντήσω</label>
                             </div>
-                            <div class="input-radio">
-                                <input type="radio" id="degree-else-radio" name="degrees" value="degree-else">
-                                <label for="degree-else-radio">Άλλο</label>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="degree-else-checkbox" name="degree-else">
+                                <label for="degree-else-checkbox">Άλλο</label>
                             </div>
                             <div class="input-text">
                                 <label for="degree-else-txt">Γράψτε το πτυχίο που έχετε λάβει:</label>
@@ -289,8 +290,8 @@
                                 <label for="xmas-sale-reason-checkbox">Θέλω να εκμεταλευτώ την χριστουγγενιάτικη προσφορά.</label>
                             </div>
                             <div class="input-checkbox">
-                                <input type="checkbox" id="else-reason-checkbox" name="else-reason">
-                                <label for="else-reason-checkbox">Άλλος λόγος</label>
+                                <input type="checkbox" id="reason-else-checkbox-2" name="else-reason">
+                                <label for="reason-else-checkbox-2">Άλλος λόγος</label>
                             </div>
                             <div class="input-text">
                                 <label for="reason-else-txt-q9">Γράφτε τον λόγο που επιλέξατε τον/τους τομέα/τομείς: </label>
@@ -428,6 +429,58 @@
                 </div>
             </form>
         </main>
+
+        <aside>
+            <div class="sticky">
+                <h2>ΧΡΙΣΤΟΥΓΓΕΝΙΑΤΙΚΗ ΠΡΟΣΦΟΡΑ</h2>
+                <p>
+                    Το Edume φέρνει τον Άι Βασίλη νωρίτερα φέτος με ένα πακέτο που δεν πρέπει να χάσεις!
+                </p>
+            
+                <div id="special-xmas-offer">
+                    <p>
+                        4 μαθήματα της επιλογής σου <span>ΜΟΝΟ 100€</span>
+                    </p>
+                </div>
+            
+                <p>
+                    Χτύπα το κουμπί <strong>Το θέλω</strong> γιατί τέτοια προσφορά δεν ξανά 'γινε.
+                </p>
+            
+                <button type="button">Το θέλω</button>
+            
+                <img src="resources/xmas.png" alt="Ο 'Αι Βασίλης έρχεται..." width="300" height="220">
+    
+                <small>Η προσφορά ισχύει μέχρι 25/12/2021 και ώρα 22:00.</small>
+            </div>
+        </aside>
+    
+        <footer>
+            <img src="resources/edume_footer_logo.png" alt="Edume logo">
+            <address>
+                <ul>
+                    <li>📧<a href="mailto:MandA@aueb.gr">MandA@aueb.gr</a></li>
+                    <li>☎️<a href="tel:+302108203107">210 8203 107</a></li>
+                    <li>📍 Λεωφόρος Πατησσίων 76, 104 34 Αθήνα</li>
+                </ul>
+            </address>
+            <div class="social-media-footer">
+                <ul>
+                    <li><a href="https://twitter.com/?lang=el"><img src="resources/twitter_icon.png" alt="twitter"
+                                width="50" height="50"></a></li>
+                    <li><a href="https://el-gr.facebook.com/"><img src="resources/facebook_icon.png" alt="facebook"
+                                width="50" height="50"></a></li>
+                    <li><a href="https://www.youtube.com/"><img src="resources/youtube_icon.png" alt="youtube" width="50"
+                                height="50"></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="resources/instagram_icon.png" alt="instagram"
+                                width="50" height="50"></a></li>
+                </ul>
+            </div>
+            <p>
+                Edume | Powered by M and A | 2021 <br>
+            </p>
+        </footer>
+
     </body>
 
 </html>

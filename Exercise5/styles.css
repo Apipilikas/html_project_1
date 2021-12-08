@@ -1101,6 +1101,17 @@ details{
     background-color: rgba(252, 159, 82, 0.767);
 }
 
+#questionnaire-result {
+    display: none;
+    margin: 0.5em 0 0 0;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 1em;
+    border-radius: 4px;
+    font-weight: 600;
+    background-color: rgba(40, 212, 40, 0.63);
+}
+
 .answer {
     margin: 0.5em auto auto auto;
     padding: 0.5em;
