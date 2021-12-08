@@ -52,8 +52,7 @@ function test() {
             else {
                 valid = false;
                 let alertBox = questions[j].querySelector(".question > .alert-box");
-                alertBox.style.display = 'initial';
-                alertBox.innerHTML = defaultQuestionsAlertMessages[j];
+                showAlertBox(alertBox, defaultQuestionsAlertMessages[j]);
             }
         }
         //checkNumberInputsRange();
@@ -74,12 +73,12 @@ function test() {
         }
         else {
             resultBox.style.backgroundColor = "rgba(247, 30, 30, 0.651)";
-            resultBox.innerHTML = 'Δεν έχετε απαντήσει σε ' + (12 - count) + ' ερωτήσεις';
+            resultBox.innerHTML = 'Δεν έχετε απαντήσει σε ' + (12 - count) + ' ερωτήσεις.';
         }
     });
 }
 
-// Μέθοδος που βοηθάει στην καλύτερη μορφοποίηση του ερωτηματολογίου. Όταν ο χρήστης
+// Συνάρτηση που βοηθάει στην καλύτερη μορφοποίηση του ερωτηματολογίου. Όταν ο χρήστης
 // απαντάει σε μία ερώτηση αλλάζει το πλαίσιο της από κόκκινο σε πράσινο.
 // Παρακάτω ακολουθούν οι τέσσερις συναρτήσεις για το καθένα από τα τέσσερα inputs που
 // χρησιμοποιούνται στο ερωτηματολόγιο.
@@ -106,7 +105,7 @@ function changeSummaryColor() {
     }
 }
 
-// Προορίζεται για τα inputs με τύπο radio.
+// Συνάρτηση που προορίζεται για τα inputs με τύπο radio.
 // Εκμεταλλευόμαστε την χρήση του eventListener για την πυροδότηση της
 // συνάρτησης question2TriggerBoxes που εξηγείται παρακάτω. Το τελευταίο το
 // χρειαζόμαστε μόνο για την πρώτη ερώτηση.
@@ -117,13 +116,13 @@ function changeSummaryColorRadio(summary, radioInputs, i) {
             changeSummaryColorToGreen(summary);
             if (i == 0) {
                 //console.log(this.value)
-                question2TriggerBoxes(this.value)
+                question2TriggerBoxes(this.value);
             }
         }
     }
 }
 
-// Προορίζεται για τα inputs με τύπο checkbox.
+// Συνάρτηση που προορίζεται για τα inputs με τύπο checkbox.
 // Αξίζει να σημειωθεί ότι στην ερώτηση 10 του ερωτηματολογίου
 // ζητείται από τον χρήστη να επιλέξει ακριβώς τρία κουτάκια. 
 // Εκμεταλευόμαστε την χρήση του eventListener για το τελευταίο και
@@ -133,26 +132,26 @@ function changeSummaryColorRadio(summary, radioInputs, i) {
 function changeSummaryColorCheckbox(summary, checkboxInputs, i) {
     for (checkboxInput of checkboxInputs) {
         checkboxInput.onchange = function () {
-            let checkboxInputsChecked = questions[i].querySelectorAll('input[type="checkbox"]:checked')
-            let len = checkboxInputsChecked.length
+            let checkboxInputsChecked = questions[i].querySelectorAll('input[type="checkbox"]:checked');
+            let len = checkboxInputsChecked.length;
             //console.log(len)
             //console.log(this)
             //console.log(this.checked)
             if (i == 9) {
-                let alertBox = questions[9].querySelector(".question > .alert-box")
+                let alertBox = questions[9].querySelector(".question > .alert-box");
                 if (len >= 1 && len <= 2) {
-                    questionsValidity[i] = false
+                    questionsValidity[i] = false;
                     changeSummaryColorToYellow(summary);
-                    alertBox.style.display = 'initial'
-                    alertBox.innerHTML = 'Επιλέξτε άλλο/άλλα ' + (3 - len) + ' κουτάκια!';
+                    showAlertBox(alertBox, 'Επιλέξτε άλλο/άλλα ' + (3 - len) + ' κουτάκια!');
                 }
                 else if (len == 3) {
-                    questionsValidity[i] = true
-                    alertBox.style.display = 'none'
+                    questionsValidity[i] = true;
+                    hideAlertBox(alertBox);
                     changeSummaryColorToGreen(summary);
                 }
                 else {
-                    changeSummaryColorToRed(summary)
+                    changeSummaryColorToRed(summary);
+                    showAlertBox(alertBox, 'Επιλέξτε άλλο/άλλα ' + (3 - len) + ' κουτάκια!');
                 }
             }
             else {
@@ -171,15 +170,15 @@ function changeSummaryColorCheckbox(summary, checkboxInputs, i) {
     }
 }
 
-// Προορίζεται για τα inputs με τύπο range.
+// Συνάρτηση που προορίζεται για τα inputs με τύπο range.
 function changeSummaryColorRange(summary, rangeInputs, i) {
     rangeInputs[0].onclick = function () {
-        questionsValidity[i] = true
+        questionsValidity[i] = true;
         changeSummaryColorToGreen(summary);
     }
 }
 
-// Προορίζεται για τα inputs με τύπο number.
+// Συνάρτηση που προορίζεται για τα inputs με τύπο number.
 function changeSummaryColorNumber(summary, numberInputs, i) {
     for (numberInput of numberInputs) {
         numberInput.onchange = function () {
@@ -197,21 +196,20 @@ function changeSummaryColorNumber(summary, numberInputs, i) {
 // το τι έχει πατήσει ο χρήστης στην ερώτηση 1, ενεργοποιούμε το κατάλληλο
 // πεδίο στον χρήστη στην ερώτηση 2. Αυτό το καταφέρνουμε διαβάζοντας τις κατάλληλες
 function question2TriggerBoxes(answerValue) {
-    console.log(answerValue == "student")
     if (answerValue == "student") {
-        enableContainer('study-year-content')
+        enableContainer('study-year-content');
     }
     else if (answerValue == "employed") {
-        enableContainer('employee-year-content')
+        enableContainer('employee-year-content');
     }
     else if (answerValue == "unemployed") {
-        enableContainer('unemployed-year-content')
+        enableContainer('unemployed-year-content');
     }
     else if (answerValue == "retired") {
-        enableContainer('retired-year-content')
+        enableContainer('retired-year-content');
     }
     else {
-        enableContainer(null)
+        enableContainer(null);
     }
 }
 
@@ -223,14 +221,26 @@ function question2TriggerBoxes(answerValue) {
 // χωρίς να εξαφανίζονται τα άλλα).
 function enableContainer(elementID) {
     let numberInputsContainers = questions[1].getElementsByClassName('input-number');
-    let container = document.getElementById(elementID);
+    let container = null;
+    if (elementID != null) {
+        container = document.getElementById(elementID);
+    }
     //console.log(numberInputsContainers)
     //console.log(container)
     for (numberInputsContainer of numberInputsContainers) {
         numberInputsContainer.style.display = "none";
     }
-    container.style.display = "initial";
-    container.style.backgroundColor = "transparent";
+    //console.log("container" + container)
+    if (container) {
+        container.style.display = "initial";
+        container.style.backgroundColor = "transparent";
+        changeSummaryColorToRed(questions[1].getElementsByTagName('summary')[0]);
+        questionsValidity[1] = false;
+    }
+    else {
+        changeSummaryColorToGreen(questions[1].getElementsByTagName('summary')[0]);
+        questionsValidity[1] = true;
+    }
 }
 
 // Συνάρτηση ελέγχου επιτρεπτού διαστήματος τιμών.
@@ -243,8 +253,8 @@ function checkNumberInputsRange() {
     let numberInputsContainers = questions[1].getElementsByClassName('input-number');
     for (numberInputsContainer of numberInputsContainers) {
         let numberInput = numberInputsContainer.querySelectorAll('input[type="number"')[0];
-        //console.log(numberInput)
-        //console.log(numberInput.value)
+        //console.log("> checkNumberInputsRange: checking " + numberInput)
+        //console.log("> checkNumberInputsRange: the value is" + numberInput.value)
         //console.log(numberInput.value < 1)
         if ((numberInput.value < 1 || numberInput.value > 70) && (numberInput.value != "")) {
             console.log("invalid")

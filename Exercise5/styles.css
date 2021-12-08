@@ -68,6 +68,8 @@ section > img {
 /* header - nav */
 
 header {
+    display: flex;
+    flex-direction: column;
     background-color: #215ef9;
     font-size: 1.1em;
     grid-area: header;
@@ -75,6 +77,36 @@ header {
 
 header > img {
     width: 100%;
+}
+
+header > div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #7996fc;
+    grid-area: register;
+    text-align: center;
+}
+
+header > div > a {
+    color: #4b4c4d;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 1em;
+    background-color: #bac0ca;
+    margin: auto;
+    transition: 0.35s;
+}
+
+header > div > a:hover {
+    color: white;
+    background-color: #565657;
+}
+
+header > div > a:active {
+    color: white;
+    background-color: #323236;
+    transition: 0.1s;
 }
 
 nav ul {
@@ -1055,7 +1087,7 @@ form .customer-inf-content {
     justify-self: center;
 }
 
-/* registration-form.html */
+/* registration_form.html */
 
 fieldset {
     border:4px solid rgb(19, 97, 240);
@@ -1121,7 +1153,7 @@ details{
 }
 
 .input-radio, .input-checkbox {
-    width: 50%;
+    width: 100%;
     color: black;
     margin: 0.5em auto 0.5em auto;
     display: flex;
@@ -1130,10 +1162,11 @@ details{
     border: 2px solid black;
     border-radius: 4px;
     font-weight: 500;
+    box-sizing: border-box;
 }
 
 .input-text {
-    width: 50%;
+    width: 100%;
     margin: auto;
 }
 
@@ -1164,12 +1197,13 @@ form input[type="number"] {
 }
 
 .input-number {
-    width: 50%;
+    width: 100%;
     margin: 0.5em auto 0.5em auto;
     border: 2px solid black;
     border-radius: 4px;
     padding: 1em;
     font-weight: 500;
+    box-sizing: border-box;
 }
 
 .input-number > p {
@@ -1221,10 +1255,31 @@ form input[type="number"] {
 @media only screen and (min-width: 768px) {
 
     /* header */
+
+    header {
+        display: grid;
+        grid-template-columns: 1.8fr 0.2fr;
+        grid-template-rows: 1.5fr 0.25fr 0.25fr;
+        grid-template-areas: "image register"
+                             "p register"
+                             "nav nav";
+    }
+
     header > img {
+        grid-area: image;
         width: 483px;
         height: 92px;
     }
+
+    header > p {
+        grid-area: p;
+    }
+
+    header > nav {
+        grid-area: nav;
+    }
+
+    
 
     header nav ul {
         flex-direction: row;
@@ -1561,6 +1616,10 @@ form input[type="number"] {
     .customer-inf-content .country-box {
         grid-area: country;
     }
+
+    .input-checkbox, .input-number, .input-radio, .input-text {
+        width: 50%;
+    }
 }
 
 /* DESKTOP */
@@ -1646,38 +1705,6 @@ form input[type="number"] {
         grid-row: 1/3;
         grid-column: 3/5;
     }
-    
-    /* #mfsa-images {
-        grid-column: 3/4;
-    }
-    
-    #mfsa-images > img {
-        display: block;
-        margin: 0.5em;
-    }
-    
-    #mfsa-images > img:nth-child(1) {
-        width: 200px;
-        height: 120px;
-        grid-row: 1/3;
-        grid-column: 1/3;
-        z-index: 3;
-    }
-    
-    #mfsa-images > img:nth-child(2) {
-        width: 220px;
-        height: 140px;
-        grid-row: 2/4;
-        grid-column: 2/5;
-        z-index: 2;
-    }
-    
-    #mfsa-images > img:nth-child(3) {
-        width: 220px;
-        height: 120px;
-        grid-row: 1/3;
-        grid-column: 3/5;
-    } */
     
     #our-vision {
         background-color: #ebdbc4;
@@ -1783,7 +1810,10 @@ form input[type="number"] {
     
     /* contact_form.html */
     
-    /* allagi ex3 */
+    #registration-form {
+        width: 75%;
+    }
+
     form {
         width: 50%;
     }
