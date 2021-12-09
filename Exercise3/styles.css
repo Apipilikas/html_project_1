@@ -4,6 +4,7 @@
     --menu_underline: #50666f;
 }
 
+/* Εισαγωγή των διάφορων γραμματοσειρών. */
 @font-face {
     font-family: 'Manrope';
     font-weight: 100;
@@ -46,6 +47,10 @@
     src: url(fonts/Manrope-ExtraBold.ttf);
 }
 
+/* Γενική οργάνωση της σελίδας με χρήση grid layout. Ορίζουμε το μέγεθος των στηλών 
+   χρησιμοποιώντας τις μονάδες μέτρησης fr που χωρίζουν σε στήλες ανάλογα με τον 
+   ελεύθερο χώρο. Παράλληλα με το grid-template-areas ορίζουμε την στοίχιση των διάφορων
+   αντικειμένων. */
 body {
     background-color: #f2f0ef;
     font-family: 'Manrope', sans-serif;
@@ -70,6 +75,8 @@ section > img {
     margin: 0.5em;
 }
 
+/* START-OF: header */
+
 header {
     background-color: var(--blue);
     font-size: 1.1em;
@@ -79,8 +86,11 @@ header {
 main {
     grid-area: main;
 }
-/* header */
 
+/* START-OF: header>nav */
+
+/* Χρήση flex layout προκειμένου να στοιχηθούν ομοιόμορφα τα στοιχεία μας στην μπάρα
+   πλοήγησης μας. */
 nav ul {
     list-style-type: none;
     margin: 0em;
@@ -166,11 +176,14 @@ nav li:active {
     text-decoration: none;
 }
 
-/* index.html | main */
+/* END-OF: header>nav */
+/* END-OF: header */
 
 section > * {
     margin-left: 0.5em;
 }
+
+/* START-OF: index.html */
 
 .main-content > h2 {
     color: #6277b6;
@@ -188,6 +201,10 @@ section > * {
     background-color: #67b4da;
 }
 
+/* Χρήση grid layout για στοίχιση του περιεχομένου σε τρεις στήλες.
+   Παρακάτω τις διαμοιράζουμε ως εξής:
+   Οι δύο πρώτες καταλαμβάνονται από το #mfsa-text
+   Η τελευταία καταλαμβάνεται από το #mfsa-image  */
 #mfsa-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -211,6 +228,8 @@ section > * {
     grid-column: 3/4;
 }
 
+/* Χρήση συνάρτηση repeat() για αποφυγή γραψίματος πολλών εντολών.
+   Χρήση grid layout για δημιουργία κολάζ φωτογραφιών. */
 #mfsa-images {
     grid-column: 3/4;
     display: grid;
@@ -318,7 +337,8 @@ section:after {
     font-weight: 500;
 }
 
-/* aside */
+/* END-OF: index.html */
+/* START-OF: aside */
 
 aside {
     background-color: #e50122;
@@ -370,7 +390,8 @@ aside button:active {
     color: transparent;
 }
 
-/* footer */
+/* END-OF: aside */
+/* START-OF: footer */
 
 footer {
     background-color: #dadbde;
@@ -429,7 +450,8 @@ footer > p {
     grid-column: 2/3;
 }
 
-/* subjects (3 files) */
+/* END-OF: footer */
+/* START-OF: college_preparation.html, computer_programming.html, anatomy.html */
 
 main > h1 {
     color: #6277b6;
@@ -540,7 +562,6 @@ main > h1 {
     color: black;
 }
 
-/* allagi ex3 */
 .subject .links ol {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -664,7 +685,6 @@ main > h1 {
     transition: 0s;
 }
 
-/*  */
 .subject .enrollment > p {
     text-align: center;
 }
@@ -696,7 +716,8 @@ main > h1 {
     flex-wrap: wrap;
 }
 
-/* contact_form.html */
+/* END-OF: college_preparation.html, computer_programming.html, anatomy.html */
+/* START-OF: contact_form.html */
 
 form {
     padding: 0.5em;
@@ -742,7 +763,6 @@ form input[type="submit"]:active, form input[type="reset"]:active {
     transition-duration: 0s;
 }
 
-/* allagi ex3 */
 form {
     margin: auto;
     width: 50%;
@@ -777,6 +797,8 @@ form .buttons-area {
     background-color: #bdd6ee;
 }
 
+/* Χρήση grid layout για στοίχιση των διάφορων inputs. Η στοίχιση φαίνεται στο
+   grid-template-areas. */
 form .customer-inf-content {
     display: grid;
     grid-template-columns: 1fr 0.5fr 1fr;
@@ -802,7 +824,8 @@ form .customer-inf-content {
     grid-area: country;
 }
 
-/* subject_areas.html */
+/* END-OF: contact_form.html */
+/* START-OF: subject_areas.html */
 
 #education, #health, #law {
     background: rgba(44, 132, 219, 0.2)
@@ -892,6 +915,9 @@ form .customer-inf-content {
     grid-area: 2/1/3/6;
 }
 
+/* END-OF: subject_areas.html */
+/* START-OF: about_us.html */
+
 .about_article {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -956,3 +982,5 @@ form .customer-inf-content {
 #first {
     margin-top: 1em;
 }
+
+/* END-OF: about_us.html */
