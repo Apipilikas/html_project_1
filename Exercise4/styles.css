@@ -46,6 +46,11 @@
     src: url(fonts/Manrope-ExtraBold.ttf);
 }
 
+/* MOBILE-BASED LAYOUT */
+
+/* Όλοι οι παρακάτω κανόνες προορίζονται για την παρουσίαση της σελίδας σε ένα κινητό.
+   Φροντίζουμε να εμφανίζεται όλο ως μία ενιαία στήλη. */
+
 body {
     background-color: #f2f0ef;
     font-family: 'Manrope', sans-serif;
@@ -70,7 +75,7 @@ section > img {
     margin: 0.5em;
 }
 
-/* header - nav */
+/* START-OF: header */
 
 header {
     background-color: var(--blue);
@@ -81,6 +86,8 @@ header {
 header > img {
     width: 100%;
 }
+
+/* START-OF: header>nav */
 
 nav ul {
     padding-left: 0em;
@@ -172,11 +179,14 @@ nav li:active {
     text-decoration: none;
 }
 
-/* index.html | main */
+/* END-OF: header>nav */
+/* END-OF: header */
 
 section > * {
     margin-left: 0.5em;
 }
+
+/* START-OF: index.html */
 
 main {
     grid-area: main;
@@ -303,7 +313,8 @@ section:after {
     font-weight: 500;
 }
 
-/* aside */
+/* END-OF: index.html */
+/* START-OF: aside */
 
 aside {
     background-color: #e50122;
@@ -355,14 +366,14 @@ aside button:active {
     color: transparent;
 }
 
-/* footer */
+/* END-OF: aside */
+/* START-OF: footer */
 
 footer {
     background-color: #dadbde;
     display: flex;
     flex-direction: column;
     grid-area: footer;
-    /* text-align: center; */
 }
 
 .social-media-footer ul {
@@ -431,7 +442,8 @@ footer > p {
     clear: both;
 }
 
-/* subjects (3 files) */
+/* END-OF: footer */
+/* START-OF: college_preparation.html, computer_programming.html, anatomy.html */
 
 main > h1 {
     color: #6277b6;
@@ -539,7 +551,6 @@ main > h1 {
     color: black;
 }
 
-/* allagi ex3 */
 .subject .links ol {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -638,7 +649,6 @@ main > h1 {
     border: 3px solid #bac0ca;
     border-radius: 5px;
     margin: 0.5em;
-    /* float: left; */
     text-align: center;
 }
 
@@ -668,7 +678,6 @@ main > h1 {
     transition: 0s;
 }
 
-/*  */
 .subject .enrollment > p {
     text-align: center;
 }
@@ -697,7 +706,8 @@ main > h1 {
     justify-content: center;
 }
 
-/* contact_form.html */
+/* END-OF: college_preparation.html, computer_programming.html, anatomy.html */
+/* START-OF: contact_form.html */
 
 form {
     padding: 0.5em;
@@ -743,10 +753,8 @@ form input[type="submit"]:active, form input[type="reset"]:active {
     transition-duration: 0s;
 }
 
-/* allagi ex3 */
 form {
     margin: auto;
-    /* width: 50%; */
     display: flex;
     flex-direction: column;
     gap: 1.5em;
@@ -778,7 +786,8 @@ form .buttons-area {
     background-color: #bdd6ee;
 }
 
-/* subject_areas.html */
+/* END-OF: contact_form.html */
+/* START-OF: subject_areas.html */
 
 #education, #health, #law {
     background: rgba(44, 132, 219, 0.2)
@@ -873,7 +882,8 @@ form .buttons-area {
     grid-area: p_gr;
 }
 
-/*about_us.html*/
+/* END-OF: subject_areas.html */
+/* START-OF: about_us.html */
 
 .about_article h3 {
     margin: 1em;
@@ -1008,14 +1018,24 @@ form .buttons-area {
     justify-self: center;
 }
 
-/* TABLETS */
+/* END-OF: about_us.html */
+
+/* TABLET-BASED LAYOUT */
+
+/* Στο παρακάτω media περιέχονται κανόνες για tablets. Φροντίζουμε το εσωτερικό γινόμενο των
+   sections, forms etc να αλλάζουν από μία στήλη που ήταν πριν σε δύο ή και περισσότερες. Όλοι
+   οι κανόνες που ορίζονται από εδώ και κάτω επικαλύπτουν τους προηγούμενους όταν η οθόνη ξεπεράσει
+   τον συγκεκριμένο αριθμό px που έχουμε καθορίσει παρακάτω. */
 @media only screen and (min-width: 768px) {
 
-    /* header */
+    /* START-OF: header */
+
     header > img {
         width: 483px;
         height: 92px;
     }
+
+    /* START-OF: header>nav */
 
     header nav ul {
         flex-direction: row;
@@ -1027,11 +1047,16 @@ form .buttons-area {
         width: 40%;
     }
 
+    /* dropdown menu*/
     .dropdown-content {
         position: absolute;
         width: 100%;
         text-align: left;
     }
+
+    /* END-OF: header>nav */
+    /* END-OF: header */
+    /* START-OF: index.html */
 
     #world-connection > img {
         float: left;
@@ -1044,8 +1069,8 @@ form .buttons-area {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    /* index.html */
-
+    /* Στους δύο παρακάτω κανόνες αλλάζουμε την αναλογία στοίχισης που
+       είχαμε ορίσει προηγουμένως σε δύο στήλες. */
     #mfsa-text {
         grid-column: 1/3;
     }
@@ -1095,10 +1120,13 @@ form .buttons-area {
         width: 50%;
     }
 
-    /* aside */
+    /* END-OF: index.html */
+
     main > h1 {
         font-size: 1.9em;
     }
+
+    /* START-OF: about_us.html */
 
     .about_us h2 {
         font-size: 1.6em;
@@ -1196,6 +1224,9 @@ form .buttons-area {
         margin-right: 2em;
     }
 
+    /* END-OF: about_us.html */
+    /* START-OF: subject_areas.html */
+
     .field {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1228,20 +1259,9 @@ form .buttons-area {
         font-size: 1.8em;
     }
 
-    header > img {
-        width: 483px;
-        height: 92px;
-    }
+    /* END-OF: subject_areas.html */
+    /* START-OF: aside */
 
-    header nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    header nav ul li {
-        width: 40%;
-    }
 
     aside img {
         display: block;
@@ -1250,7 +1270,9 @@ form .buttons-area {
         margin: auto;
     }
 
-    /* footer */
+    /* END-OF: aside */
+    /* START-OF: footer */
+
     footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1283,6 +1305,9 @@ form .buttons-area {
         grid-row: 3/4;
     }
 
+    /* END-OF: footer */
+    /* START-OF: college_preparation.html, computer_programming.html, anatomy.html */
+
     .subject .description {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
@@ -1303,6 +1328,9 @@ form .buttons-area {
         grid-column: 5/9;
         grid-row: 2/3;
     }
+
+    /* END-OF: college_preparation.html, computer_programming.html, anatomy.html */
+    /* START-OF: contact_form.html */
 
     form .customer-inf-content {
         display: grid;
@@ -1327,9 +1355,14 @@ form .buttons-area {
     .customer-inf-content .country-box {
         grid-area: country;
     }
+    /* END-OF: contact_form.html */
 }
 
-/* DESKTOP */
+/* DESKTOP-BASED LAYOUT */
+
+/* Στο παρακάτω media περιέχονται κανόνες για desktops. Φροντίζουμε το εσωτερικό γινόμενο των
+   sections, forms etc να αλλάζουν από δύο στήλες που ήταν πριν σε περισσότερες. Επιπρόσθετα
+   το γενικό layout αλλάζει σε δύο στήλες (προσθήκη aside στο πλάι ενώ πριν ήταν στο κάτω μέρος). */
 @media only screen and (min-width: 992px) {
     body {
         grid-template-columns: minmax(0, 1.9fr) 0.1fr;
@@ -1338,12 +1371,19 @@ form .buttons-area {
                              "footer footer";
     }
 
+    /* START-OF: header */
+    /* START-OF: header>nav */
+
     header nav ul {
         border: 0;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
         text-align: center;
+    }
+
+    header nav ul li {
+        width: 20%;
     }
 
     header nav li {
@@ -1355,8 +1395,10 @@ form .buttons-area {
     .dropdown-content {
         text-align: left;
     }
-    
-    /* index.html | main */
+
+    /* END-OF: header>nav */
+    /* END-OF: header */
+    /* START-OF: index.html */
     
     #mfsa-content {
         display: grid;
@@ -1386,11 +1428,6 @@ form .buttons-area {
         grid-template-columns: repeat(4, 1fr);
     }
     
-    /* #mfsa-images > img {
-        display: block;
-        margin: 0.5em;
-    } */
-    
     #mfsa-images > img:nth-child(1) {
         grid-row: 1/3;
         grid-column: 1/3;
@@ -1408,38 +1445,6 @@ form .buttons-area {
         grid-column: 3/5;
     }
     
-    /* #mfsa-images {
-        grid-column: 3/4;
-    }
-    
-    #mfsa-images > img {
-        display: block;
-        margin: 0.5em;
-    }
-    
-    #mfsa-images > img:nth-child(1) {
-        width: 200px;
-        height: 120px;
-        grid-row: 1/3;
-        grid-column: 1/3;
-        z-index: 3;
-    }
-    
-    #mfsa-images > img:nth-child(2) {
-        width: 220px;
-        height: 140px;
-        grid-row: 2/4;
-        grid-column: 2/5;
-        z-index: 2;
-    }
-    
-    #mfsa-images > img:nth-child(3) {
-        width: 220px;
-        height: 120px;
-        grid-row: 1/3;
-        grid-column: 3/5;
-    } */
-    
     #our-vision {
         background-color: #ebdbc4;
     }
@@ -1453,8 +1458,9 @@ form .buttons-area {
         width: 30%;
         
     }
-    
-    /* aside */
+
+    /* END-OF: index.html */
+    /* START-OF: aside */
     
     
     aside img {
@@ -1467,7 +1473,8 @@ form .buttons-area {
         top: 0;
     }
 
-    /* footer */
+    /* END-OF: aside */
+    /* START-OF: footer */
     
     footer {
         display: grid;
@@ -1494,10 +1501,10 @@ form .buttons-area {
     footer > p {
         grid-column: 2/3;
     }
+
+    /* END-OF: aside */
+    /* START-OF: college_preparation.html, computer_programming.html, anatomy.html */
     
-    /* subjects (3 files) */
-    
-    /* allagi ex3 */
     .subject .description {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
@@ -1540,9 +1547,9 @@ form .buttons-area {
         width: auto;
     }
     
-    /* contact_form.html */
+    /* END-OF: college_preparation.html, computer_programming.html, anatomy.html */
+    /* START-OF: contact_form.html */
     
-    /* allagi ex3 */
     form {
         width: 50%;
     }
@@ -1554,9 +1561,13 @@ form .buttons-area {
                              "country country country";
     }
 
+    /* END-OF: contact_form.html */
+
     main > h1 {
         font-size: 2em;
     }
+
+    /* START-OF: about_us.html */
 
     .about_us h2 {
         font-size: 1.7em;
@@ -1613,12 +1624,5 @@ form .buttons-area {
         padding-bottom: 2.5em;
     }
 
-    header nav ul {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    header nav ul li {
-        width: 20%;
-    }
+    /* END-OF: about_us.html */
 }

@@ -73,7 +73,7 @@ section > img {
     margin: 0.5em;
 }
 
-/* header - nav */
+/* START-OF: header */
 
 header {
     display: flex;
@@ -116,6 +116,8 @@ header > div > a:active {
     background-color: #323236;
     transition: 0.1s;
 }
+
+/* START-OF: header>nav */
 
 nav ul {
     padding-left: 0em;
@@ -202,7 +204,8 @@ nav li:active {
     text-decoration: none;
 }
 
-/* index.html | main */
+/* END-OF: header>nav */
+/* END-OF: header */
 
 section > * {
     margin-left: 0.5em;
@@ -212,13 +215,14 @@ main {
     grid-area: main;
 }
 
+/* START-OF: index.html */
+
 .main-content > h2 {
     color: #6277b6;
 }
 
 #world-connection {
     background-color: #d5ebf2;
-    /* text-align: center; */
 }
 
 .main-content > img {
@@ -332,7 +336,8 @@ section:after {
     font-weight: 500;
 }
 
-/* aside */
+/* END-OF: index.html */
+/* START-OF: aside */
 
 aside {
     background-color: #e50122;
@@ -384,7 +389,8 @@ aside button:active {
     color: transparent;
 }
 
-/* footer */
+/* END-OF: aside */
+/* START-OF: footer */
 
 footer {
     background-color: #dadbde;
@@ -401,7 +407,6 @@ footer {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
     gap: 0.5em;
 }
 
@@ -460,7 +465,8 @@ footer > p {
     clear: both;
 }
 
-/* subjects (3 files) */
+/* END-OF: footer */
+/* START-OF: college_preparation.html, computer_programming.html, anatomy.html */
 
 main > h1 {
     color: #6277b6;
@@ -724,7 +730,8 @@ main > h1 {
     justify-content: center;
 }
 
-/* contact_form.html */
+/* END-OF: college_preparation.html, computer_programming.html, anatomy.html */
+/* START-OF: contact_form.html */
 
 form {
     padding: 0.5em;
@@ -805,7 +812,8 @@ form .buttons-area {
     background-color: #bdd6ee;
 }
 
-/* subject_areas.html */
+/* END-OF: contact_form.html */
+/* START-OF: subject_areas.html */
 
 #education, #health, #law {
     background: rgba(44, 132, 219, 0.2)
@@ -900,7 +908,8 @@ form .buttons-area {
     grid-area: p_gr;
 }
 
-/*about_us.html*/
+/* END-OF: subject_areas.html */
+/* START-OF: about_us.html */
 
 .about_article h3 {
     margin: 1em;
@@ -1035,7 +1044,8 @@ form .buttons-area {
     justify-self: center;
 }
 
-/* registration_form.html */
+/* END-OF: about_us.html */
+/* START-OF: registration_form.html */
 
 fieldset {
     border:4px solid rgb(19, 97, 240);
@@ -1081,7 +1091,6 @@ details{
 
 .question > summary {
     padding: 1em;
-    /* border: 1px solid black; */
     border-radius: 4px;
     font-weight: 700;
     background-color: rgba(247, 30, 30, 0.651);
@@ -1328,8 +1337,6 @@ details{
     height: 2.3em;
 }
 
-/* registration_form.html */
-
 .form-field input:focus {
     outline: none;
 }
@@ -1346,10 +1353,13 @@ details{
     color: var(--error-color);
 }
 
-/* TABLETS */
+/* END-OF: registration_form.html */
+
+/* TABLET-BASED LAYOUT */
 @media only screen and (min-width: 768px) {
 
-    /* header */
+    /* START-OF: header */
+    /* START-OF: header>nav */
 
     header {
         display: grid;
@@ -1386,11 +1396,16 @@ details{
         width: 40%;
     }
 
+    /* dropdown menu*/
     .dropdown-content {
         position: absolute;
         width: 100%;
         text-align: left;
     }
+
+    /* END-OF: header>nav */
+    /* END-OF: header */
+    /* START-OF: index.html */
 
     #world-connection > img {
         float: left;
@@ -1402,8 +1417,6 @@ details{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-
-    /* index.html */
 
     #mfsa-text {
         grid-column: 1/3;
@@ -1456,10 +1469,13 @@ details{
         width: 50%;
     }
 
-    /* aside */
+    /* END-OF: index.html */
+
     main > h1 {
         font-size: 1.9em;
     }
+
+    /* START-OF: about_us.html */
 
     .about_us h2 {
         font-size: 1.6em;
@@ -1557,6 +1573,9 @@ details{
         margin-right: 2em;
     }
 
+    /* END-OF: about_us.html */
+    /* START-OF: subject_areas.html */
+
     .field {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1589,20 +1608,8 @@ details{
         font-size: 1.8em;
     }
 
-    header > img {
-        width: 483px;
-        height: 92px;
-    }
-
-    header nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    header nav ul li {
-        width: 40%;
-    }
+    /* END-OF: subject_areas.html */
+    /* START-OF: aside */
 
     aside img {
         display: block;
@@ -1611,7 +1618,8 @@ details{
         margin: auto;
     }
 
-    /* footer */
+    /* END-OF: aside */
+    /* START-OF: footer */
 
     footer {
         display: grid;
@@ -1645,6 +1653,9 @@ details{
         grid-row: 3/4;
     }
 
+    /* END-OF: footer */
+    /* START-OF: college_preparation.html, computer_programming.html, anatomy.html */
+
     .subject .description {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
@@ -1665,6 +1676,9 @@ details{
         grid-column: 5/9;
         grid-row: 2/3;
     }
+
+    /* END-OF: college_preparation.html, computer_programming.html, anatomy.html */
+    /* START-OF: contact_form.html */
 
     form .customer-inf-content {
         display: grid;
@@ -1689,6 +1703,9 @@ details{
     .customer-inf-content .country-box {
         grid-area: country;
     }
+
+    /* END-OF: contact_form.html */
+    /* START-OF: registration_form.html */
 
     .input-checkbox, .input-number, .input-radio, .input-text {
         width: 50%;
@@ -1727,6 +1744,7 @@ details{
     #reg_form_password2{
         margin-left: 1.5em;
     }
+    /* END-OF: registration_form.html */
 }
 
 /* DESKTOP */
@@ -1738,6 +1756,9 @@ details{
                              "main aside"
                              "footer footer";
     }
+
+    /* START-OF: header */
+    /* START-OF: header>nav */
 
     header nav ul {
         border: 0;
@@ -1757,7 +1778,9 @@ details{
         text-align: left;
     }
     
-    /* index.html | main */
+    /* END-OF: header>nav */
+    /* END-OF: header */
+    /* START-OF: index.html */
     
 
     #mfsa-content {
@@ -1823,7 +1846,8 @@ details{
         
     }
     
-    /* aside */
+    /* END-OF: index.html */
+    /* START-OF: aside */
     
     aside img {
         width: 100%;
@@ -1835,7 +1859,8 @@ details{
         top: 0;
     }
 
-    /* footer */
+    /* END-OF: aside */
+    /* START-OF: footer */
 
     footer {
         display: grid;
@@ -1863,7 +1888,8 @@ details{
         grid-column: 2/3;
     }
     
-    /* subjects (3 files) */
+    /* END-OF: aside */
+    /* START-OF: college_preparation.html, computer_programming.html, anatomy.html */
     
     .subject .description {
         display: grid;
@@ -1907,7 +1933,12 @@ details{
         width: auto;
     }
     
-    /* contact_form.html */
+    /* END-OF: college_preparation.html, computer_programming.html, anatomy.html */
+    /* START-OF: contact_form.html, registration_form.html */
+    
+    #contact-form {
+        width: 50%;
+    }
     
     form fieldset {
         margin: auto;
@@ -1925,9 +1956,13 @@ details{
                              "country country country";
     }
 
+    /* END-OF: contact_form.html, registration_form.html */
+
     main > h1 {
         font-size: 2em;
     }
+
+    /* START-OF: about_us.html */
 
     .about_us h2 {
         font-size: 1.7em;
@@ -1992,4 +2027,6 @@ details{
     header nav ul li {
         width: 20%;
     }
+
+    /* END-OF: about_us.html */
 }

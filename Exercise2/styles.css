@@ -324,6 +324,56 @@ section:after {
 }
 
 /* END-OF: index.html */
+/* START-OF: aside */
+
+aside {
+    background-color: #e50122;
+    text-align: center;
+}
+
+aside img {
+    display: block;
+    margin: auto;
+}
+
+aside p:nth-child(3) {
+    background-color: #fae8a2;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+aside span {
+    display: block;
+    font-size: 1.5em;
+}
+
+/* Χρήση του background-image για να βάλουμε στο κουμπί να έχει μία φωτογραφία
+   αντί για χρώμα. */
+aside button {
+    display: block;
+    width: 50%;
+    background-image: url(resources/xmas_button.png);
+    padding: 0.8em;
+    margin: auto;
+    font-family: sans-serif;
+    font-weight: 700;
+    border: 2px solid black;
+    border-radius: 6px;
+    transition-duration: 0.5s;
+}
+
+aside button:hover {
+    color: #e50122;
+}
+
+aside button:active {
+    background-image: url(resources/xmas_button_active.png);
+    background-position: center;
+    background-size: cover;
+    color: transparent;
+}
+
+/* END-OF: aside */
 /* START-OF: footer */
 
 footer {
@@ -600,6 +650,9 @@ form {
     padding: 0.5em;
 }
 
+/* Ορισμός display:block για να είναι το ένα κάτω από το άλλο. Επίσης ορίζουμε και font-family
+   προκειμένου οι περιγραφές placeholder στα εωτερικά των κουτιών να έχουν την γραμματοσειρά της
+   επιλογής μας. */
 form label, form input[type="text"], form input[type="email"],
 form select, form textarea {
     display: block;
@@ -612,6 +665,8 @@ form label {
     padding-left: 0em;
 }
 
+/* Ορίζουμε την ιδιότητα transition-duration για ομαλή μετάβαση από την κανονική κατάσταση
+   στην κατάσταση hover και μετέπειτα στην active. */
 form input[type="submit"], form input[type="reset"] {
     padding: 0.8em;
     margin-top: 0.5em;
