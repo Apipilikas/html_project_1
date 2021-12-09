@@ -103,7 +103,7 @@ nav li:active {
     transition: 0.15s;
 }
 
-/* dropdown menu*/
+/* Μορφοποίηση dropdown menu. */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -548,16 +548,20 @@ main > h1 {
     
 }
 
+/* Με την χρήση του τελεστή + θέλουμε όταν το Input τύπου radio αλλάξει κατάσταση βάση των ψευδό-κλάσεων
+   να αλ΄λαξει και το χρώμα του στοιχείου-αδελφιού label. */
 .subject .choose-price input[type="radio"]:focus + label {
     background-color: #7c7c99;
 }
 
+/* Χρήση της ψευδό-κλάσης :checked ώστε όταν επιλέξουμε το συγκεκριμένο radio να αλλ;aξει χρώμα το label. */
 .subject .choose-price input[type="radio"]:checked + label {
     border: 2px solid #215ef9;
     background-color: #215ef9;
     color: white;
 }
 
+/* Μορφοποίηση πλαισίου εγγραφής σε μάθημα. */
 .subject .start-day {
     width: 200px;
     background-color: #dadbde;
