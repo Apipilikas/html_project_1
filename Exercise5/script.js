@@ -59,7 +59,7 @@ function test() {
             }
         }
         //checkNumberInputsRange();
-        console.log(checkElseTextInputs());
+        //console.log(checkElseTextInputs());
         let invalidTextInputs = checkElseTextInputs();
         console.log(invalidTextInputs);
         count -= invalidTextInputs;
