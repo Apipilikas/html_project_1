@@ -689,14 +689,18 @@ form input[type="submit"]:active, form input[type="reset"]:active {
     padding-bottom: 0.5em;
 }
 
+/*Χρωματισμός υπερσυνδέσμων*/
 #education ul li a, #health ul li a, #law ul li a, #education ul li, #health ul li, #law ul li {
     color: rgb(19, 16, 233);
 }
 
+/*Χρωματισμός υπερσυνδέσμων*/
 #energy ul li a, #history ul li a, #IT ul li a, #energy ul li, #history ul li, #IT ul li {
     color: rgb(226, 134, 81);
 }
 
+/*Εφαρμογή περιθωρίου, επιλογή χρώματος παρασκηνίου για τις παραγράφους, περιθώριο παραγράφων solid,
+ πάχος & χρώμα περιθωρίου παραγράφων, στρογγύλευση γωνιών περιθωρίου παραγράφων */
 #education p, #health p, #law p {
     margin: 2em 10em 2em 1em;
     background: rgba(44, 132, 219, 0.3);
@@ -706,6 +710,8 @@ form input[type="submit"]:active, form input[type="reset"]:active {
     border-radius: 25px;
 }
 
+/*Εφαρμογή περιθωρίου, επιλογή χρώματος παρασκηνίου για τις παραγράφους, περιθώριο παραγράφων solid,
+ πάχος & χρώμα περιθωρίου παραγράφων, στρογγύλευση γωνιών περιθωρίου παραγράφων */
 #energy p, #history p, #IT p {
     margin: 2em 10em 2em 1em;
     background: rgba(126, 93, 76, 0.3);
