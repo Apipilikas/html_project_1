@@ -25,6 +25,10 @@ const defaultQuestionsAlertMessages = ['Επιλέξτε μία από τις π
 
 window.onload = test;
 
+// Constraint Validation για το ερωτηματολόγιο. Η πληρότητα των δεδομένων ελέγχεται σε αρκετές περιπτώσεις
+// την στιγμή που ο χρήστης βάζει τα διάφορα στοιχεία του στην φόρμα. Για αυτό και ανάλογα αλλάζουν τα χρώματα
+// των ερωτήσεων από πράσινο σε κόκκινο. Όταν γίνεται submit ελέγχουμε ποιες ερωτήσεις έχουν συμπληρωθεί από τον χρήστη,
+// ενώ παράλληλα ελέγχουμε σε ορισμένες και την εγκυρότητα των δεδομένων (πχ. text και number inputs).
 function test() {
     changeSummaryColor();
 
@@ -78,7 +82,7 @@ function test() {
 }
 
 // Συνάρτηση που βοηθάει στην καλύτερη μορφοποίηση του ερωτηματολογίου. Όταν ο χρήστης
-// απαντάει σε μία ερώτηση αλλάζει το πλαίσιο της από κόκκινο σε πράσινο.
+// απαντάει σε μία ερώτηση αλλάζει το πλαίσιο της από κόκκινο σε πράσινο με την βοήθεια eventListeners.
 // Παρακάτω ακολουθούν οι τέσσερις συναρτήσεις για το καθένα από τα τέσσερα inputs που
 // χρησιμοποιούνται στο ερωτηματολόγιο.
 function changeSummaryColor() {
@@ -138,19 +142,29 @@ function changeSummaryColorCheckbox(summary, checkboxInputs, i) {
             //console.log(this.checked)
             if (i == 9) {
                 let alertBox = questions[9].querySelector(".question > .alert-box");
-                if (len >= 1 && len <= 2) {
+                if (len == 1) {
                     questionsValidity[i] = false;
                     changeSummaryColorToYellow(summary);
-                    showAlertBox(alertBox, 'Επιλέξτε άλλο/άλλα ' + (3 - len) + ' κουτάκια!');
+                    showAlertBox(alertBox, 'Επιλέξτε άλλα ' + (3 - len) + ' κουτάκια!');
+                }
+                else if (len == 2) {
+                    questionsValidity[i] = false;
+                    changeSummaryColorToYellow(summary);
+                    showAlertBox(alertBox, 'Επιλέξτε άλλo ' + (3 - len) + ' κουτάκι!');
                 }
                 else if (len == 3) {
                     questionsValidity[i] = true;
                     hideAlertBox(alertBox);
                     changeSummaryColorToGreen(summary);
                 }
+                else if (len > 3) {
+                    questionsValidity[i] = false;
+                    changeSummaryColorToYellow(summary);
+                    showAlertBox(alertBox, 'Επιλέξτε ' + (len - 3) + ' λιγότερα κουτάκια!');
+                }
                 else {
                     changeSummaryColorToRed(summary);
-                    showAlertBox(alertBox, 'Επιλέξτε άλλο/άλλα ' + (3 - len) + ' κουτάκια!');
+                    showAlertBox(alertBox, 'Επιλέξτε άλλα ' + (3 - len) + ' κουτάκια!');
                 }
             }
             else {
