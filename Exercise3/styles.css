@@ -81,7 +81,6 @@ main {
 }
 /* header */
 
-/*allagi*/
 nav ul {
     list-style-type: none;
     margin: 0em;
@@ -97,7 +96,6 @@ nav li > a {
     text-decoration: none;
 }
 
-/*allagi*/
 nav li {
     color: white;
     padding: 0.5em 1em;
@@ -105,7 +103,6 @@ nav li {
 }
 
 nav li:not(nav ul > li:nth-child(2)):hover {
-    /* background-color: var(--menu_underline); */
     border-bottom: 0.5em solid var(--menu_underline);
     transition: 0.5s;
 }
@@ -136,7 +133,6 @@ nav li:active {
     background-color: var(--menuColor);
     width: 100%;
     text-align: left;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
 }
 
@@ -192,13 +188,11 @@ section > * {
     background-color: #67b4da;
 }
 
-/*allagi*/
 #mfsa-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-/*allagi*/
 #mfsa-text {
     grid-column: 1/3;
     display: grid;
@@ -217,7 +211,6 @@ section > * {
     grid-column: 3/4;
 }
 
-/*allagi*/
 #mfsa-images {
     grid-column: 3/4;
     display: grid;
@@ -230,7 +223,6 @@ section > * {
     margin: 0.5em;
 }
 
-/*allagi*/
 #mfsa-images > img:nth-child(1) {
     width: 200px;
     height: 120px;
@@ -239,7 +231,6 @@ section > * {
     z-index: 3;
 }
 
-/*allagi*/
 #mfsa-images > img:nth-child(2) {
     width: 220px;
     height: 140px;
@@ -248,7 +239,6 @@ section > * {
     z-index: 2;
 }
 
-/*allagi*/
 #mfsa-images > img:nth-child(3) {
     width: 220px;
     height: 120px;
@@ -295,10 +285,6 @@ section:after {
     color: red;
 }
 
-/* #your-level > img {
-    float: left;
-} */
-
 #your-level #your-level-content {
     display: flex;
     flex-direction: row;
@@ -312,7 +298,6 @@ section:after {
     float: right;
 }
 
-/*allagi*/
 #announcements {
     display: flex;
     justify-content: space-between;
@@ -387,7 +372,6 @@ aside button:active {
 
 /* footer */
 
-/*allagi*/
 footer {
     background-color: #dadbde;
     display: grid;
@@ -440,7 +424,6 @@ footer address li {
     display: block;
 }
 
-/*allagi*/
 footer > p {
     clear: both;
     grid-column: 2/3;
@@ -652,7 +635,6 @@ main > h1 {
     border: 3px solid #bac0ca;
     border-radius: 5px;
     margin: 0.5em;
-    /* float: left; */
     text-align: center;
 }
 
@@ -826,7 +808,6 @@ form .customer-inf-content {
     background: rgba(44, 132, 219, 0.2)
 } 
 
-/*CHANGE*/
 .field {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -880,7 +861,7 @@ form .customer-inf-content {
     font-size: large;
     font-weight: bold;
     margin: 40px;
-    justify-self: space-around;
+    justify-self: center;
 }
 
 #education ul li a, #health ul li a, #law ul li a, #education ul li, #health ul li, #law ul li {
@@ -911,7 +892,6 @@ form .customer-inf-content {
     grid-area: 2/1/3/6;
 }
 
-/*CHANGE*/
 .about_article {
     display: grid;
     grid-template-columns: auto auto auto;
