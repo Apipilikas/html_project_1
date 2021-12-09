@@ -1,3 +1,9 @@
+:root {
+    --menuColor: #94acfc;
+    --blue: #215ef9;
+    --menu_underline: #50666f;
+}
+
 @font-face {
     font-family: 'Manrope';
     font-weight: 100;
@@ -61,14 +67,14 @@ section > img {
     margin: 0.5em;
 }
 
-.main-content > h3 {
+.main-content h3 {
     margin: 0.5em;
 }
 
 /* header - nav */
 
 header {
-    background-color: #215ef9;
+    background-color: var(--blue);
     font-size: 1.1em;
     grid-area: header;
 }
@@ -82,9 +88,9 @@ nav ul {
     list-style-type: none;
     margin: 0em;
     /* padding: 0.5em 0em; */
-    border-left: 0.5em solid #94acfc;
-    border-right: 0.5em solid #94acfc;
-    background-color: #94acfc;
+    border-left: 0.5em solid var(--menuColor);
+    border-right: 0.5em solid var(--menuColor);
+    background-color: var(--menuColor);
     display: flex;
     flex-direction: column;
 }
@@ -101,19 +107,19 @@ nav li {
 }
 
 nav li:not(nav ul > li:nth-child(2)):hover {
-    border-bottom: 0.5em solid #50666f;
+    border-bottom: 0.5em solid var(--menu_underline);
     transition: 0.5s;
 }
 
 nav li:nth-child(2):hover {
-    border-bottom: 0.5em solid #94acfc;
+    border-bottom: 0.5em solid var(--menuColor);
     transition: 0.5s;
 }
 
 nav li:active {
-    background-color: #50666f;
-    border-top: 0.5em solid #50666f;
-    border-bottom: 0.5em solid #50666f;
+    background-color: var(--menu_underline);
+    border-top: 0.5em solid var(--menu_underline);
+    border-bottom: 0.5em solid var(--menu_underline);
     transition: 0.15s;
 }
 
@@ -128,13 +134,13 @@ nav li:active {
     margin-top: 0.5em;
     display: none;
     position: relative;
-    background-color: #94acfc;
+    background-color: var(--menuColor);
     min-width: 160px;
     z-index: 1;
 }
 
 .dropdown-content a {
-    border-left: 0.5em solid #94acfc;
+    border-left: 0.5em solid var(--menuColor);
     color: white;
     padding: 0.5em 1em;
     text-decoration: none;
@@ -142,13 +148,13 @@ nav li:active {
 }
 
 .dropdown-content a:hover {
-    border-left: 0.5em solid #50666f;
+    border-left: 0.5em solid var(--menu_underline);
     transition: 0.5s;
 }
 
 .dropdown-content a:active {
     color: white;
-    background-color: #50666f;
+    background-color: var(--menu_underline);
     transition: 0.15s;
 }
 
@@ -306,7 +312,7 @@ section:after {
 
 .announcement > h3 + p {
     margin: 0em;
-    border-left: 0.2em solid #215ef9;
+    border-left: 0.2em solid var(--blue);
     font-weight: 500;
 }
 
@@ -434,6 +440,7 @@ footer  address a {
 
 footer address li {
     display: block;
+    text-align: center;
 }
 
 footer div li {
@@ -457,7 +464,7 @@ main > h1 {
 .subject h1 {
     background-color: #f2f0ef;
     margin-left: 0.3em;
-    border-left: 0.5em solid #215ef9;
+    border-left: 0.5em solid var(--blue);
     font-size: 1.8em;
     position: sticky;
     top: 0;
@@ -648,8 +655,8 @@ main > h1 {
 }
 
 .subject .choose-price input[type="radio"]:checked + label {
-    border: 2px solid #215ef9;
-    background-color: #215ef9;
+    border: 2px solid var(--blue);
+    background-color: var(--blue);
     color: white;
 }
 
@@ -747,7 +754,7 @@ form input[type="submit"], form input[type="reset"] {
     width: 100%;
     border: 2px solid;
     border-radius: 4px;
-    background-color: #215ef9;
+    background-color: var(--blue);
     font-family: 'Manrope', sans-serif;
     color: white;
     transition-duration: 0.5s;
