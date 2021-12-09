@@ -2,6 +2,9 @@
     --menuColor: #94acfc;
     --blue: #215ef9;
     --menu_underline: #50666f;
+    --error-color: #dc3545;
+    --success-color: rgba(40, 212, 40, 0.63);
+    --warning-color: #ffc107;
 }
 
 @font-face {
@@ -762,9 +765,9 @@ form {
     padding: 0.5em;
 }
 
-#contact-form label, #contact-form input[type="text"], 
-#contact-form input[type="email"],
-#contact-form select, #contact-form textarea {
+form label, form input[type="text"], 
+form input[type="email"],
+form select, form textarea {
     display: block;
     width: 100%;
     padding: 0.5em;
@@ -1097,11 +1100,27 @@ form .customer-inf-content {
 
 fieldset {
     border:4px solid rgb(19, 97, 240);
-    background-color: #d8e0fc;
+    background-color: #94acfc;
     border-radius: 35px;
     padding: 2.5em;
     margin: 1em;
     display: grid;
+}
+
+#questionnaire {
+    background-color: #d8e0fc;
+}
+
+.personal_info {
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "rf_firstname rf_firstname rf_firstname"
+    "rf_lastname rf_lastname rf_lastname"
+    "rf_email rf_email rf_email"
+    "rf_address rf_address rf_address"
+    "rf_birth rf_tel rf_tel"
+    "rf_country rf_country rf_country";
 }
 
 legend {
@@ -1112,6 +1131,7 @@ legend {
     color: white;
     padding: 0.5em;
 }
+
 details{
     display: flex;
 }
@@ -1196,10 +1216,14 @@ details{
     color: var(--blue);
 }
 
-form input[type="number"] {
+.input-number input[type="number"] {
     width: 50px;
     padding: 0.5em;
     font-family: 'Manrope', sans-serif;
+}
+
+.input-number label {
+    display: initial;
 }
 
 .input-number {
@@ -1256,6 +1280,139 @@ form input[type="number"] {
  .input-radio + .input-text > input[type="text"] {
     background-color: rgba(247, 30, 30, 0.356);
 } */
+
+#reg_form_buttons{
+    background-color: transparent;
+}
+
+#reg_form_buttons input[type="submit"], #reg_form_buttons input[type="reset"]{
+    padding: 0.6em;
+    font-size: 18px;
+    border-radius: 35px;
+}
+
+#reg_form_firstname {
+    grid-area: rf_firstname;
+}
+
+#reg_form_lastname {
+    grid-area: rf_lastname;
+}
+
+#reg_form_email {
+    grid-area: rf_email;
+}
+
+#reg_form_address {
+    grid-area: rf_address;
+}
+
+#reg_form_birth {
+    grid-area: rf_birth;
+}
+
+#reg_form_country {
+    grid-area: rf_country;
+}
+
+#reg_form_country input{
+    min-width: 100%;
+}
+
+
+#reg_form_telephone {
+    grid-area: rf_tel;
+    margin-left: 1.5em;
+}
+
+#reg_form_birth input {
+    min-width: 100%;
+    height: 2.3em;
+}
+
+#reg_form_telephone input {
+    min-width: 96%;
+    height: 2.3em;
+}
+
+.payment_info {
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "rf_card rf_card rf_card"
+    "rf_cvv rf_card_date rf_card_date"
+    "rf_card_email rf_card_email rf_card_email";
+}
+
+#reg_form_card {
+    grid-area: rf_card;
+}
+
+#reg_form_cvv {
+    grid-area: rf_cvv;
+}
+
+#reg_form_card_date {
+    grid-area: rf_card_date;
+    margin-left: 1.5em;
+}
+
+#reg_form_card_date input{
+    min-width: 98%;
+    height: 2.3em;
+}
+
+#reg_form_card_email {
+    grid-area: rf_card_email;
+}
+
+.user_info {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "rf_username"
+    "rf_password1"
+    "rf_password2";
+}
+
+#reg_form_username{
+    grid-area: rf_username;
+}
+
+#reg_form_password1{
+    grid-area: rf_password1;
+}
+
+#reg_form_password1 input{
+    min-width: 98%; /*gia na vrisketai isa me to username */
+    height: 2.3em;
+}
+
+#reg_form_password2{
+    grid-area: rf_password2;
+}
+
+#reg_form_password2 input{
+    min-width: 98%;
+    height: 2.3em;
+}
+
+/* registration_form.html */
+.form-field input:focus {
+    outline: none;
+}
+
+.form-field.error input {
+    border-color: var(--error-color);
+}
+
+.form-field.success input {
+    border-color: var(--success-color);
+}
+
+.form-field small {
+    color: var(--error-color);
+}
 
 /* TABLETS */
 @media only screen and (min-width: 768px) {
@@ -1326,12 +1483,10 @@ form input[type="number"] {
         grid-column: 1/2;
         grid-row: 1/2;
     }
-
     #mfsa-text-health {
         grid-column: 2/3;
         grid-row: 1/2;
     }
-
     #mfsa-text-developer {
         grid-column: 1/3;
         grid-row: 2/3;
@@ -1452,8 +1607,8 @@ form input[type="number"] {
         grid-area: 2/1/3/2;
         align-self: center; 
         justify-self: center;
-        width: 170;
-        height: 150;
+        width: 170px;
+        height: 150px;
     }
     
     #first p{
@@ -1480,8 +1635,8 @@ form input[type="number"] {
         grid-area: 2/1/3/2;
         align-self: center; 
         justify-self: center;
-        width: 170;
-        height: 150;
+        width: 170px;
+        height: 150px;
     }
     
     #second p{
@@ -1625,6 +1780,40 @@ form input[type="number"] {
 
     .input-checkbox, .input-number, .input-radio, .input-text {
         width: 50%;
+    }
+
+    .personal_info {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "rf_firstname rf_lastname"
+        "rf_email rf_address"
+        "rf_birth rf_tel"
+        "rf_country rf_country";
+    }
+
+    #reg_form_telephone input {
+        min-width: 98%;
+    }
+
+    #reg_form_lastname {
+        margin-left: 1.5em;
+    }
+
+    #reg_form_address {
+        margin-left: 1.5em;
+    }
+
+    .user_info {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "rf_username rf_username"
+        "rf_password1 rf_password2";
+    }
+
+    #reg_form_password2{
+        margin-left: 1.5em;
     }
 }
 
@@ -1816,12 +2005,16 @@ form input[type="number"] {
     
     /* contact_form.html */
     
-    #registration-form {
-        width: 75%;
+    
+
+    /* allagi ex3 */
+    form fieldset {
+        margin: auto;
+        width: 50%;
     }
 
-    form {
-        width: 50%;
+    #questionnaire {
+        width: 75%;
     }
     
     form .customer-inf-content {
