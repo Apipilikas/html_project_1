@@ -1,3 +1,9 @@
+:root {
+    --menuColor: #94acfc;
+    --blue: #215ef9;
+    --menu_underline: #50666f;
+}
+
 @font-face {
     font-family: 'Manrope';
     font-weight: 100;
@@ -65,7 +71,7 @@ section > img {
 }
 
 header {
-    background-color: #215ef9;
+    background-color: var(--blue);
     font-size: 1.1em;
     grid-area: header;
 }
@@ -80,7 +86,7 @@ nav ul {
     list-style-type: none;
     margin: 0em;
     padding-left: 0em;
-    background-color: #94acfc;
+    background-color: var(--menuColor);
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -99,20 +105,20 @@ nav li {
 }
 
 nav li:not(nav ul > li:nth-child(2)):hover {
-    /* background-color: #50666f; */
-    border-bottom: 0.5em solid #50666f;
+    /* background-color: var(--menu_underline); */
+    border-bottom: 0.5em solid var(--menu_underline);
     transition: 0.5s;
 }
 
 nav li:nth-child(2):hover {
-    border-bottom: 0.5em solid #94acfc;
+    border-bottom: 0.5em solid var(--menuColor);
     transition: 0.5s;
 }
 
 nav li:active {
-    background-color: #50666f;
-    border-top: 0.5em solid #50666f;
-    border-bottom: 0.5em solid #50666f;
+    background-color: var(--menu_underline);
+    border-top: 0.5em solid var(--menu_underline);
+    border-bottom: 0.5em solid var(--menu_underline);
     transition: 0.15s;
 }
 
@@ -127,7 +133,7 @@ nav li:active {
     margin-top: 0.5em;
     display: none;
     position: absolute;
-    background-color: #94acfc;
+    background-color: var(--menuColor);
     width: 100%;
     text-align: left;
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
@@ -135,7 +141,7 @@ nav li:active {
 }
 
 .dropdown-content a {
-    border-left: 0.5em solid #94acfc;
+    border-left: 0.5em solid var(--menuColor);
     color: white;
     padding: 0.5em 1em;
     text-decoration: none;
@@ -143,13 +149,13 @@ nav li:active {
 }
 
 .dropdown-content a:hover {
-    border-left: 0.5em solid #50666f;
+    border-left: 0.5em solid var(--menu_underline);
     transition: 0.5s;
 }
 
 .dropdown-content a:active {
     color: white;
-    background-color: #50666f;
+    background-color: var(--menu_underline);
     transition: 0.15s;
 }
 
@@ -323,7 +329,7 @@ section:after {
 
 .announcement > h3 + p {
     margin: 0em;
-    border-left: 0.2em solid #215ef9;
+    border-left: 0.2em solid var(--blue);
     font-weight: 500;
 }
 
@@ -453,7 +459,7 @@ main > h1 {
 .subject h1 {
     background-color: #f2f0ef;
     margin-left: 0.3em;
-    border-left: 0.5em solid #215ef9;
+    border-left: 0.5em solid var(--blue);
     font-size: 1.8em;
     position: sticky;
     top: 0;
@@ -635,8 +641,8 @@ main > h1 {
 }
 
 .subject .choose-price input[type="radio"]:checked + label {
-    border: 2px solid #215ef9;
-    background-color: #215ef9;
+    border: 2px solid var(--blue);
+    background-color: var(--blue);
     color: white;
 }
 
@@ -737,7 +743,7 @@ form input[type="submit"], form input[type="reset"] {
     width: 100%;
     border: 2px solid;
     border-radius: 4px;
-    background-color: #215ef9;
+    background-color: var(--blue);
     font-family: 'Manrope', sans-serif;
     color: white;
     transition-duration: 0.5s;

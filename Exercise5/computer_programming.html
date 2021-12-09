@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+
+<html lang="el">
+
+<head>
+    <title>Edume | Επιστήμη των υπολογιστών</title>
+    <link rel="icon" href="resources/edume_icon.png">
+    <meta name="description" content="An open source site for everyone">
+    <meta name="keywords" content="Open source, Education, Edume">
+    <meta name="author" content="Myrto Chatzivoukoudi, Evangelos Pipilikas">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <img src="resources/edume_header_logo.png" alt="Edume logo">
+        <p>ΟΠΑ! Εδώ είμαστε...</p>
+        <div id="register">
+            <a href="registration_form.html">Εγγραφή</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Αρχική</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="subject_areas.html" class="dropbtn">Θεματικές περιοχές</a>
+                        <div class="dropdown-content">
+                            <a href="subject_areas.html#education">Εκπαίδευση</a>
+                            <a href="subject_areas.html#energy">Ενέργεια</a>
+                            <a href="subject_areas.html#health">Υγεία</a>
+                            <a href="subject_areas.html#history">Ιστορία</a>
+                            <a href="subject_areas.html#law">Νομική</a>
+                            <a href="subject_areas.html#IT">Προγραμματισμός Υπολογιστών</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about_us.html">Ποιοι είμαστε</a></li>
+                <li><a href="contact_form.html">Φόρμα επικοινωνίας</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--gnvstika antikeimena-->
+    <main class="main-subject">
+        <h1>Επιστήμη των υπολογιστών</h1>
+        <p>
+            Το συγκεκριμένο αντικείμενο προορίζεται για όσους θέλουν να εμφαθύνουν στο τομέα του προγραμματισμού.
+            Ανέπτυξε τις ικανότητες σου ως προγραμματιστής, μαθαίνοντας να γράφεις κώδικα από τους καλύτερους! Σου
+            δίνεται η δυνατότητα να ασχοληθείς με διάφορες γλώσσες προγραμματισμού, όπως Python και Java, με μηχανική
+            μάθηση, τεχνητή νοημοσύνη και πολλά άλλα.
+        </p>
+
+        <article class="subject" id="introduction-to-computer-science">
+            <h1>Εισαγωγή στην επιστήμη των υπολογιστών</h1>
+            <section class="description">
+
+                <img src="resources/computer_science.jpg" alt="Διάφορες συσκευές που χρησιμοποιούμε σήμερα" width="350"
+                    height="200">
+
+                <p>
+                    Μια γενική εισαγωγή στην επιστήμη των υπολογιστών και στην τέχνη του προγραμματισμού.
+                </p>
+            </section>
+            <section class="content">
+                <h2>Περιεχόμενο μαθήματος</h2>
+                <p>
+                    Οι ενότητες που θα καλυφθούν στο παρόν μάθημα με τις αντίστοιχες ώρες διδασκαλίας είναι οι εξής:
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Α/Ε</th>
+                            <th>Ενότητα</th>
+                            <th>Ώρα/ες διδασκαλίας</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Εισαγωγή</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>1.1</td>
+                            <td>Κατανόηση της επιστήμης</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1.2</td>
+                            <td>Πως δουλεύει ένας υπολογιστής;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1.3</td>
+                            <td>Από τι αποτελείται ένας υπολογιστής;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1.4</td>
+                            <td>Συζήτηση: Ποιοι είναι οι κολλοσοί της πληροφορικής;</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>Επίλυση αλγοριθμηκών προβλημάτων</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>2.1</td>
+                            <td>Βασικές μονάδες μέτρησης (Μεγάλο Όμικρον)</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2.2</td>
+                            <td>Πως επιλύω αποτελεσματικά προβλήματα προγραμματισμού;</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>Βασικές έννοιες</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>3.1</td>
+                            <td>Αλγόριθμοι</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>3.2</td>
+                            <td>Δομές δεδομένων</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>3.3</td>
+                            <td>Ασφάλεια υπολογιστικού συστήματος</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>4</td>
+                            <td>Εξοικείωση με γλώσσες προγραμματισμού</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>4.1</td>
+                            <td>Python</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4.2</td>
+                            <td>HTML</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4.3</td>
+                            <td>Java</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4.4</td>
+                            <td>Javascript</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+            <section class="links">
+                <h2>Εξωτερικοί σύνδεσμοι</h2>
+                <ol>
+                    <li><a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">Εισαγωγή στον
+                            προγραμματισμό υπολογιστών</a></li>
+                    <li><a href="https://eclass.aueb.gr/courses/INF111/">Μία διαφορετική οπτική</a></li>
+                </ol>
+            </section>
+            <section class="total-cost">
+                <h2>Κόστος μαθήματος</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Εμπλουτισμένη έκδοση</th>
+                            <th>Απλή έκδοση</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Πρόσβαση σε διαδικτυακό μάθημα</td>
+                            <td>Απεριόριστο</td>
+                            <td>Πρώτοι δύο μήνες</td>
+                        </tr>
+                        <tr>
+                            <td>Πρόσβαση σε υλικό</td>
+                            <td>Απεριόριστα</td>
+                            <td>Απεριόριστα</td>
+                        </tr>
+                        <tr>
+                            <td>Πρόσθετο υλικό γιας γλώσσες προγραμματισμού</td>
+                            <td>Απεριόριστο</td>
+                            <td>Περιορισμένο</td>
+                        </tr>
+                        <tr>
+                            <td>Δυνατότητα δημιουργίας εικονικής τάξης</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ πάνω από 5 άτομα</td>
+                        </tr>
+                        <tr>
+                            <td>Υποστήριξη</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΝΑΙ</td>
+                        </tr>
+                        <tr>
+                            <td>Πιστοποιητικό συμμετοχής</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ</td>
+                        </tr>
+                        <tr>
+                            <td>Συμμετοχή σε εξετάσεις</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>Τιμή</td>
+                            <td><s>200€</s>110€*</td>
+                            <td>ΔΩΡΕΑΝ</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <small>(*) Η προσφορά ισχύει μέχρι 1/1/2022 και ώρα 22:00!</small>
+            </section>
+            <section class="enrollment">
+                <h2>Εγγραφή στο μάθημα</h2>
+                <p>
+                    Για να εγγραφείς:
+                </p>
+                <ul>
+                    <li>επίλεξε μία από τις δύο εκδόσεις πληρωμής</li>
+                    <li>επίλεξε μία από τις διαθέσιμες ημερομηνίες πατώντας το κουμπί <strong>Εγγραφή</strong></li>
+                </ul>
+
+                <div class="subject-choices">
+                    <section class="choose-price">
+                        <h3>Επιλογή εκδόσης</h3>
+                        <input type="radio" id="choosing-price-model1" name="choose-price1" value="unlimited">
+                        <label for="choosing-price-model1">Εμπλουτισμένη</label>
+                        <input type="radio" id="choosing-price-model2" name="choose-price1" value="free" checked>
+                        <label for="choosing-price-model2">Απλή</label>
+                    </section>
+                
+                    <section class="choose-date">
+                        <h3>Απομένουν τέσσερις διαθέσιμες ημερομηνιές:</h3>
+
+                        <div class="available-dates">
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    20 Νοεμβρίου 2021
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                    
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    10 Ιανουαρίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                    
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    15 Φεβρουαρίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                    
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    15 Μαρτίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </article>
+
+        <article class="subject" id="introduction-to-python">
+            <h1>Εισαγωγή στην Python</h1>
+            <section class="description">
+
+                <img src="resources/python.png" alt="Logo python" width="350" height="200">
+
+                <p>
+                    Εκμάθηση της γλώσσας προγραμματισμού Python. Βασικές αρχές προγραμματισμού και κανόνες για
+                    ευανάγνωστο κώδικα.
+                </p>
+            </section>
+            <section class="content">
+                <h2>Περιεχόμενο μαθήματος</h2>
+                <p>
+                    Οι ενότητες που θα καλυφθούν στο παρόν μάθημα με τις αντίστοιχες ώρες διδασκαλίας είναι οι εξής:
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Α/Ε</th>
+                            <th>Ενότητα</th>
+                            <th>Ώρα/ες διδασκαλίας</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Βασικές αρχές</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>1.1</td>
+                            <td>Μεταβλητές</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>1.2</td>
+                            <td>Συναρτήσεις</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>1.3</td>
+                            <td>Βασικές λειτουργίες-μέθοδοι</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>1.4</td>
+                            <td>Μαθαίνοντας να κάνω debugging</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>Δομές ελέγχου</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>2.1</td>
+                            <td>Δομή while</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2.2</td>
+                            <td>Δομή if-else</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2.3</td>
+                            <td>Αντιμετώπιση σφαλμάτων</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>Δομές δεδομένων</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>3.1</td>
+                            <td>Λίστες</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3.2</td>
+                            <td>Πίνακες</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3.3</td>
+                            <td>Διανύσματα</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3.4</td>
+                            <td>Πλοιάδες</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>5</td>
+                            <td>Αντικειμενοστραφής προγραμματισμός</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>5.1</td>
+                            <td>Ορίζοντας τι είναι κλάση</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>5.2</td>
+                            <td>Δημιουργία κλάσεων</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>5.3</td>
+                            <td>Δημιουργία αντικειμένων</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>5.4</td>
+                            <td>Επικοινωνία μεταξύ κλάσεων</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>6</td>
+                            <td>Δημιουργία προγράμματος</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>6.1</td>
+                            <td>Σωστή δόμηση προγράμματος</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>6.2</td>
+                            <td>Συχνά λάθη</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+            <section class="links">
+                <h2>Εξωτερικοί σύνδεσμοι</h2>
+                <ol>
+                    <li><a href="https://www.edx.org/professional-certificate/introduction-to-python-programming">Εισαγωγή
+                            στην Python</a></li>
+                    <li><a href="https://www.python.org/">Επίσημο site Python</a></li>
+                </ol>
+            </section>
+            <section class="total-cost">
+                <h2>Κόστος μαθήματος</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Εμπλουτισμένη έκδοση</th>
+                            <th>Απλή έκδοση</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Πρόσβαση σε διαδικτυακό μάθημα</td>
+                            <td>Απεριόριστο</td>
+                            <td>Πρώτοι δύο μήνες</td>
+                        </tr>
+                        <tr>
+                            <td>Πρόσβαση σε υλικό</td>
+                            <td>Απεριόριστα</td>
+                            <td>Απεριόριστα</td>
+                        </tr>
+                        <tr>
+                            <td>Δυνατότητα δημιουργίας εικονικής τάξης</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ πάνω από 5 άτομα</td>
+                        </tr>
+                        <tr>
+                            <td>Υποστήριξη</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΝΑΙ</td>
+                        </tr>
+                        <tr>
+                            <td>Πιστοποιητικό συμμετοχής</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ</td>
+                        </tr>
+                        <tr>
+                            <td>Συμμετοχή σε εξετάσεις</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>Τιμή</td>
+                            <td>80€</td>
+                            <td>ΔΩΡΕΑΝ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="enrollment">
+                <h2>Εγγραφή στο μάθημα</h2>
+                <p>
+                    Για να εγγραφείς:
+                </p>
+                <ul>
+                    <li>επίλεξε μία από τις δύο εκδόσεις πληρωμής</li>
+                    <li>επίλεξε μία από τις διαθέσιμες ημερομηνίες πατώντας το κουμπί <strong>Εγγραφή</strong></li>
+                </ul>
+
+                <div class="subject-choices">
+                    <section class="choose-price">
+                        <h3>Επιλογή εκδόσης</h3>
+                        <input type="radio" id="choosing-price-model3" name="choose-price2" value="unlimited">
+                        <label for="choosing-price-model3">Εμπλουτισμένη</label>
+                        <input type="radio" id="choosing-price-model4" name="choose-price2" value="free" checked>
+                        <label for="choosing-price-model4">Απλή</label>
+                    </section>
+                
+                    <section class="choose-date">
+                        <h3>Απομένουν δύο διαθέσιμες ημερομηνιές:</h3>
+
+                        <div class="available-dates">
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    20 Νοεμβρίου 2021
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                    
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    10 Ιανουαρίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </article>
+
+        <article class="subject" id="arificial-intelligence">
+            <h1>Εισαγωγή στην τεχνητή νοημοσύνη</h1>
+            <section class="description">
+
+                <img src="resources/artificial_intelligence.jpg" alt="Ένα ρομπότ που σκέφτεται..." width="350"
+                    height="200">
+
+                <p>
+                    Ανάλυση του όρου τεχνητή νοημοσύνη μέσω της κατανόησης εφαρμογών μηχανικής μάθησης, νευρωνικών
+                    δικτύων και άλλων.
+                </p>
+            </section>
+            <section class="content">
+                <h2>Περιεχόμενο μαθήματος</h2>
+                <p>
+                    Οι ενότητες που θα καλυφθούν στο παρόν μάθημα με τις αντίστοιχες ώρες διδασκαλίας είναι οι εξής:
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Α/Ε</th>
+                            <th>Ενότητα</th>
+                            <th>Ώρα/ες διδασκαλίας</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Εισαγωγή</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>1.1</td>
+                            <td>Τι είναι η τεχνητή νοημοσύνη;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1.2</td>
+                            <td>Που εφαρμόζεται;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1.3</td>
+                            <td>Παραδείγματα εφαρμογής στο σήμερα-τάσεις για το μέλλον</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>Βασικοί αλγόριθμοι</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>2.1</td>
+                            <td>DFS</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2.2</td>
+                            <td>BFS</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2.3</td>
+                            <td>BEST-FS</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2.4</td>
+                            <td>A*</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>Ευρετική συνάρτηση</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>3.1</td>
+                            <td>Τι είναι η ευρετική συνάρτηση;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3.2</td>
+                            <td>Πως επιλέγω την σωστή ευρετική μάθηση;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3.3</td>
+                            <td>Προβλήματα εφαρμογής ευρετικών συναρτήσεων</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>4</td>
+                            <td>Βασικοί όροι</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>4.1</td>
+                            <td>Μηχανική μάθηση</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4.2</td>
+                            <td>Βαθιά μάθηση</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4.3</td>
+                            <td>Νευρωνικά δίκτυα</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+            <section class="links">
+                <h2>Εξωτερικοί σύνδεσμοι</h2>
+                <ol>
+                    <li><a href="https://www.edx.org/course/artificial-intelligence-for-everyone">Εισαγωγή στην τεχνητή
+                            νοημοσύνη</a></li>
+                    <li><a href="https://builtin.com/artificial-intelligence">Τι είναι η τεχνητή νοημοσύνη;</a></li>
+                </ol>
+            </section>
+            <section class="total-cost">
+                <h2>Κόστος μαθήματος</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Εμπλουτισμένη έκδοση</th>
+                            <th>Απλή έκδοση</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Πρόσβαση σε διαδικτυακό μάθημα</td>
+                            <td>Απεριόριστο</td>
+                            <td>Πρώτοι δύο μήνες</td>
+                        </tr>
+                        <tr>
+                            <td>Πρόσβαση σε υλικό</td>
+                            <td>Απεριόριστα</td>
+                            <td>Απεριόριστα</td>
+                        </tr>
+                        <tr>
+                            <td>Δυνατότητα δημιουργίας εικονικής τάξης</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ πάνω από 5 άτομα</td>
+                        </tr>
+                        <tr>
+                            <td>Υποστήριξη</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΝΑΙ</td>
+                        </tr>
+                        <tr>
+                            <td>Πιστοποιητικό συμμετοχής</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ</td>
+                        </tr>
+                        <tr>
+                            <td>Συμμετοχή σε εξετάσεις</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>Τιμή</td>
+                            <td>70€</td>
+                            <td>ΔΩΡΕΑΝ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="enrollment">
+                <h2>Εγγραφή στο μάθημα</h2>
+                <p>
+                    Για να εγγραφείς:
+                </p>
+                <ul>
+                    <li>επίλεξε μία από τις δύο εκδόσεις πληρωμής</li>
+                    <li>επίλεξε μία από τις διαθέσιμες ημερομηνίες πατώντας το κουμπί <strong>Εγγραφή</strong></li>
+                </ul>
+
+                <div class="subject-choices">
+                    <section class="choose-price">
+                        <h3>Επιλογή εκδόσης</h3>
+                        <input type="radio" id="choosing-price-model5" name="choose-price3" value="unlimited">
+                        <label for="choosing-price-model5">Εμπλουτισμένη</label>
+                        <input type="radio" id="choosing-price-model6" name="choose-price3" value="free" checked>
+                        <label for="choosing-price-model6">Απλή</label>
+                    </section>
+    
+                    <section class="choose-date">
+                        <h3>Απομένει μία διαθέσιμη ημερομηνία:</h3>
+
+                        <div class="available-dates">
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    10 Ιανουαρίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </article>
+
+        <article class="subject" id="introduction-to-database">
+            <h1>Εισαγωγή στις βάσεις δεδομένων</h1>
+            <section class="description">
+
+                <img src="resources/database.png" alt="Διασυνδεμένες βάσεις δεδομένων" width="350" height="200">
+
+                <p>
+                    Δημιουργία μίας ολοκληρωμένης βάσης δεδομένων ακολουθώντας τα κατάλληλα πρύτυπα και τους κατάλληλους
+                    κανόνες. Εξοικείωση με την γλώσσα SQL.
+                </p>
+            </section>
+            <section class="content">
+                <h2>Περιεχόμενο μαθήματος</h2>
+                <p>
+                    Οι ενότητες που θα καλυφθούν στο παρόν μάθημα με τις αντίστοιχες ώρες διδασκαλίας είναι οι εξής:
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Α/Ε</th>
+                            <th>Ενότητα</th>
+                            <th>Ώρα/ες διδασκαλίας</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Βασικές αρχές</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>1.1</td>
+                            <td>Τι είναι βάση δεδομένων;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1.2</td>
+                            <td>Πρωτεύον-δευτερεύον κλειδί</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>1.3</td>
+                            <td>Ακεραιότητα κλειδιών</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>1.4</td>
+                            <td>Ορισμός πινάκων</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>SQL</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>2.1</td>
+                            <td>Ερώτημα SFW</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>2.2</td>
+                            <td>Τελεστές συνάθροισης</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>2.3</td>
+                            <td>Επιπλέον τελεστές</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>2.4</td>
+                            <td>Εμφολευμένα ερωτήματα</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>2.5</td>
+                            <td>Παραδείγματα</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>Σχεσιακή άλγεβρα</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>3.1</td>
+                            <td>Βασικοί τελεστές</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3.2</td>
+                            <td>Απεικόνιση με δέντρο</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3.3</td>
+                            <td>Παραδείγματα</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>4</td>
+                            <td>Βασικοί κανόνες</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>4.1</td>
+                            <td>Συναρτησιακή εξάρτηση</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4.2</td>
+                            <td>1NF</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4.3</td>
+                            <td>BCNF</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4.4</td>
+                            <td>3NF</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4.5</td>
+                            <td>4NF</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4.6</td>
+                            <td>Διάσπαση πινάκων</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+            <section class="links">
+                <h2>Εξωτερικοί σύνδεσμοι</h2>
+                <ol>
+                    <li><a href="https://www.edx.org/microbachelors/nyux-introduction-to-databases">Εισαγωγή στις βάσεις
+                            δεδομένων</a></li>
+                    <li><a href="https://www.oracle.com/database/what-is-database/">Τι είναι βάση δεδομένων από την
+                            ματιά της Oracle</a></li>
+                </ol>
+            </section>
+            <section class="total-cost">
+                <h2>Κόστος μαθήματος</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Εμπλουτισμένη έκδοση</th>
+                            <th>Απλή έκδοση</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Πρόσβαση σε διαδικτυακό μάθημα</td>
+                            <td>Απεριόριστο</td>
+                            <td>Πρώτοι δύο μήνες</td>
+                        </tr>
+                        <tr>
+                            <td>Πρόσβαση σε υλικό</td>
+                            <td>Απεριόριστα</td>
+                            <td>Απεριόριστα</td>
+                        </tr>
+                        <tr>
+                            <td>Δυνατότητα δημιουργίας εικονικής τάξης</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ πάνω από 5 άτομα</td>
+                        </tr>
+                        <tr>
+                            <td>Υποστήριξη</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΝΑΙ</td>
+                        </tr>
+                        <tr>
+                            <td>Πιστοποιητικό συμμετοχής</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ</td>
+                        </tr>
+                        <tr>
+                            <td>Συμμετοχή σε εξετάσεις</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>Τιμή</td>
+                            <td>100€</td>
+                            <td>ΔΩΡΕΑΝ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="enrollment">
+                <h2>Εγγραφή στο μάθημα</h2>
+                <p>
+                    Για να εγγραφείς:
+                </p>
+                <ul>
+                    <li>επίλεξε μία από τις δύο εκδόσεις πληρωμής</li>
+                    <li>επίλεξε μία από τις διαθέσιμες ημερομηνίες πατώντας το κουμπί <strong>Εγγραφή</strong></li>
+                </ul>
+
+                <div class="subject-choices">
+                    <section class="choose-price">
+                        <h3>Επιλογή εκδόσης</h3>
+                        <input type="radio" id="choosing-price-model7" name="choose-price4" value="unlimited">
+                        <label for="choosing-price-model7">Εμπλουτισμένη</label>
+                        <input type="radio" id="choosing-price-model8" name="choose-price4" value="free" checked>
+                        <label for="choosing-price-model8">Απλή</label>
+                    </section>
+    
+                    <section class="choose-date">
+                        <h3>Απομένουν τρεις διαθέσιμες ημερομηνιές:</h3>
+
+                        <div class="available-dates">
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    20 Νοεμβρίου 2021
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+        
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    10 Ιανουαρίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+        
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    13 Μαρτίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </article>
+
+        <article class="subject" id="machine-learning">
+            <h1>Βασικές αρχές μηχανικής μάθησης</h1>
+            <section class="description">
+
+                <img src="resources/machine_learning.png" alt="Ένας εγκέφαλος συνδεμένος σε έναν υπολογιστή" width="350"
+                    height="200">
+
+                <p>
+                    Κατανόηση του βασικού ρόλου της μηχανικής μάθησης στην μοντελοποίηση, πρόβλεψη και λήψη αποφάσεων.
+                </p>
+            </section>
+            <section class="content">
+                <h2>Περιεχόμενο μαθήματος</h2>
+                <p>
+                    Οι ενότητες που θα καλυφθούν στο παρόν μάθημα με τις αντίστοιχες ώρες διδασκαλίας είναι οι εξής:
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Α/Ε</th>
+                            <th>Ενότητα</th>
+                            <th>Ώρα/ες διδασκαλίας</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Εισαγωγή</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1.1</td>
+                            <td>Τι είναι η μηχανική μάθηση;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1.2</td>
+                            <td>Πως σχετίζεται η τεχνητή νοημοσύνη και η μηχανική μάθηση;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1.3</td>
+                            <td>Που εφαρμόζεται σήμερα;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1.4</td>
+                            <td>Είδη μηχανικής μάθησης</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>Μέθοδοι διαχωρισμού δεδομένων</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>2.1</td>
+                            <td>Πως διαχωρίζουμε τα δεδομένα;</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>2.2</td>
+                            <td>Διάφοροι μέθοδοι</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>2.3</td>
+                            <td>Πως επιλέγουμε τον πιο σωστό;</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>Επανάληψη</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>3.1</td>
+                            <td>Έννοια της πιθανότητας</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3.2</td>
+                            <td>Στατιστική</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3.3</td>
+                            <td>Μετατόπιση-παλινδρόμηση συναρτήσεων</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>4</td>
+                            <td>Εκπαίδευση και έλεγχος μοντέλου</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>4.1</td>
+                            <td>Πως καταλαβαίνουμε ότι το μοντέλο μας είναι σωστό;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4.2</td>
+                            <td>Πως αποφεύγουμε τα false positive-negative;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4.3</td>
+                            <td>Πως αποφεύγουμε την υπερ-υποεκπαίδευση;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4.4</td>
+                            <td>Παραδείγματα εκμάθησης</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4.5</td>
+                            <td>Συζήτηση: Μηχανική μάθηση στο μέλλον</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+            <section class="links">
+                <h2>Εξωτερικοί σύνδεσμοι</h2>
+                <ol>
+                    <li><a href="https://www.edx.org/course/machine-learning-fundamentals-2">Μηχανική μάθηση</a></li>
+                    <li><a href="https://searchenterpriseai.techtarget.com/definition/machine-learning-ML">Γιατί είναι
+                            σημαντική η μηχανική μάθηση;</a></li>
+                </ol>
+            </section>
+            <section class="total-cost">
+                <h2>Κόστος μαθήματος</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Εμπλουτισμένη έκδοση</th>
+                            <th>Απλή έκδοση</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Πρόσβαση σε διαδικτυακό μάθημα</td>
+                            <td>Απεριόριστο</td>
+                            <td>Πρώτοι δύο μήνες</td>
+                        </tr>
+                        <tr>
+                            <td>Πρόσβαση σε υλικό</td>
+                            <td>Απεριόριστα</td>
+                            <td>Απεριόριστα</td>
+                        </tr>
+                        <tr>
+                            <td>Δυνατότητα δημιουργίας εικονικής τάξης</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ πάνω από 5 άτομα</td>
+                        </tr>
+                        <tr>
+                            <td>Υποστήριξη</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΝΑΙ</td>
+                        </tr>
+                        <tr>
+                            <td>Πιστοποιητικό συμμετοχής</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ</td>
+                        </tr>
+                        <tr>
+                            <td>Συμμετοχή σε εξετάσεις</td>
+                            <td>ΝΑΙ</td>
+                            <td>ΟΧΙ</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>Τιμή</td>
+                            <td>50€</td>
+                            <td>ΔΩΡΕΑΝ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="enrollment">
+                <h2>Εγγραφή στο μάθημα</h2>
+                <p>
+                    Για να εγγραφείς:
+                </p>
+                <ul>
+                    <li>επίλεξε μία από τις δύο εκδόσεις πληρωμής</li>
+                    <li>επίλεξε μία από τις διαθέσιμες ημερομηνίες πατώντας το κουμπί <strong>Εγγραφή</strong></li>
+                </ul>
+
+                <div class="subject-choices">
+                    <section class="choose-price">
+                        <h3>Επιλογή εκδόσης</h3>
+                        <input type="radio" id="choosing-price-model9" name="choose-price5" value="unlimited">
+                        <label for="choosing-price-model9">Εμπλουτισμένη</label>
+                        <input type="radio" id="choosing-price-model10" name="choose-price5" value="free" checked>
+                        <label for="choosing-price-model10">Απλή</label>
+                    </section>
+    
+                    <section class="choose-date">
+                        <h3>Απομένουν δύο διαθέσιμες ημερομηνιές:</h3>
+
+                        <div class="available-dates">
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    20 Νοεμβρίου 2021
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+        
+                            <div class="start-day">
+                                <h2>Ξεκινά στις</h2>
+                                <p>
+                                    10 Ιανουαρίου 2022
+                                </p>
+                                <button type="button">Εγγραφή</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <aside>
+        <div class="sticky">
+            <h2>ΧΡΙΣΤΟΥΓΓΕΝΙΑΤΙΚΗ ΠΡΟΣΦΟΡΑ</h2>
+            <p>
+                Το Edume φέρνει τον Άι Βασίλη νωρίτερα φέτος με ένα πακέτο που δεν πρέπει να χάσεις!
+            </p>
+        
+            <div id="special-xmas-offer">
+                <p>
+                    4 μαθήματα της επιλογής σου <span>ΜΟΝΟ 100€</span>
+                </p>
+            </div>
+        
+            <p>
+                Χτύπα το κουμπί <strong>Το θέλω</strong> γιατί τέτοια προσφορά δεν ξανά 'γινε.
+            </p>
+        
+            <button type="button">Το θέλω</button>
+        
+            <img src="resources/xmas.png" alt="Ο 'Αι Βασίλης έρχεται..." width="300" height="220">
+
+            <small>Η προσφορά ισχύει μέχρι 25/12/2021 και ώρα 22:00.</small>
+        </div>
+    </aside>
+
+    <footer>
+        <img src="resources/edume_footer_logo.png" alt="Edume logo">
+        <address>
+            <ul>
+                <li>📧<a href="mailto:MandA@aueb.gr">MandA@aueb.gr</a></li>
+                <li>☎️<a href="tel:+302108203107">210 8203 107</a></li>
+                <li>📍 Λεωφόρος Πατησσίων 76, 104 34 Αθήνα</li>
+            </ul>
+        </address>
+        <div class="social-media-footer">
+            <ul>
+                <li><a href="https://twitter.com/?lang=el"><img src="resources/twitter_icon.png" alt="twitter"
+                            width="50" height="50"></a></li>
+                <li><a href="https://el-gr.facebook.com/"><img src="resources/facebook_icon.png" alt="facebook"
+                            width="50" height="50"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="resources/youtube_icon.png" alt="youtube" width="50"
+                            height="50"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="resources/instagram_icon.png" alt="instagram"
+                            width="50" height="50"></a></li>
+            </ul>
+        </div>
+        <p>
+            Edume | Powered by M and A | 2021 <br>
+        </p>
+    </footer>
+
+</body>
+
+</html>

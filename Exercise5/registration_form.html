@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html lang="el">
+
+<head>
+    <title>Edume | Φόρμα εγγραφής</title>
+    <link rel="icon" href="resources/edume_icon.png">
+    <meta name="description" content="An open source site for everyone">
+    <meta name="keywords" content="Open source, Education, Edume">
+    <meta name="author" content="Myrto Chatzivoukoudi, Evangelos Pipilikas">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <img src="resources/edume_header_logo.png" alt="Edume logo">
+        <p>ΟΠΑ! Εδώ είμαστε...</p>
+        <div id="register">
+            <a href="registration_form.html">Εγγραφή</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Αρχική</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="subject_areas.html" class="dropbtn">Θεματικές περιοχές</a>
+                        <div class="dropdown-content">
+                            <a href="subject_areas.html#education">Εκπαίδευση</a>
+                            <a href="subject_areas.html#energy">Ενέργεια</a>
+                            <a href="subject_areas.html#health">Υγεία</a>
+                            <a href="subject_areas.html#history">Ιστορία</a>
+                            <a href="subject_areas.html#law">Νομική</a>
+                            <a href="subject_areas.html#IT">Προγραμματισμός Υπολογιστών</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about_us.html">Ποιοι είμαστε</a></li>
+                <li><a href="contact_form.html">Φόρμα επικοινωνίας</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Εγγραφείτε στο Edume!</h1>
+        <form method="POST" id="form" novalidate>
+            <!--novalidate: gia emfanisi twn javascript validation rules-->
+            <fieldset class="personal_info">
+                <legend>Προσωπικά Στοιχεία</legend>
+
+                <div class="form-field" id="reg_form_firstname">
+                    <label for="firstname_txt">Όνομα: </label>
+                    <input type="text" id="firstname_txt" name="firstname" autocomplete="on" required>
+                    <small></small>
+                </div>
+
+                <div class="form-field" id="reg_form_lastname">
+                    <label for="lastname_txt">Επώνυμο: </label>
+                    <input type="text" id="lastname_txt" name="lastname" autocomplete="on" required>
+                    <small></small>
+                </div>
+
+                <div class="form-field" id="reg_form_email">
+                    <label for="email_txt">Email: </label>
+                    <input type="email" id="email_txt" name="email" placeholder="πχ. p1234@aueb.gr" autocomplete="on"
+                        required>
+                    <small></small>
+                </div>
+
+                <div class="form-field" id="reg_form_address">
+                    <label for="address_txt">Διεύθυνση: </label>
+                    <input type="text" id="address_txt" name="address" placeholder="πχ. Πατησίων 76" autocomplete="on"
+                        required>
+                    <small></small>
+                </div>
+
+                <div class="form-field" id="reg_form_birth">
+                    <label for="birth_txt">Ημερομηνία Γέννησης: </label>
+                    <input type="date" id="birth_txt" name="birth_date" autocomplete="on" required>
+                    <small></small>
+                </div>
+
+                <div class="form-field" id="reg_form_country">
+                    <label for="country_txt">Χώρα: </label>
+                    <input type="text" id="country_txt" name="country" placeholder="πχ. Ελλάδα" autocomplete="on"
+                        required>
+                    <small></small>
+                </div>
+
+                <div class="form-field" id="reg_form_telephone">
+                    <label for="telephone_txt">Τηλέφωνο Επικοινωνίας: </label>
+                    <input type="tel" id="telephone_txt" name="telephone" placeholder="πχ. 6912345678" autocomplete="on"
+                        required>
+                    <small></small>
+                </div>
+            </fieldset>
+
+            <fieldset class="payment_info">
+                <legend>Στοιχεία Πληρωμής</legend>
+
+                <div class="form-field" id="reg_form_card">
+                    <label for="card_txt">Αριθμός Κάρτας: </label>
+                    <input type="text" id="card_txt" name="card" pattern=[0-9]{16} autocomplete="off" required>
+                    <small></small>
+                </div>
+
+                <div class="form-field" id="reg_form_cvv">
+                    <label for="cvv_txt">CVV: </label>
+                    <input type="text" id="cvv_txt" name="cvv" pattern=[0-9]{3,4} placeholder="πχ. 123"
+                        autocomplete="off" required>
+                    <small></small>
+                </div>
+
+                <!--<details>
+                        <summary>CVV:</summary> 
+                        <p>CVV είναι ένας τριψήφιος ή τετραψήφιος κωδικός που αναγράφεται στο μπροστινό ή πίσω μέρος μίας χρεωστικής
+                         / πιστωτικής κάρτας και χρησιμοποιείται για την επαλήθευση της ταυτότητας του πελάτη και την ελαχιστοποίηση
+                          του κινδύνου απάτης στις ηλεκτρονικές συναλλαγές ή στα ΑΤΜ.
+                        </p>
+                    </details>-->
+
+                <div class="form-field" id="reg_form_card_date">
+                    <label for="card_date_txt">Ημερομηνία Λήξης: </label>
+                    <input type="month" id="card_date_txt" name="cvv" autocomplete="off" required>
+                    <small></small>
+                </div>
+
+                <div class="form-field" id="reg_form_card_email">
+                    <label for="card_email_txt">Email κατόχου: </label>
+                    <input type="email" id="card_email_txt" name="card_email" placeholder="πχ. p1234@aueb.gr"
+                        autocomplete="on" required>
+                    <small></small>
+                </div>
+            </fieldset>
+
+            <fieldset class="user_info">
+                <legend>Στοιχεία Χρήστη</legend>
+
+                <div class="form-field" id="reg_form_username">
+                    <label for="username_txt">Username: </label>
+                    <input type="text" id="username_txt" name="username" autocomplete="off" required>
+                    <small></small>
+                </div>
+
+                <div class="form-field" id="reg_form_password1">
+                    <label for="password_txt">Password: </label>
+                    <input type="password" id="password_txt" name="password1" autocomplete="off" required>
+                    <small></small>
+                </div>
+
+                <div class="form-field" id="reg_form_password2">
+                    <label for="password2_txt">Επιβεβαίωση password: </label>
+                    <input type="password" id="password2_txt" name="password2" autocomplete="off" required>
+                    <small></small>
+                </div>
+            </fieldset>
+
+            <fieldset id="questionnaire">
+                <legend>Ερωτηματολόγιο</legend>
+                <span id="questionnaire-result">a</span>
+                <p>
+                    Απάντησε στις παρακάτω ερωτήσεις για να μας βοηθήσεις να σου παρέχουμε όλο και πιο
+                    στοχευμένο υλικό πάνω στα ενδιαφέροντα σου! Για την σωστή υποβολή του ερωτηματολογίου,
+                    ακολούθα τις ερωτήσεις <strong>κατά την αύξουσα αριθμητική τους σειρά</strong>. Δεν θα
+                    σου πάρει πάνω από ένα λεπτό...
+                </p>
+                <details class="question" id="question-1" open>
+                    <summary>1. Ποια είναι η τωρινή σου επαγγελματική κατάσταση;</summary>
+                    <span class="alert-box"></span>
+                    <div class="answer">
+                        <div class="input-radio">
+                            <input type="radio" id="student-radio" name="employment-status" value="student">
+                            <label for="student-radio">Φοιτητής</label>
+                        </div>
+                        <div class="input-radio">
+                            <input type="radio" id="employed-radio" name="employment-status" value="employed">
+                            <label for="employed-radio">Εργαζόμενος</label>
+                        </div>
+                        <div class="input-radio">
+                            <input type="radio" id="unemployed-radio" name="employment-status" value="unemployed">
+                            <label for="unemployed-radio">Άνεργος</label>
+                        </div>
+                        <div class="input-radio">
+                            <input type="radio" id="retired-radio" name="employment-status" value="retired">
+                            <label for="retired-radio">Συνταξιοδοτημένος</label>
+                        </div>
+                        <div class="input-radio">
+                            <input type="radio" id="pnta-radio-1" name="employment-status" value="pnta">
+                            <label for="pnta-radio-1">Δεν θέλω να απαντήσω</label>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="question-2" open>
+                    <summary>2. Ανάλογα με την απάντηση σου στην ερώτηση (1.) απάντησε τα παρακάτω:</summary>
+                    <span class="alert-box"></span>
+                    <div class="answer">
+                        <div class="input-number" id="study-year-content">
+                            <label for="study-year-input">Παρακολουθώ το </label>
+                            <input type="number" id="study-year-input" name="study-year" min="1" max="70">
+                            <p>έτος.</p>
+                        </div>
+                        <div class="input-number" id="employee-year-content">
+                            <label for="employee-year-input">Δουλεύω το/α τελευταίο/α </label>
+                            <input type="number" id="employee-year-input" name="employee-year" min="1">
+                            <p>χρόνο/ια.</p>
+                        </div>
+                        <div class="input-number" id="unemployed-year-content">
+                            <label for="unemployed-year-input">Δεν εργάζομαι το/α τελευταίο/α </label>
+                            <input type="number" id="unemployed-year-input" name="unemployed-year" min="1">
+                            <p>χρόνο/ια.</p>
+                        </div>
+                        <div class="input-number" id="retired-year-content">
+                            <label for="retired-year-input">Εργαζόμουν τα τελευταία:</label>
+                            <input type="number" id="retired-year-input" name="retired-year" min="1">
+                            <p>χρόνια.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="question-3" open>
+                    <summary>3. Τι πτυχίο/πτυχία έχεις στην κατοχή σου;</summary>
+                    <span class="alert-box"></span>
+                    <div class="answer">
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="high-school-checkbox" name="high-school">
+                            <label for="high-school-checkbox">Απολυτήριο Λυκείου</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="bachelor-degree-checkbox" name="bachelor-degree">
+                            <label for="bachelor-degree-checkbox">Προπτυχιακό</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="master-degree-checkbox" name="master-degree">
+                            <label for="master-degree-checkbox">Μεταπτυχιακό</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="phd-degree-checkbox" name="phd-degree">
+                            <label for="phd-degree-checkbox">Διδακτορικό</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="pnta-checkbox-2" name="pnta-2">
+                            <label for="pnta-checkbox-2">Δεν θέλω να απαντήσω</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="degree-else-checkbox" name="degree-else">
+                            <label for="degree-else-checkbox">Άλλο</label>
+                        </div>
+                        <div class="input-text">
+                            <label for="degree-else-txt">Γράψτε το πτυχίο που έχετε λάβει:</label>
+                            <input type="text" id="degree-else-txt" name="degree-else"
+                                placeholder="πχ. Πτυχίο στην εκμάθηση προγραμματισμού">
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="question-4" open>
+                    <summary>4. Σε τι επίπεδο θα κατέταζες τον εαυτό σου;</summary>
+                    <span class="alert-box"></span>
+                    <div class="answer">
+                        <div class="input-range">
+                            <input type="range" min="0" max="100" step="25" id="question-4-range"
+                                list="experience-level-list">
+                            <datalist id="experience-level-list">
+                                <option value="very-bad" label="Πολύ κακό">gfhf</option>
+                                <option value="bad" label="Κακό"></option>
+                                <option value="mediocre" label="Μέτριο"></option>
+                                <option value="good" label="Καλό"></option>
+                                <option value="very-good" label="Άριστο"></option>
+                            </datalist>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="question-5" open>
+                    <summary>5. Ποιος/Ποιοι από τους παρακάτω τομείς σε ενδιαφέρει/ενδιαφέρουν περισσότερο;</summary>
+                    <span class="alert-box"></span>
+                    <div class="answer">
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="education-checkbox" name="education">
+                            <label for="education-checkbox">Εκπαίδευση</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="energy-checkbox" name="energy">
+                            <label for="energy-checkbox">Ενέργεια</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="health-checkbox" name="health">
+                            <label for="health-checkbox">Υγεία</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="history-checkbox" name="history">
+                            <label for="history-checkbox">Ιστορία</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="law-checkbox" name="law">
+                            <label for="law-checkbox">Νομική</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="computer-programming-checkbox" name="computer-programming">
+                            <label for="computer-programming-checkbox">Προγραμματισμός Υπολογιστών</label>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="question-6" open>
+                    <summary>6. Γιατί σε ενδιαφέρει ο/οι τομέας/τομείς που διάλεξες στην ερώτηση (5.);</summary>
+                    <span class="alert-box"></span>
+                    <div class="answer">
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="business-reason-checkbox" name="business-reason">
+                            <label for="business-reason-checkbox">Επαγγελματικός λόγος</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="money-reason-checkbox" name="money-reason">
+                            <label for="money-reason-checkbox">Οικονομικές απολαβές</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="family-business-reason-checkbox" name="family-business-reason">
+                            <label for="family-business-reason-checkbox">Οικογενειακός λόγος (οικογενειακή
+                                επιχείρηση)</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="educational-reason-checkbox" name="educational-reason">
+                            <label for="educational-reason-checkbox">Εκπαιδευτικός λόγος</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="focus-on-subject-reason-checkbox" name="focus-on-subject-reason">
+                            <label for="focus-on-subject-reason-checkbox">Εμβάθυνση σε γνωστικό αντικείμενο</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="reason-else-checkbox" name="reason-else">
+                            <label for="reason-else-checkbox">Άλλος λόγος</label>
+                        </div>
+                        <div class="input-text">
+                            <label for="reason-else-txt">Γράφτε τον λόγο που επιλέξατε τον/τους τομέα/τομείς: </label>
+                            <input type="text" id="reason-else-txt" name="reason-else-text"
+                                placeholder="Ο λόγος είναι...">
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question yes-no-question" id="question-7" open>
+                    <summary>7. Στον ελεύθερο σου χρόνο ασχολείσαι με το επάγγελμα/ενδιαφέρον σου;</summary>
+                    <span class="alert-box"></span>
+                    <div class="answer">
+                        <div class="input-radio">
+                            <input type="radio" id="yes-radio-q7" name="question-7-radio" value="yes">
+                            <label for="yes-radio-q7">ΝΑΙ</label>
+                        </div>
+                        <div class="input-radio">
+                            <input type="radio" id="no-radio-q7" name="question-7-radio" value="no">
+                            <label for="no-radio-q7">ΟΧΙ</label>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="question-8" open>
+                    <summary>8. Πόσες ώρες από τον ελεύθερο σου χρόνο αφιερώνεις στο επάγγελμα/ενδιαφέρον σου;</summary>
+                    <span class="alert-box"></span>
+                    <div class="answer">
+                        <div class="input-range">
+                            <input type="range" min="0" max="100" step="25" id="question-8-range"
+                                list="daily-hours-list">
+                            <datalist id="daily-hours-list">
+                                <option value="less-than-1" label="<1"></option>
+                                <option value="between-1-2" label="[1-2]"></option>
+                                <option value="between-2-3" label="[2-3]"></option>
+                                <option value="between-3-4" label="[3-4]"></option>
+                                <option value="more-than-4" label=">4"></option>
+                            </datalist>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="question-9" open>
+                    <summary>9. Ποιος είναι ο λόγος εγγραφής στην σελίδα;</summary>
+                    <span class="alert-box"></span>
+                    <div class="answer">
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="knowledge-reason-checkbox" name="knowledge-reason">
+                            <label for="knowledge-reason-checkbox">Θέλω να διευρύνω το γνωστικό μου περιβάλλον.</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="socialize-reason-checkbox" name="socialize-reason">
+                            <label for="socialize-reason-checkbox">Θέλω να γνωρίσω νέους ανθρώπους.</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="interested-reason-checkbox" name="interested-reason">
+                            <label for="interested-reason-checkbox">Θέλω να μάθω αν ενδιαφέρομαι για κάποια
+                                μαθήματα.</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="revision-reason-checkbox" name="revision-reason">
+                            <label for="revision-reason-checkbox">Θέλω να κάνω μία σύντομη επανάληψη σε βασικές
+                                έννοιες.</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="hobbi-reason-checkbox" name="hobbi-reason">
+                            <label for="hobbi-reason-checkbox">Καθαρά για λόγους χόμπι.</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="certificate-reason-checkbox" name="certificate-reason">
+                            <label for="certificate-reason-checkbox">Θέλω να αποκτήσω τον τίτλο ενός συγκεκριμένου
+                                πιστοποιητικού.</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="xmas-sale-reason-checkbox" name="xmas-sale-reason">
+                            <label for="xmas-sale-reason-checkbox">Θέλω να εκμεταλευτώ την χριστουγγενιάτικη
+                                προσφορά.</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="reason-else-checkbox-2" name="else-reason">
+                            <label for="reason-else-checkbox-2">Άλλος λόγος</label>
+                        </div>
+                        <div class="input-text">
+                            <label for="reason-else-txt-q9">Γράψτε τον λόγο εγγραφής στην σελίδα: </label>
+                            <input type="text" id="reason-else-txt-q9" name="reason-else-text-q9"
+                                placeholder="Ο λόγος είναι...">
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="question-10" open>
+                    <summary>10. Με τρεις λέξεις θα περιέγραφα τον εαυτό μου...</summary>
+                    <span class="alert-box"></span>
+                    <div class="answer">
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="creative-checkbox" name="creative">
+                            <label for="creative-checkbox">Δημιουργικό</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="boring-checkbox" name="boring">
+                            <label for="boring-checkbox">Βαρετό</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="active-checkbox" name="active">
+                            <label for="active-checkbox">Ενεργητικό</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="competitive-checkbox" name="competitive">
+                            <label for="competitive-checkbox">Ανταγωνιστικό</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="individualist-checkbox" name="individualist">
+                            <label for="individualist-checkbox">Ατομιστή</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="skillful-checkbox" name="skillful">
+                            <label for="skillful-checkbox">Επιδέξιο</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="willing-checkbox" name="willing">
+                            <label for="willing-checkbox">Πρόθυμο</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="cooperative-checkbox" name="cooperative">
+                            <label for="cooperative-checkbox">Συνεργατικό</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="supportive-checkbox" name="supportive">
+                            <label for="supportive-checkbox">Υποστηρικτικό</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="lazy-checkbox" name="lazy">
+                            <label for="lazy-checkbox">Τεμπέλη</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="anxious-checkbox" name="anxious">
+                            <label for="anxious-checkbox">Αγχώδη</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="studious-checkbox" name="studious">
+                            <label for="studious-checkbox">Μελετηρό</label>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question yes-no-question" id="question-11" open>
+                    <summary>11. Έχεις ξαναπαρακολουθήσει μάθημα από αντίστοιχη σελίδα;</summary>
+                    <span class="alert-box"></span>
+                    <div class="answer">
+                        <div class="input-radio">
+                            <input type="radio" id="yes-radio-q11" name="question-11-radio" value="yes">
+                            <label for="yes-radio-q11">ΝΑΙ</label>
+                        </div>
+                        <div class="input-radio">
+                            <input type="radio" id="no-radio-q11" name="question-11-radio" value="no">
+                            <label for="no-radio-q11">ΟΧΙ</label>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="question-12" open>
+                    <summary>12. Αυτό που αναζητώ στο Edume είναι...</summary>
+                    <span class="alert-box"></span>
+                    <div class="answer">
+                        <div>
+                            <h3>από άποψη υλικού:</h3>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="tests-checkbox" name="tests">
+                                <label for="tests-checkbox">Διαγώνισματα</label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="exercices-checkbox" name="exercices">
+                                <label for="exercices-checkbox">Ασκήσεις</label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="int-videos-checkbox" name="int-videos">
+                                <label for="int-videos-checkbox">Διαδραστικά βίντεο</label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="quiz-checkbox" name="quiz">
+                                <label for="quiz-checkbox">Quizs</label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="examples-checkbox" name="examples">
+                                <label for="examples-checkbox">Παραδείγματα</label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="notes-checkbox" name="notes">
+                                <label for="notes-checkbox">Σημειώσεις</label>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>από άποψη εκπαιδευτικής διαδικασίας:</h3>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="self-paced-checkbox" name="self-paced">
+                                <label for="self-paced-checkbox">Αυτορυθμιζόμενο μάθημα</label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="teacher-communication-checkbox" name="teacher-communication">
+                                <label for="teacher-communication-checkbox">Επίλυση αποριών με καθηγητή</label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="e-class-checkbox" name="e-class">
+                                <label for="e-class-checkbox">Μάθημα σε εικονική τάξη</label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="study-program-checkbox" name="study-program">
+                                <label for="study-program-checkbox">Δημιουργία προγράμματος διαβάσματος</label>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </fieldset>
+
+            <div class="buttons-area" id="reg_form_buttons">
+                <input type="submit" id="submit_btn" name="submit_btn">
+                <input type="reset" id="reset_btn" name="reset">
+            </div>
+        </form>
+    </main>
+
+    <aside>
+        <div class="sticky">
+            <h2>ΧΡΙΣΤΟΥΓΓΕΝΙΑΤΙΚΗ ΠΡΟΣΦΟΡΑ</h2>
+            <p>
+                Το Edume φέρνει τον Άι Βασίλη νωρίτερα φέτος με ένα πακέτο που δεν πρέπει να χάσεις!
+            </p>
+
+            <div id="special-xmas-offer">
+                <p>
+                    4 μαθήματα της επιλογής σου <span>ΜΟΝΟ 100€</span>
+                </p>
+            </div>
+
+            <p>
+                Χτύπα το κουμπί <strong>Το θέλω</strong> γιατί τέτοια προσφορά δεν ξανά 'γινε.
+            </p>
+
+            <button type="button">Το θέλω</button>
+
+            <img src="resources/xmas.png" alt="Ο 'Αι Βασίλης έρχεται..." width="300" height="220">
+
+            <small>Η προσφορά ισχύει μέχρι 25/12/2021 και ώρα 22:00.</small>
+        </div>
+    </aside>
+
+    <footer>
+        <img src="resources/edume_footer_logo.png" alt="Edume logo">
+        <address>
+            <ul>
+                <li>📧<a href="mailto:MandA@aueb.gr">MandA@aueb.gr</a></li>
+                <li>☎️<a href="tel:+302108203107">210 8203 107</a></li>
+                <li>📍 Λεωφόρος Πατησσίων 76, 104 34 Αθήνα</li>
+            </ul>
+        </address>
+        <div class="social-media-footer">
+            <ul>
+                <li><a href="https://twitter.com/?lang=el"><img src="resources/twitter_icon.png" alt="twitter"
+                            width="50" height="50"></a></li>
+                <li><a href="https://el-gr.facebook.com/"><img src="resources/facebook_icon.png" alt="facebook"
+                            width="50" height="50"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="resources/youtube_icon.png" alt="youtube" width="50"
+                            height="50"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="resources/instagram_icon.png" alt="instagram"
+                            width="50" height="50"></a></li>
+            </ul>
+        </div>
+        <p>
+            Edume | Powered by M and A | 2021 <br>
+        </p>
+    </footer>
+</body>
+
+</html>
